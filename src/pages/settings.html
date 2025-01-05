@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <style>
+        body {
+            background-color: #333; /* Dark grey background */
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .tabs {
+            overflow: hidden;
+            border-bottom: 1px solid #666;
+            margin-bottom: 20px;
+        }
+    
+        .tab {
+            float: left;
+            cursor: pointer;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+    
+        .tab:hover {
+            background-color: #555; /* Darker grey on hover */
+        }
+    
+        .tab.active {
+            background-color: #777; /* Slightly lighter grey when active */
+        }
+    
+        .settings-content {
+            display: none;
+        }
+    
+        .settings-content.active {
+            display: block;
+        }
+    
+        .map-settings {
+            margin-top: 20px;
+        }
+    
+        .map-option {
+            cursor: pointer;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+    
+        .map-option:hover {
+            background-color: #555; /* Darker grey on hover */
+        }
+        /* Input field */
+    input, textarea {
+        padding: 10px;
+        border: 1px solid #666;
+        background-color: #444; /* Dark grey background */
+        color: white;
+        font-size: 14px;
+        transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+    }
+
+    input, textarea:focus {
+        border-color: #888; /* Lighter grey on focus */
+        background-color: #555; /* Slightly darker grey on focus */
+    }
+
+    /* Checkbox and radio buttons */
+    input {
+        margin-right: 5px;
+    }
+
+    /* Button */
+    button {
+        padding: 10px 20px;
+        background-color: #555; /* Dark grey background */
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background-color: #777; /* Slightly lighter grey on hover */
+    }
+
+    /* Select dropdown */
+    select {
+        padding: 10px;
+        border: 1px solid #666;
+        background-color: #444; /* Dark grey background */
+        color: white;
+        font-size: 14px;
+        transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+    }
+
+    select:focus {
+        border-color: #888; /* Lighter grey on focus */
+        background-color: #555; /* Slightly darker grey on focus */
+    }
+    /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #333;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #00c3ff;
+  border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #00c3ff;
+  border-radius: 15px;
+}
+@media (max-width: 600px) {
+  body {
+  zoom: 50%; /* Zooms the page to 150% */
+}
+
+
+}
+    </style>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'es,fr,de,it,pt,zh-CN,ja,ru', // Add languages you want to support
+            autoDisplay: false
+          }, 'google_translate_element');
+        }
+      </script>
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+</head>
+
+<body>
+    <div class="tabs">
+        <div class="tab active" onclick="openTab(event, 'map-settings')">Map Settings</div>
+        <div class="tab" onclick="openTab(event, 'lag-induced')" hidden>Lag Induced Settings</div>
+        <div class="tab" onclick="openTab(event, 'location-settings')">Location Settings</div>
+        <div class="tab" onclick="openTab(event, 'privacy')">Privacy</div>
+        <div class="tab" onclick="openTab(event, 'lang')" hidden>Languages</div>
+        <div class="tab" onclick="openTab(event, 'notifications')" hidden>Push Notifications</div>
+         <!-- New tab -->
+
+        <!-- Add more tabs for additional settings if needed -->
+    </div>
+
+    <div id="map-settings" class="settings-content active">
+        <h2>Map Settings</h2>
+        <div class="map-settings">
+            <div class="map-option" onclick="setMapType('hybrid')">Hybrid</div>
+            <div class="map-option" onclick="setMapType('satellite')">Satellite</div>
+            <div class="map-option" onclick="setMapType('street')">Street</div>
+            <div class="map-option" onclick="setMapType('Stadia_AlidadeSatellite')" hidden>Stadia_AlidadeSatellite (Fan Favorite)</div>
+            <div class="map-option" onclick="setMapType('USGS_USImageryTopo')">USGS_USImageryTopo</div>
+            <div class="map-option" onclick="setMapType('GeoportailFrance_orthos')">GeoportailFrance_orthos</div>
+            
+        </div>
+        <div>Current Map Setting: <span id="mapsetting"></span></div>
+        <p>Map Settings will only apply to 2D map.</p>
+    </div>
+
+    <div id="privacy" class="settings-content">
+        <h2>Privacy</h2>
+        <p>By using our site, you acknowledge that we are using your data for our site. We will never store your IP,
+            Data, Or anything else on our site. The only thing we may store is keystrokes incase of a ban requirement.
+            To reset all the data, you may press reset cookies. This will reset the location data, the information
+            stored on your browser, and the map settings. Thank you for your understanding.</p>
+        <button onclick="deleteCookies()">Reset Cookies</button>
+        <!-- Add more privacy settings here -->
+    </div>
+    <div id="lang" class="settings-content">
+        <div id="google_translate_element"></div>
+
+        <!-- Add more privacy settings here -->
+    </div>
+    <div id="lag-induced" class="settings-content">
+        <p>Here is where you can choose from different settings to reduce lag, or to up your graphical settings.</p>
+        <label for="graphics-dropdown">Graphics Settings:</label>
+        <select id="graphics-dropdown">
+            <option value="Ultra">Ultra</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select>
+        <div id="checkboxes">
+            <label>
+                <input type="checkbox" id="santa-front-end-oscilation"> Santa Sleigh Front End Oscillation
+            </label><br>
+            <label>
+                <input type="checkbox" id="santa-height-oscilation"> Santa Sleigh Height Oscillation
+            </label><br>
+            <label>
+                <input type="checkbox" id="screen-snow"> Screen Snow
+            </label><br>
+            <label>
+                <input type="checkbox" id="animated-water"> Animated Water
+            </label><br>
+            <label>
+                <input type="checkbox" id="google-hybrid"> Google Hybrid
+            </label><br>
+            <label>
+                <input type="checkbox" id="camera-raises-lowers"> Camera Raises and Lowers with Sleigh
+            </label>
+        </div>
+    </div>
+    
+    
+    <div id="location-settings" class="settings-content">
+        <h2>Location Settings</h2>
+        <p>This data is only stored on your browser, not our site.</p>
+        <br>
+        <div>
+            <input type="checkbox" id="hide-location" onchange="toggleLocation()">
+            <label for="hide-location">Hide Location</label>
+            
+        </div>
+    
+       
+        <br>
+        <label for="latitude">Latitude:</label>
+        <input type="number" id="latitude">
+        <br>
+        <label for="longitude">Longitude:</label>
+        <input type="number" id="longitude">
+        <h4>Nearest Stopping City: <span id="nearestcity"></span></h4>
+        <p>The nearest stopping city is the closest city to you that the Master Santa Tracker will stop at.</p>
+        <br>
+        <button onclick="regetLocation()">Reget Location</button>
+        
+        <!-- Add more privacy settings here -->
+    </div>
+    
+    <!-- Push Notifications Tab Content -->
+    <div id="notifications" class="settings-content">
+        <h2>Push Notifications</h2>
+        <p>Enable push notifications to receive updates from our site.</p>
+        <button id="subscribe-btn">Subscribe</button>
+        <button id="unsubscribe-btn" style="display:none;">Unsubscribe</button>
+        <p id="subscription-status"></p>
+    </div>
+    
+    <!-- JavaScript -->
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const settingsKey = "laginducedsettings";
+
+    // Default settings
+    const defaultSettings = {
+        "Ultra": {
+            "Santa Sleigh Front End Oscillation": true,
+            "Santa Sleigh Height Oscillation": true,
+            "Screen Snow": true,
+            "Animated Water": true,
+            "Google Hybrid": true,
+            "Camera Raises and Lowers with Sleigh": false,
+        },
+        "High": {
+            "Santa Sleigh Front End Oscillation": true,
+            "Santa Sleigh Height Oscillation": false,
+            "Screen Snow": true,
+            "Animated Water": true,
+            "Google Hybrid": true,
+            "Camera Raises and Lowers with Sleigh": false,
+        },
+        "Medium": {
+            "Santa Sleigh Front End Oscillation": true,
+            "Santa Sleigh Height Oscillation": false,
+            "Screen Snow": true,
+            "Animated Water": false,
+            "Google Hybrid": false,
+            "Camera Raises and Lowers with Sleigh": false,
+        },
+        "Low": {
+            "Santa Sleigh Front End Oscillation": false,
+            "Santa Sleigh Height Oscillation": false,
+            "Screen Snow": false,
+            "Animated Water": false,
+            "Google Hybrid": false,
+            "Camera Raises and Lowers with Sleigh": false,
+        }
+    };
+
+    const dropdown = document.getElementById("graphics-dropdown");
+    const checkboxes = {
+        "Santa Sleigh Front End Oscillation": document.getElementById("santa-front-end-oscilation"),
+        "Santa Sleigh Height Oscillation": document.getElementById("santa-height-oscilation"),
+        "Screen Snow": document.getElementById("screen-snow"),
+        "Animated Water": document.getElementById("animated-water"),
+        "Google Hybrid": document.getElementById("google-hybrid"),
+        "Camera Raises and Lowers with Sleigh": document.getElementById("camera-raises-lowers"),
+    };
+
+    // Load settings from localStorage or use default
+    const loadSettings = () => {
+        const storedSettings = JSON.parse(localStorage.getItem(settingsKey));
+        return storedSettings || { ...defaultSettings["Ultra"] };
+    };
+
+    // Save settings to localStorage
+    const saveSettings = (settings) => {
+        localStorage.setItem(settingsKey, JSON.stringify(settings));
+    };
+
+    // Update checkboxes based on settings
+    const updateCheckboxes = (settings) => {
+        for (const [key, checkbox] of Object.entries(checkboxes)) {
+            checkbox.checked = settings[key];
+        }
+    };
+
+    // Update dropdown based on settings
+    const updateDropdown = (settings) => {
+        for (const [level, values] of Object.entries(defaultSettings)) {
+            if (JSON.stringify(values) === JSON.stringify(settings)) {
+                dropdown.value = level;
+                return;
+            }
+        }
+        dropdown.value = "Custom";
+    };
+
+    // Handle dropdown change
+    dropdown.addEventListener("change", () => {
+        const selectedLevel = dropdown.value;
+        if (defaultSettings[selectedLevel]) {
+            const newSettings = { ...defaultSettings[selectedLevel] };
+            updateCheckboxes(newSettings);
+            saveSettings(newSettings);
+        }
+    });
+
+    // Handle checkbox change
+    Object.entries(checkboxes).forEach(([key, checkbox]) => {
+        checkbox.addEventListener("change", () => {
+            const currentSettings = loadSettings();
+            currentSettings[key] = checkbox.checked;
+            updateDropdown(currentSettings);
+            saveSettings(currentSettings);
+        });
+    });
+
+    // Initialize UI with saved settings
+    const initialSettings = loadSettings();
+    updateCheckboxes(initialSettings);
+    updateDropdown(initialSettings);
+});
+
+ 
+
+
+    function urlBase64ToUint8Array(base64String) {
+        const padding = '='.repeat((4 - base64String.length % 4) % 4);
+        const base64 = (base64String + padding).replace(/\-/g, '+').replace(/_/g, '/');
+        const rawData = window.atob(base64);
+        return new Uint8Array([...rawData].map(char => char.charCodeAt(0)));
+    }
+
+// Function to set values from localStorage to inputs
+function updateInputsFromLocalStorage() {
+    // Retrieve values from localStorage or set default values
+    let storedLongitude = localStorage.getItem('longitude');
+    let storedLatitude = localStorage.getItem('latitude');
+
+    // Set default values if not found in localStorage
+    if (!storedLongitude) {
+        storedLongitude = 0; // Middle of the Earth (Greenwich Meridian)
+    }
+    if (!storedLatitude) {
+        storedLatitude = 0; // Middle of the Earth (Equator)
+    }
+
+    // Set values in the inputs
+    document.getElementById('longitude').value = storedLongitude;
+    document.getElementById('latitude').value = storedLatitude;
+// Set nearest Santa stop as nearestcity
+    document.getElementById('nearestcity').innerHTML = localStorage.getItem('nearestcity');
+}
+
+// Initial setup
+updateInputsFromLocalStorage();
+
+// Event listeners to update localStorage when inputs change
+document.getElementById('longitude').addEventListener('input', function() {
+    localStorage.setItem('longitude', this.value);
+});
+
+document.getElementById('latitude').addEventListener('input', function() {
+    localStorage.setItem('latitude', this.value);
+});
+
+// Listen for changes in localStorage and update inputs accordingly
+window.addEventListener('storage', function(event) {
+    if (event.key === 'longitude' || event.key === 'latitude' || event.key === 'nearestcity') {
+        updateInputsFromLocalStorage();
+    }
+});
+
+
+
+
+        // Function to switch between tabs
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("settings-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.classList.add("active");
+        }
+
+        // Function to set map type and store it in local storage
+        function setMapType(mapType) {
+            // console.log('Map type set to: ' + mapType);
+            localStorage.setItem('mapType', mapType);
+            updateMapSetting()
+        }
+
+        // Function to hide location and store it in local storage
+        function toggleLocation() {
+            // console.log('toggleLocation function called');
+            var hide = document.getElementById('hide-location').checked;
+            // console.log('Location hidden:', hide);
+            localStorage.setItem('locationHid', hide.toString());
+        }
+
+        // Function to reget location and remove stored IP factor
+        function regetLocation() {
+            // console.log('Location reget');
+            localStorage.removeItem('storedIP');
+            localStorage.removeItem('longitude');
+            localStorage.removeItem('latitude');
+        }
+// Function to update map setting display
+function updateMapSetting() {
+    const mapType = localStorage.getItem('mapType');
+    document.getElementById('mapsetting').textContent = mapType || 'Default'; // Default value if mapType is not set
+}
+
+// Initial call to set map setting on page load
+updateMapSetting();
+
+// Event listener for changes in localStorage 'mapType' item
+window.addEventListener('storage', function(e) {
+    if (e.key === 'mapType') {
+        updateMapSetting();
+    }
+});
+       // Function to delete cookies (remove all local storage items) and refresh after 1 second
+function deleteCookies() {
+    // console.log('Cookies deleted');
+    localStorage.clear();
+    setTimeout(function() {
+        location.reload();
+    }, 1000); // 1000 milliseconds = 1 second
+}
+
+
+        // Check local storage for 'locationHid' item onload and set checkbox
+        window.onload = function () {
+            var hideLocation = localStorage.getItem('locationHid');
+            if (hideLocation === 'true') {
+                document.getElementById('hide-location').checked = true;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

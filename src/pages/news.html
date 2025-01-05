@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #444;
+            /* Grey background */
+            color: #f0f0f0;
+            /* Dark grey text color */
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: white;
+            /* Dark grey for headings */
+        }
+
+        blockquote {
+            background-color: #333;
+            /* Light grey background for blockquote */
+            border-left: 5px solid black;
+            /* Grey border on the left side */
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        blockquote p {
+            margin: 0;
+        }
+
+        .updates {
+            background-color: #333;
+            /* White background for updates section */
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .updates h2 {
+            color: #666;
+            /* Grey color for update titles */
+        }
+
+        .signature {
+            margin-top: 20px;
+        }
+
+        .signature p {
+            margin: 5px 0;
+        }
+
+        .highlight {
+            font-weight: bold;
+        }
+
+        .article {
+            margin-bottom: 20px;
+            background-color: #444;
+            /* Dark grey background for articles */
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .metadata {
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        .version {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            font-size: 12px;
+            color: #ccc;
+        }
+    </style>
+    <script>
+        // Function to handle scrolling to the specified article
+        function scrollToArticle(articleNumber) {
+            // Get the target article element based on the provided number
+            var targetArticle = document.getElementById("article" + articleNumber);
+            if (targetArticle) {
+                // Scroll to the target article's position
+                targetArticle.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Check if the URL contains the scroll parameter
+        var urlParams = new URLSearchParams(window.location.search);
+        var scrollParam = urlParams.get('scroll');
+        if (scrollParam) {
+            // If scroll parameter exists, scroll to the specified article
+            scrollToArticle(scrollParam);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="article" id="article1">
+        <div class="title">Version 0.6.2 BETA</div>
+        <div class="metadata">Published on April 27, 2024 at 8:13 PM CDT</div>
+        <p>So today, I am doing another test. I just released another version and this version has a ton of new features
+            that I am really excited about. I completely restructured the tracker from scratch. I'm going for a dark
+            aesthetic this time which is different from the previous white-themed pages. Heres some Beta systems
+            information:
+        </p>
+        <h1>Year of 2024 V0.6.2 Systems Information</h1>
+        <blockquote>
+            <p>Built on Yarn.</p>
+            <p>Between <span class="highlight">1,000</span> and <span class="highlight">2,000</span> main stops for the bunny this year.
+            </p>
+            <p>We began monitizing the site on April 17th, 2024.</p>
+            <p>The Bunny is expected to launch from Easter Island at <span class="highlight">5 AM EST</span>.</p>
+            <p>He will usually start preparations at <span class="highlight">2 AM EST</span>.</p>
+            <p>This will be happening on <span class="highlight">April 27th, 2024</span>.</p>
+            <p>Special Update to Honor track.easterbunny.cc</p>
+            <p>To start, he will deliver to about <span class="highlight">6 billion people (6,000,000,000
+                    people)</span>.</p>
+            <p>New UI.</p>
+            <p>Preparation Text.</p>
+            <p>New Timing System (time isn't the same every stop like last v0.1.0)</p>
+            <p>Estimated 6 Billion Baskets</p>
+            <p>Free V1.5 Release on Github after 2025 Launch.</p>
+            <p>New Countdown Screen</p>
+            <p>New movement tween system.</p>
+            <p>Delivering animation.</p>
+            <p>Same embed system as last time.</p>
+            <p>News Page.</p>
+            <p>You can now find us on Bing by searching.</p>
+            <p>Works as a static site.</p>
+            <p>New Data on countdown page (scroll down).</p>
+            <p>Permanent domain (http://masterbunnytracker.us.to)</p>
+            <p>Github Contributers now.</p>
+            <p>New Image GUI on tracker.</p>
+            <p>Tells you how long until he arrives in your city. (You can of course disable this in settings).</p>
+            <p>If he already arrived, shows what time he arrived if you click on the basket, and how long ago he arrived at the top.</p>
+            <p>You can choose what map style you want.</p>
+            <p>New settings ui.</p>
+            <p>You can now donate to me using my buy a coffee page. (Bottom right hand corner of any main page.)</p>
+        </blockquote>
+
+       
+        <div class="signature">
+            <p><strong>Master Bunny Trackers</strong></p>
+            <p>Hayden L.<br>Lead Builder/Programmer</p>
+        </div>
+    </div>
+
+    <div class="article" id="article2">
+        <div class="title">MBT Gains 15k Visitors</div>
+        <div class="metadata">Published on April 6, 2024 at 1:46:13 PM CDT</div>
+        <p>Without running, and with running, this year along we have had 15 thousand hits on our site. </p>
+    </div>
+
+    <div class="article" id="article1">
+        <div class="title">Shutdown of Big Tracker</div>
+        <div class="metadata">Published on April 6, 2024 at 12:00 PM</div>
+        <p>Recently, as you may know, tebcc (track.easterbunny.cc) shut down, which was very unfortunate. Due to costs,
+            his system was very hard to run, therefor, brings the shutdown of his software. It was very unfortunate as
+            he was my only competition and now he's gone. It's the worst feeling you can feel. To honor his system, in
+            2025 we will be using his bunny image instead of our usual to honor him. It was such an honor watching tebcc
+            grow, and now I'm inspired to create my own. This year was the second ever launch of mbt (master bunny
+            trackers), and this year was the first public launch. It's sad to see tebcc go, but now we will rise. This
+            program is growing fast, and has tons of moving parts. With version 0.5.0, we had implemented a lot of new
+            features. Here is the 2024 systems information:
+        </p>
+        <h1>Year of 2024 Systems Information</h1>
+        <blockquote>
+            <p>This year is being built on node.js and npm.</p>
+            <p>To start, there are an estimated <span class="highlight">10656</span> main stops for the bunny this year.
+            </p>
+            <p>Santa Claus normally calls the Easter Bunny to wish good luck, except for 2022 and 2019.</p>
+            <p>The Bunny is expected to launch from Easter Island at <span class="highlight">6 AM EST</span>.</p>
+            <p>He will usually start preparations at <span class="highlight">4 AM EST</span>.</p>
+            <p>This will be happening on <span class="highlight">March 30th, 2024</span>.</p>
+            <p>We updated a lot of things since this is the first year we are doing this system.</p>
+            <p>To start, he will deliver to about <span class="highlight">8.1 billion people (8,100,000,000
+                    people)</span>.</p>
+            <p>This is solely based on radars and will estimate the next location from past years and radars. We are
+                using Google satellites and NORAD radars.</p>
+            <p>Our system can be found on <a href="https://github.com">GitHub</a>.</p>
+            <p>If you would like to record this, please note that you can add <span class="highlight">?zoom=1-15</span>
+                at the end of <span class="highlight">/en-us/embed/map</span> or <span
+                    class="highlight">/en-us/embed/tracker</span> to go directly to the map and zoom.</p>
+            <p>This year is the first year for master bunny trackers to track the Easter Bunny, so sorry for any bugs.
+            </p>
+            <p>Should launch at <span class="highlight">8 am UTC</span>.</p>
+            <p>Every year the Easter Bunny gets a series of tasks before it launches. For instance, last year he had to
+                check every Easter egg which took about <span class="highlight">5 minutes</span>.</p>
+            <p>He likes to travel at a pace of <span class="highlight">8 seconds per city</span>.</p>
+            <p><span class="highlight">449.33</span> cities per hour.</p>
+            <p>It is really unknown how fast he travels, although it is predicted he travels at millions of miles per
+                hour.</p>
+            <p>An average of <span class="highlight">800 thousand baskets per city</span>.</p>
+        </blockquote>
+
+        <h2>New Updates V0.1.0</h2>
+        <div class="updates">
+            <p>Added Leaflet Map instead of map image.</p>
+            <p>Added Topbar.</p>
+            <p>Added Baskets count.</p>
+            <p>Added Server system, instead of timing system.</p>
+            <p>Added rate limit procedures.</p>
+            <p>Added UI Constraints to make a more consistent UI.</p>
+            <p>Added <span class="highlight">164</span> New Expected Cities.</p>
+            <p>Added Games Screen.</p>
+            <p>Added Better Mobile Support.</p>
+        </div>
+
+        <div class="signature">
+            <p><strong>Master Bunny Trackers</strong></p>
+            <p>Hayden L.<br>Lead Builder/Programmer</p>
+        </div>
+    </div>
+
+    <div class="article" id="article2">
+        <div class="title">MBT Gains 15k Visitors</div>
+        <div class="metadata">Published on April 6, 2024 at 1:46:13 PM</div>
+        <p>Without running, and with running, this year alone we have had 15 thousand hits on our site. </p>
+    </div>
+
+    <div class="version">Version 0.6.2</div>
+</body>
+
+</html>

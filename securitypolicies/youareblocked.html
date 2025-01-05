@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Denied</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #e74c3c;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .code {
+            font-size: 20px;
+            font-weight: bold;
+            color: #c0392b;
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            color: white;
+            background-color: #3498db;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>1020 - Your Request Was Blocked!</h1>
+        <img src="https://cdn.svgator.com/images/2022/12/santa-claus-and-rudolf-standing-next-to-the-christmas-tree-1.gif"
+            width="100%" alt="Santa and Rudolf">
+
+        <p>The resource you are trying to access has been blocked due to security policies. This may be due to
+            suspicious activity or because your IP address has been flagged for potential abuse.</p>
+        <p>Your country may also be blocked.</p>
+        <p><a href="https://master-trackers.xyz">master-trackers.xyz</a> tries to maintain a legal understanding to
+            follow all rules for all different countries. Considering our website is for children and globally
+            accessible, we try to follow all rules provided by other countries to ensure any violation of law is fairly
+            prosecuted.</p>
+        <p>If you believe this is an error, please contact the website administrator for further assistance.</p>
+
+        <div class="code">Error Code: http 403</div>
+        <div class="code">Cloudflare Error Code: Error 1020 (Access Denied)</div>
+
+        <button class="button" onclick="revealIP()">Reveal IP</button>
+        <button class="button" onclick="revealCountry()">Reveal Country</button>
+        <button class="button" onclick="window.location.href = '/assets/termsofblockage.html'">View Terms of
+            Blockage</button>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        async function revealIP() {
+            try {
+                const response = await fetch('/api/ip/get');
+                const data = await response.json();
+                document.getElementById('result').textContent = `IP Address: ${data.userIP}`;
+            } catch (error) {
+                document.getElementById('result').textContent = 'Error fetching IP address';
+            }
+        }
+
+        async function revealCountry() {
+            try {
+                const response = await fetch('/api/ip/get');
+                const data = await response.json();
+                document.getElementById('result').textContent = `Country: ${data.geo.country}`;
+            } catch (error) {
+                document.getElementById('result').textContent = 'Error fetching country';
+            }
+        }
+    </script>
+</body>
+
+</html>

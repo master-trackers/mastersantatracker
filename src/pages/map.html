@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+        <html lang="en">
+        
+        <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+          <title>Master Trackers - Santa Tracker</title>
+          <link rel="icon" href="https://github.com/Haydenlogs/sources/blob/main/image-removebg-preview%20(3).png?raw=true" type="image/png">
+          <meta name="msvalidate.01" content="8DF6B8C1C97521142EFB1F3437EC4E4C" />
+          <meta name="description" content="And he's off! Master Trackers has officially started tracking Santa Claus.">
+          <script src="/assets/timeworker.js"></script>
+          <!-- Meta tags for Bing -->
+          <meta name="msvalidate.01" content="8DF6B8C1C97521142EFB1F3437EC4E4C" />
+          
+          <!-- Optional Open Graph tags for better sharing on social media -->
+          <meta property="og:title" content="Master Trackers - Santa Tracker">
+          <meta property="og:description" content="And he's off! Master Trackers has officially started tracking Santa Claus.">
+          <meta property="og:type" content="website">
+          <meta property="og:url" content="http://master-trackers.xyz">
+          <meta property="og:image" content="https://github.com/Haydenlogs/sources/blob/main/image-removebg-preview%20(3).png?raw=true">
+          
+          <!-- Twitter Card tags for better sharing on Twitter -->
+          <meta name="twitter:card" content="https://github.com/Haydenlogs/sources/blob/main/image-removebg-preview%20(3).png?raw=true">
+          <meta name="twitter:title" content="Master Trackers - Santa Tracker">
+          <meta name="twitter:description" content="And he's off! Master Trackers has officially started tracking Santa Claus.">
+          <meta name="twitter:image" content="https://github.com/Haydenlogs/sources/blob/main/image-removebg-preview%20(3).png?raw=true">
+          
+          <!-- Canonical URL to avoid duplicate content issues -->
+          <link rel="canonical" href="http://master-trackers.xyz">
+          <style>
+           * {
+          overflow: hidden !important;
+        }
+        iframe {
+          overflow: hidden;
+        }
+        html {
+          overflow: hidden;
+        
+          user-select: none;
+            -moz-user-select: none; /* Firefox */
+            -webkit-user-select: none; /* Safari and Chrome */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+        }
+            .threed-view {
+              border-color: blue;
+              color: blue;
+            }
+            .exitButton {
+              background-color: darkblue;
+              color: white;
+              font-family: "Barlow", sans-serif;
+          font-weight: 300;
+          font-style: normal;
+              font-size: larger;      
+            }
+            .twod-view {
+              border-color: yellow;
+                    color: yellow;
+            }
+            
+            body {
+              margin: 0;
+              padding: 0;
+              font-family: Arial, sans-serif;
+              overflow: hidden;
+              overflow-x: hidden;
+              overflow-y: hidden;
+              height: 100vh;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)),
+                url("https://example.com/background.jpg") center/cover fixed;
+            }
+            .leaflet-pane {
+            border: none !important;
+        }
+        .leaflet-tile-container {
+            border: none !important;
+        }
+        #map {
+            border: none !important;
+        }
+        #logo {
+            color: #fff;
+            font-weight: bold;
+            text-transform: uppercase;
+            overflow: hidden; /* Prevents overflow */
+            white-space: nowrap; /* Keeps text in one line */
+            position: absolute; /* Positions the element relative to the nearest positioned ancestor */
+            left: 50%; /* Moves the element to the center horizontally */
+            transform: translate(-50%, 0); /* Centers the element */
+            max-width: calc(100% - 40px); /* Ensures the logo doesn't exceed the screen width */
+            padding: 0 20px; /* Adds padding to prevent text from touching edges */
+            box-sizing: border-box; /* Includes padding in the width calculation */
+        }
+        
+        @media (max-width: 600px) {
+            #logo {
+                font-size: 32px; /* Font size for mobile */
+                letter-spacing: 3px; /* Letter spacing for mobile */
+            }
+        }
+        
+        @media (min-width: 601px) and (max-width: 1024px) {
+            #logo {
+                font-size: 48px; /* Font size for tablets */
+                letter-spacing: 5px; /* Letter spacing for tablets */
+            }
+        }
+        
+        @media (min-width: 1025px) {
+            #logo {
+                font-size: 64px; /* Font size for desktops */
+                letter-spacing: 10px; /* Letter spacing for desktops */
+            }
+        }
+        
+        
+        #logo span {
+            display: inline-block;
+            transform: translateY(100%);
+            transition: transform 1s ease;
+        }
+        
+        #logo.spread span {
+            transform: translateY(0);
+        }
+        
+        /* Optional: To ensure the span does not overflow the parent */
+        #logo span {
+            max-width: 100%; /* Makes sure the span doesn't exceed the width */
+            overflow: hidden; /* Prevents overflow */
+            white-space: nowrap; /* Keeps span text in one line */
+        }
+        
+            @media screen and (max-width: 600px) and (-webkit-min-device-pixel-ratio: 1) {
+              
+            }
+            iframe {
+              position: fixed;
+              bottom: 0px;
+              width: 100vw;
+              height: calc(100vh - 60px);
+              border: none;
+              visibility: hidden;
+              overflow: hidden;
+              overflow-x: hidden;
+              overflow-y: hidden;
+              
+              transition: opacity 0.5s ease;
+            }
+        
+            .fade-in {
+              animation: fadeIn 1s forwards;
+            }
+        
+            @keyframes fadeIn {
+              0% {
+                visibility: hidden;
+                opacity: 0;
+              }
+        
+              100% {
+                visibility: visible;
+                opacity: 1;
+              }
+            }
+        
+            .fade-out {
+              animation: fadeOut 2s forwards 6s;
+            }
+        
+            @keyframes fadeOut {
+              0% {
+                visibility: visible;
+                opacity: 1;
+              }
+        
+              100% {
+                visibility: hidden;
+                opacity: 0;
+              }
+            }
+        
+            /* Top bar styles */
+            .topbar {
+              position: fixed;
+              top: 60px;
+              left: 0;
+              width: 100%;
+              height: 80px;
+              background-color: #333;
+              color: #fff;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding: 0 20px;
+              box-sizing: border-box;
+              z-index: 1000;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+              font-size: 18px;
+            }
+        
+            /* Right section */
+            .right-section {
+              display: flex;
+              align-items: center;
+            }
+        
+            #loading {
+              color: white;
+              font-size: 24px;
+              position: absolute;
+              bottom: 20px;
+              /* Adjust the distance from the bottom */
+              left: 50%;
+              transform: translateX(-50%);
+              opacity: 0;
+              transition: opacity 1s ease;
+              text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+            }
+        
+        
+            #loading.show {
+              opacity: 1;
+            }
+        
+            .right-section span {
+              margin-left: 20px;
+            }
+        
+            #srcimg {
+              top: 50%;
+              transform: translateY(100%);
+            opacity: 1; /* Temporarily set to 1 for testing */
+            transition: opacity 1s ease;
+        
+            position: fixed; /* Positions the element relative to the viewport */
+            left: 50%; /* Moves the element to the center horizontally */
+            transform: translate(-50%, 0); /* Centers the element */
+            
+            max-width: calc(100% - 40px); /* Ensures the logo doesn't exceed the screen width */
+            /* padding: 0 20px; /* Adds padding to prevent text from touching edges */
+        
+            /* Uncomment these if needed */
+            /* color: #fff; */
+            /* z-index: 91923981209839; */
+            /* font-weight: bold; */
+            /* text-transform: uppercase; */
+        }
+        
+        
+            #logo.spread img {
+             /* opacity: 1;*/
+            }
+        
+            /* Overlay styles */
+            .overlay2 {
+              position: fixed;
+              bottom: 20px;
+              right: 20px;
+              z-index: 9999;
+            }
+        
+            /* Settings button styles */
+            .settings-btn2 {
+              background-color: #333;
+              color: white;
+              padding: 10px 20px;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+              transition: background-color 0.3s;
+            }
+        
+            .settings-btn2:hover {
+              background-color: #555;
+            }
+            @media (max-width: 600px) {
+          body {
+          zoom: 50%; /* Zooms the page to 150% */
+        }
+        iframe {
+                width: 100%;
+              height: 100%;
+              }
+        
+        }
+        /* Targeting the Google Translate iframe */
+        .skiptranslate iframe {
+          filter: invert(1) hue-rotate(180deg); /* Dark mode effect */
+        
+           width: 90vw; /* Ensure it fits its container */
+            
+        }
+        #iframe {
+          opacity: 0;
+        }
+        .settingsiframe {
+          width: 100%;
+              height: 100%;
+              border-color: transparent;
+              
+        }
+            /* Settings popup styles */
+            .settings-popup {
+              width: 50%;
+              height: 50%;
+              position: fixed;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              z-index: 99999;
+              background-color: #333;
+              color: white;
+              padding: 10px;
+              border-radius: 20px;
+              border-color: #f0f8ff;
+              box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+              display: none;
+              /* Initially hidden */
+            }
+        
+            /* Close button for the settings popup */
+            .close-btn2 {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              color: white;
+              cursor: pointer;
+            }
+            #header {
+                    position: fixed;
+                    top: 0;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 20px 0;
+                    background-color: #333;
+                    z-index: 999;
+                }
+        
+                #logo2 {
+                    width: 50px;
+                    height: 50px;
+                    margin-right: 10px;
+                }
+        
+                h1 {
+                    font-size: 24px;
+                    margin: 0;
+                    color: white;
+                }
+                #viewButton {
+                  position: fixed;
+                  top: 0;
+                  right: 0;
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    font-family: Arial, sans-serif;
+                    border: 2px solid;
+                    border-radius: 20px;
+                    background: transparent;
+                    cursor: pointer;
+                    outline: none;
+                    transition: all 0.3s ease;
+                    z-index: 912938918273891;
+                }
+                #exitButton {
+                  visibility: hidden;
+                  position: fixed;
+                  top: 0;
+                  right: 0;
+                    padding: 10px 20px;
+                    font-family: Arial, sans-serif;
+                    border: 2px solid;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    outline: none;
+                    transition: all 0.3s ease;
+                    z-index: 912938918273891;
+                }
+                .google-translate {
+            position: fixed;
+            top: 20px; /* Adjust as needed */
+            right: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            filter: invert(1) hue-rotate(180deg); /* Dark mode effect */
+        
+        }
+        
+        .google-translate {
+            position: fixed;
+            top: 20px; /* Adjust as needed */
+            left: 15px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            filter: invert(1) hue-rotate(180deg); /* Dark mode effect */
+        
+        }
+        
+        #header:hover .google-translate {
+            opacity: 1;
+        }
+          </style>
+        </head>
+        <script src="https://holistic-waiting-unicorn.glitch.me/servercheck.js"></script>
+        <body>
+          <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'en',
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                }, 'google_translate_element');
+            }
+        </script>
+        
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        
+          <div id="header">
+            <img id="logo2" src="https://github.com/Haydenlogs/sources/blob/main/image-removebg-preview%20(3).png?raw=true" alt="Logo">
+            <h1>Master Santa Trackers 2024</h1>
+            <div id="google_translate_element" class="google-translate"></div>
+        
+        </div><button id="viewButton" class="threed-view">2D View</button> 
+        <button id="exitButton" class="exitButton">X</button> 
+          <div class="topbar">
+            <span id="utc-time"></span>
+            <span id="london-time"></span>
+            <span id="nyc-time"></span>
+            <span id="tokyo-time"></span>
+            <span id="local-time"></span>
+          </div>
+        
+          <div id="logo" class="fade-in">
+            <span>M</span>
+            <span>a</span>
+            <span>s</span>
+            <span>t</span>
+            <span>e</span>
+            <span>r</span>
+            <span> </span>
+            <span>S</span>
+            <span>a</span>
+            <span>n</span>
+            <span>t</span>
+            <span>a</span>
+            <span> </span>
+            <span>T</span>
+            <span>r</span>
+            <span>a</span>
+            <span>c</span>
+            <span>k</span>
+            <span>e</span>
+            <span>r</span>
+            <span>s</span>
+            
+          </div><img id="srcimg" src="/assets/santa.png" alt="Logo Image" />
+          <div id="loading">Loading...</div>
+          
+          <iframe id="iframe" src="/en-us/embed/inpreparation.html"></iframe>
+          <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        
+          <script>
+             const viewButton = document.getElementById('viewButton');
+        
+             const exitButton = document.getElementById('exitButton');
+             const iframe2 = document.getElementById('iframe');
+          const iframe = document.getElementById('iframe');
+          var countdownDate;
+          async function fetchCountdownDate() {
+
+  
+  try {
+    const response = await fetch('/getcountdowndate');
+    countdownDate = await response.text(); // Assuming it returns a plain text Unix timestamp
+    
+  } catch (error) {
+    console.error('Error fetching countdown date:', error);
+  }
+  
+ 
+}
+
+// Call the function
+fetchCountdownDate()
+          const srcimage = document.getElementById("srcimg");
+        function update3dbutton() {
+
+          if ((currenttimeunixsec/1000) > countdownDate) {
+            viewButton.style.visibility = "Visible";
+            exitButton.style.visibility = "Hidden";
+            
+        } else if ((currenttimeunixsec/1000) < (countdownDate-10800)) {
+            viewButton.style.visibility = "Hidden";
+            exitButton.style.visibility = "Visible";
+        } else if ((currenttimeunixsec/1000) > (countdownDate-10800) && (currenttimeunixsec/1000) < countdownDate) {
+          viewButton.style.visibility = "Hidden";
+            exitButton.style.visibility = "Hidden";
+        }
+        }
+          async function updateIframe() {
+           
+        
+                // Get the current URL and extract query parameters
+                const currentUrl = new URL(window.location.href);
+                const queryParams = currentUrl.search; // Extract query parameters
+        
+                // Update iframe source based on the countdown date, appending query parameters
+                iframe.src = (currenttimeunixsec/1000) < countdownDate 
+                    ? '/en-us/embed/inpreparation.html' + queryParams 
+                    : '/en-us/embed/cesium' + queryParams;
+        
+               
+           
+        }
+        
+          // Initial check and set interval for periodic updates
+
+        setInterval(() => {
+          update3dbutton()
+        }, 1000);
+        viewButton.addEventListener('click', () => {
+            const currentUrl = new URL(window.location.href); // Get the current URL
+            const queryParams = currentUrl.search; // Extract query parameters
+        
+            if (viewButton.classList.contains('threed-view')) {
+                viewButton.classList.remove('threed-view');
+                viewButton.classList.add('twod-view');
+                viewButton.textContent = '3D View';
+                iframe2.src = '/en-us/embed/2dtracker' + queryParams; // Append query parameters
+            } else {
+                viewButton.classList.remove('twod-view');
+                viewButton.classList.add('threed-view');
+                viewButton.textContent = '2D View';
+                iframe2.src = '/en-us/embed/cesium' + queryParams; // Append query parameters
+            }
+        });
+        exitButton.addEventListener('click', () => {
+            window.location.href = "/"
+        });
+        
+            /*  document.addEventListener('DOMContentLoaded', () => {
+          // Function to check the screen width
+          function checkScreenWidth() {
+            if (window.innerWidth < 900 || window.innerHeight < 900) {
+              const topbar = document.querySelector('.topbar');
+              const header = document.getElementById('header');
+              if (topbar) {
+                topbar.style.display = 'none';
+              }
+              if (header) {
+                header.style.display = 'none';
+              }
+            } else {
+              const topbar = document.querySelector('.topbar');
+              const header = document.getElementById('header');
+              if (topbar) {
+                topbar.style.display = 'block';
+              }
+              if (header) {
+                header.style.display = 'block';
+              }
+            }
+          }
+        
+          // Initial check
+          checkScreenWidth();
+        
+          // Check screen width on resize
+          window.addEventListener('resize', checkScreenWidth);
+        });*/
+          // Create a new EventSource instance for the /updates endpoint
+          ///const eventsource1481903284 = new EventSource('/updates');
+        
+        // Listen for messages from the server
+        /*eventsource1481903284.onmessage = function(event) {
+            // Parse the received data
+            const data = JSON.parse(event.data);
+        
+            // Display the data in the updates div
+            // Check if trackerEnded is true
+            if (data.trackerEnded && data.trackerEnded === true) {
+                // Change the iframe source to /en-us/embed/ended.html
+               // document.getElementById('iframe').src = '/en-us/embed/ended.html';
+                // Optionally close the EventSource connection
+                
+            }
+            if (data.refresh && data.refresh === true) {
+              // Change the iframe source to /en-us/embed/ended.html
+        //      document.getElementById('iframe').src = '/en-us/embed/ended.html';
+                // Optionally close the EventSource connection
+                
+            }
+        };
+        
+        // Handle any errors that occur
+        eventsource1481903284.onerror = function(error) {
+            console.error('EventSource failed:', error);
+            
+        };
+        
+        // Optional: Handle connection open event
+        eventsource1481903284.onopen = function() {
+            console.log('Connection to server opened.');
+        };*/
+          </script>
+            
+            <script>
+              window.onload = async function() {
+                try {
+                  // Fetch the manifest to get the correct hash
+                  const response = await fetch('/scripts/manifest.json');
+                  const manifest = await response.json();
+                  
+                  // Extract the script hash from the manifest
+                  const scriptHash = manifest['scriptcheckmap'];
+            
+                  // Dynamically create the script URL with the hash
+                  const script = document.createElement('script');
+                  script.src = `/scripts/${scriptHash}`;
+            
+                  // Append the script to the body to load it
+                  document.body.appendChild(script);
+                } catch (error) {
+                  console.error('Failed to load script:', error);
+                }
+              };
+            </script>
+          </script><script>
+            window.onload = async function() {
+              try {
+                // Fetch the manifest to get the correct hash
+                const response = await fetch('/scripts/manifest.json');
+                const manifest = await response.json();
+                
+                // Extract the script hash from the manifest
+                const scriptHash = manifest['mapviewer'];
+          
+                // Dynamically create the script URL with the hash
+                const script = document.createElement('script');
+                script.src = `/scripts/${scriptHash}`;
+          
+                // Append the script to the body to load it
+                document.body.appendChild(script);
+              } catch (error) {
+                console.error('Failed to load script:', error);
+              }
+            };
+          </script>
+        
+        </body>
+        
+        </html>

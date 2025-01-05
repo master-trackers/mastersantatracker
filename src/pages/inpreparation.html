@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Countdown</title>
+    <link rel="icon" href="https://github.com/Haydenlogs/sources/blob/main/image-removebg-preview%20(3).png?raw=true" type="image/png">
+    <meta name="msvalidate.01" content="8DF6B8C1C97521142EFB1F3437EC4E4C" />
+    <meta name="description" content="Master Trackers is preparing to track Santa Claus.">
+    <script src="/assets/timeworker.js"></script>
+    <!-- Meta tags for Bing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.6/easing/EasePack.min.js"></script>
+    <meta name="msvalidate.01" content="8DF6B8C1C97521142EFB1F3437EC4E4C" />
+    <script src="https://mastertrackers.statuspage.io/embed/script.js"></script>
+
+    <!-- Optional Open Graph tags for better sharing on social media -->
+    <meta property="og:title" content="Master Trackers">
+    <meta property="og:description" content="Master Trackers is preparing to track Santa Claus.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://master-trackers.xyz">
+    <meta property="og:image" content="https://github.com/Haydenlogs/sources/blob/main/image-removebg-preview%20(3).png?raw=true">
+    
+    <!-- Twitter Card tags for better sharing on Twitter -->
+    <meta name="twitter:card" content="https://github.com/Haydenlogs/sources/blob/main/image-removebg-preview%20(3).png?raw=true">
+    <meta name="twitter:title" content="Master Trackers">
+    <meta name="twitter:description" content="Master Trackers is preparing to track Santa Claus.">
+    <meta name="twitter:image" content="https://github.com/Haydenlogs/sources/blob/main/image-removebg-preview%20(3).png?raw=true">
+    
+    <!-- Canonical URL to avoid duplicate content issues -->
+    <link rel="canonical" href="http://master-trackers.xyz">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 17px;
+            background-image: url('/assets/santaprepares.png');
+    background-size:auto; /* Cover ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image horizontally and vertically */
+
+            /* Dark grey background */
+            color: #fff;
+            /* White text color */
+            margin: 0;
+            padding: 0;
+            position: relative;
+            height: 100vh;
+            font-weight: normal;
+        }
+
+        
+        #countdown {
+    margin-top: 100px;
+    font-size: 78px; /* Large font size */
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #fff; /* White text color */
+    margin: 0;
+    padding: 0;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh; /* Adjusted height for countdown */
+    font-weight: normal; /* Set font weight to normal */
+}
+
+#launchestimate {
+    font-size: 28px; /* Adjust font size as needed */
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #fff; /* White text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal; /* Set font weight to normal */
+    position: absolute;
+    bottom: 30%;
+    left: 30%;
+    right: 30%
+}
+
+
+        /* Overlay styles */
+        .overlay {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+        }
+
+        /* Settings button styles */
+        .settings-btn {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .settings-btn:hover {
+            background-color: #555;
+        }
+
+        .settingsiframe {
+  width: 100%;
+      height: 100%;
+      border-color: transparent;
+      
+}
+    /* Settings popup styles */
+    .settings-popup {
+      width: 50%;
+      height: 50%;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 99999;
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      border-radius: 20px;
+      border-color: #f0f8ff;
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+      display: none;
+      /* Initially hidden */
+    }
+
+        /* Close button for the settings popup */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: white;
+            cursor: pointer;
+        }
+
+        #tween-info {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            background-color: #1b1b1b;
+            border: 1px solid #cccccc85;
+            border-radius: 5px;
+            padding: 10px;
+            z-index: 200000;
+            display: flex;
+            align-items: center;
+        }
+
+        #tween-speed {
+            font-weight: bold;
+            color: white;
+            margin-right: 10px;
+        }
+
+        #speed-value {
+            color: white;
+        }
+
+        #countdownButtonContainer {
+            display: flex;
+            justify-content: flex-end;
+            /* Align items to the right */
+            align-items: center;
+            height: 40px;
+        }
+
+        #countdownButton {
+            background-color: #666;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s;
+            /* Hover animation */
+        }
+
+        #countdownButton2 {
+            background-color: #666;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s;
+            /* Hover animation */
+        }
+
+        #countdownButton:hover {
+            transform: scale(1.1);
+            /* Hover animation */
+        }
+
+        #countdownButton img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        #countdownButton {
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 999999;
+        }
+        .top-bar2 {
+      width: 90%;
+      height: 20%;
+      position: fixed;
+      color: white;
+      top: 16%;
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      zoom: 88%;
+      /* Center content */
+      align-items: center;
+      padding: 0;
+      /* Remove padding */
+      background-color: transparent;
+      left: 50%;
+      /* Center the bar */
+      transform: translateX(-50%);
+      /* Adjust for the bar's width */
+    }
+
+    .info-container {
+      display: flex;
+    }
+
+    .info-box {
+      flex: 1;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      background-color: #333;
+      margin: 0 10px;
+      /* Adjust margin for spacing between boxes */
+      border-radius: 10px;
+      /* Slightly curved edges */
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      /* Box shadow for depth */
+    }
+    .title {
+      font-size: 0.8em;
+      margin-bottom: 5px;
+    }
+
+    .data {
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+    
+    .notes {
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    #overlay {
+      position: fixed;
+      top: 150px;
+      /* Adjust this value as needed */
+      right: 25px;
+      /* Adjust this value as needed */
+      z-index: 1999;
+    }
+    #tween-info {
+
+position: fixed;
+bottom: 10px;
+left: 10px;
+background-color: #1b1b1b;
+border: 1px solid #cccccc85;
+border-radius: 5px;
+padding: 10px;
+z-index: 200000;
+display: none; /* flex */
+align-items: center;
+}
+    </style>
+</head>
+
+<body>
+
+    
+    <div id="preptext" class="top-bar2">
+        <div class="info-container">
+            <div class="info-box">
+                <span class="title">Status:</span>
+                <span id="lastCityInfo" class="data">Santa is in Preparation. Expected Launch Soon!</span><br/>
+                <span class="notes" id="notes"></span>
+            </div>
+            <div class="info-box">
+                <span class="title">Gifts Loaded:</span>
+                <span id="giftsloaded" class="data">LOADING!!!</span><br/>
+                <span class="notes" id="notes">The amount of gifts that have been loaded onto Santa's Sleigh.</span>
+            </div>
+            <div class="info-box">
+                <span class="title">Gifts Awaiting Loading:</span>
+                <span id="giftsreadytoload" class="data">LOADING!!!</span><br/>
+                <span class="notes" id="notes">The gifts that are waiting to be loaded onto Santa's Sleigh.</span>
+            </div>
+            <div class="info-box">
+                <span class="title">Estimated time:</span>
+                <span id="timebetween" class="data">LOADING!!!</span><br/>
+                <span class="notes" id="notes">The time until Santa's Sleigh fills up.</span>
+            </div>
+            <div class="info-box">
+                <span class="title">Your Present:</span>
+                <span id="presentinfo" class="data">Not yet available</span><br/>
+                <span class="notes" id="notes">The number present you are assigned.</span>
+            </div>
+            <div class="info-box">
+                <span class="title">Sleigh Weight:</span>
+                <span id="weightinfo" class="data">Not yet available</span><br/>
+                <span class="notes" id="notes">Measured in gd (gumdrops).</span>
+            </div>
+        </div>
+       
+    </div>
+    
+        
+  
+
+    
+    <!-- Overlay with settings button -->
+    <div class="overlay">
+        <button class="settings-btn" onclick="toggleSettings()">Settings</button>
+    </div>
+
+    <!-- Settings popup -->
+    <div id="settingsPopup" class="settings-popup">
+        <!-- Close button -->
+        <span class="close-btn" onclick="toggleSettings()">X</span>
+        <!-- Settings page iframe -->
+        <iframe src="/embed/settings" class="settingsiframe"></iframe>
+    </div>
+    <div id="countdown"></div>
+    <script>
+      
+      
+    </script>
+</body><style>
+
+    .discord-button {
+      position: fixed;
+          bottom: 60px;
+          right: 20px;
+          z-index: 9999;
+    }
+    
+      .discord-button button {
+          background-color: #333;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          transition: background-color 0.3s;
+    }
+    
+    .discord-button button:hover {
+    background-color: #555;
+    }
+      
+    
+      .discord-button button img {
+          height: 15px;
+          margin-left: 5px;
+          border-radius: 3px;
+      }
+    </style>
+    <!-- Fixed position Discord button -->
+    <div class="discord-button">
+      <button onclick="window.open('https://discord.gg/AVSJQmF6zP')">
+          Discord  <img src="https://static.vecteezy.com/system/resources/previews/006/892/625/original/discord-logo-icon-editorial-free-vector.jpg" hidden alt="Discord Icon">
+      </button>
+    </div>
+
+</html><script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get the current year
+      var currentYear = new Date(currenttimeunixsec).getFullYear();
+      
+      // Select all span elements with the id 'year'
+      var yearElements = document.querySelectorAll('span#year');
+      
+      // Update the text content of each element to the current year
+      yearElements.forEach(function(element) {
+        element.textContent = currentYear;
+      });
+    });
+  </script>
+    <script>
+// Hide the message element initially
+let countdownDate;
+
+document.getElementById("preptext").style.display = 'none';
+
+// Predefined messages for Santa's status updates with corresponding time remaining in seconds
+const messages = [
+
+    
+{ timeUntil: 10800, message: "ptclosed" }, // 3 hours
+    { timeUntil: 10500, message: "✨ Santa is checking his list! Have you been naughty or nice? 🎁", imagesrc: "https://img1.picmix.com/output/pic/normal/2/6/3/5/5665362_c6342.gif"}, // 2 hours 55 minutes
+    { timeUntil: 10200, message: "🎄 The reindeer are eagerly awaiting their flight! 🦌", imagesrc: "https://pixelboom.it/wp-content/uploads/2022/10/Santas-Reindeer-Blue-Screen-3D-Animation-PixelBoom.jpg"}, // 2 hours 50 minutes
+    { timeUntil: 9900, message: "🎉 The cookies are fresh out of the oven! Santa will love them! 🍪🥛", imagesrc: "https://media.istockphoto.com/id/1406238681/vector/hands-in-gloves-taking-out-tray-of-cookies-from-baking-oven-baker-making-dessert.jpg?s=612x612&w=0&k=20&c=Zq2GE5iQF73nxwNhGVI-iqQSbrNcHVq8YyJSc0DOCV0="}, // 2 hours 45 minutes
+    { timeUntil: 9600, message: "🎅 Santa is busy loading gifts into the sleigh! The excitement is building!", imagesrc: "https://content.presentermedia.com/files/clipart/00024000/24398/santa_and_helper_distance_load_sleigh_800_wht.jpg" }, // 2 hours 40 minutes
+    { timeUntil: 9300, message: "⏳ Elves are singing carols and the magic is in the air!", imagesrc: "https://media.istockphoto.com/id/1181176263/vector/christmas-character-choir.jpg?s=612x612&w=0&k=20&c=QEl1K5_dKZmODJEUDK6k7lJP7oH15rFrw2TdTdK2sRg="}, // 2 hours 30 minutes
+    { timeUntil: 9000, message: "🌟 Santa's workshop is buzzing with holiday cheer!", imagesrc: "https://img.freepik.com/free-vector/flat-christmas-santa-workshop-illustration_23-2149820931.jpg"}, // 2 hours 25 minutes
+    { timeUntil: 8700, message: "🎉 The North Pole is aglow with twinkling lights! Can you feel the magic?", imagesrc: "https://www.shutterstock.com/shutterstock/videos/92701/thumb/1.jpg?ip=x480"}, // 2 hours 20 minutes
+    { timeUntil: 8400, message: "🎅 Reindeer are getting their harnesses on! They're ready for adventure!", imagesrc: "https://i.ebayimg.com/images/g/VSEAAOSw7NNUJgcM/s-l400.jpg"}, // 2 hours 15 minutes
+    { timeUntil: 8100, message: "✨ The sleigh is sparkling under the Northern lights, almost ready to go!", imagesrc: "https://t4.ftcdn.net/jpg/08/87/87/21/360_F_887872144_8KVXwqWMo6kXLPq0321W6wkzLFTP3Duw.jpg"}, // 2 hours 10 minutes
+    { timeUntil: 7800, message: "🎄 The reindeer can hardly wait! They’re getting restless for their flight!", imagesrc: "https://media.tenor.com/XJOKkH89tL8AAAAM/klm-santa-claus.gif"}, // 2 hours 5 minutes
+    { timeUntil: 7500, message: "⏳ The magic of Christmas is building! Are you ready to join in?", imagesrc: "https://www.shutterstock.com/image-vector/santa-going-gift-bag-600nw-1908849814.jpg"}, // 2 hours
+    { timeUntil: 7200, message: "🎉 The North Pole is filled with laughter and joy! What’s your favorite Christmas memory?", imagesrc: "https://3d-lab.org/wp-content/uploads/2022/05/unknown-4-1616x808.png"}, // 1 hour 40 minutes
+    { timeUntil: 6900, message: "🎅 Elves are putting the final touches on Santa's gift list! It’s almost time!", imagesrc: "https://i.insider.com/5a29bd977101ad262673708c?width=700"}, // 1 hour 35 minutes
+    { timeUntil: 6600, message: "✨ The sleigh is packed with surprises! Santa can't wait to share them!", imagesrc: "https://media.istockphoto.com/id/1865111288/vector/santa-claus-in-the-sleigh-pulled-by-sparkling-reindeer-travels-through-the-night-sky.jpg?s=612x612&w=0&k=20&c=uJ786n87iH_gvcRnjoiRkVKWfqFq4zMM-2USAftLits="}, // 1 hour 30 minutes
+    { timeUntil: 6300, message: "🎄 The countdown to Christmas is thrilling! What do you hope for this year?", imagesrc: "https://i.pinimg.com/originals/e4/ae/aa/e4aeaa1248fc63856af4d1e4849f51d8.gif"}, // 1 hour 25 minutes
+    { timeUntil: 6000, message: "🎉 Elves are buzzing with excitement! The holiday magic is just around the corner!", imagesrc: "https://shop.bitgem3d.com/cdn/shop/products/character-toon-elves-1_1024x.jpeg?v=1585921584"}, // 1 hour 20 minutes
+    { timeUntil: 5700, message: "🎅 The reindeer are warming up for their big night! They’re so eager!", imagesrc: "https://media.licdn.com/dms/image/D5612AQF_SeM9IZ67zg/article-cover_image-shrink_720_1280/0/1670301905377?e=2147483647&v=beta&t=70EUjSpoLT_VJemFB-OMN5HTo8v3HNMdsf7uV3iQXjI"}, // 1 hour 15 minutes
+    { timeUntil: 5400, message: "✨ Santa is making sure everything is perfect for the journey ahead!", imagesrc: "https://www.heavenandearthdesigns.com/images/interlitho/Santa%20Checks%20His%20List_1.jpg"}, // 1 hour 10 minutes
+    { timeUntil: 5100, message: "🎄 Stockings are hung by the chimney! Santa will be here soon!", imagesrc: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhC2nXACTa2fjlsen2Kn8s-iIO2ZGsmPGJ-hcOOiEOsel5WwQBQPzZlCSMV36U1mTIrYdS0sdmIkmjbUrQHYC_GyPOOQQYblFGG_Ocr5Rk4j3RIodoMzukfbDfKiMlOhyphenhyphenNGFIKJWxRKpSU/s280/BarePlushHarborporpoise-small.gif"}, // 1 hour
+    { timeUntil: 4800, message: "🎉 The elves are sharing stories of Christmas magic! The air is filled with joy!", imagesrc: "https://friendlystock.com/wp-content/uploads/2020/05/1-santa-claus-and-elves-at-a-snowy-house-cartoon-clipart.jpg"}, // 55 minutes
+    { timeUntil: 4500, message: "🎅 Santa’s sleigh bells are jingling! The excitement is palpable!", imagesrc: "https://media.istockphoto.com/id/1357466235/vector/christmas-fun-scene-santa-claus-sled-and-reindeer.jpg?s=612x612&w=0&k=20&c=3ZVXd4kMlIqIgmaxEjv_QwnwBOal3yTE4vEnv7iT0tg="}, // 50 minutes
+    { timeUntil: 4200, message: "🛦 We are receiving reports from NORAD of an unknown object to the North.", imagesrc: "https://i.ytimg.com/vi/vTRHl9LZn7g/maxresdefault.jpg"}, // 45 minutes
+    { timeUntil: 3900, message: "🎄 The scent of pine fills the air! It’s the perfect holiday atmosphere!", imagesrc: "https://static5.depositphotos.com/1031812/444/v/450/depositphotos_4442077-stock-illustration-snowmen.jpg"}, // 40 minutes
+    { timeUntil: 3600, message: "🎉 The North Pole is a flurry of activity! Everyone is ready to celebrate!", imagesrc: "https://amusedfineart.com/uploads/1/0/6/8/106872333/north-pole_orig.jpg"}, // 35 minutes
+    { timeUntil: 3300, message: "🎅 Santa’s favorite cocoa is brewing! The warmth spreads joy all around!", imagesrc: "https://drydenart.weebly.com/uploads/8/9/6/1/8961653/img-1302_orig.gif"}, // 30 minutes
+    { timeUntil: 3000, message: "✨ The stars are twinkling bright in the clear North Pole sky, and magic is in the air!", imagesrc: "https://cdn.mos.cms.futurecdn.net/k6okX2VVUg4qWoyxuNLsf7-1200-80.jpg"}, // 25 minutes
+    { timeUntil: 2700, message: "🎄 Snowflakes are dancing! Keep your eyes on the sky for a surprise!", imagesrc: "https://wallpapers.com/images/hd/snowing-background-9niw1aqyiqkifd8u.jpg"}, // 20 minutes
+    { timeUntil: 2400, message: "🎉 The magic is building! Get ready for the festive fun ahead!", imagesrc: "https://st2.depositphotos.com/1672894/9380/v/450/depositphotos_93805068-stock-illustration-winter-village-scene.jpg"}, // 15 minutes
+    { timeUntil: 2100, message: "🎅 Reindeer games are underway! Who will win the race to the sky?", imagesrc: "https://www.visitsalla.fi/wp-content/uploads/2022/03/202203-Porokisat-Salla-13-Mikaela-Creutz.jpg"}, // 10 minutes
+    { timeUntil: 1800, message: "🎉 The elves are preparing for the biggest surprise of the night! Stay tuned!", imagesrc: "https://i.ytimg.com/vi/OtxzPY2w5_k/maxresdefault.jpg"}, // 9 minutes
+    { timeUntil: 1500, message: "🎅 Santa’s getting ready for his grand entrance! Excitement is in the air!", imagesrc: "https://media.gettyimages.com/id/1447568615/video/santa-claus-flying-on-a-sleigh-with-reindeers-alpha-channel-loop-animation.jpg?s=640x640&k=20&c=9E3EvSZVcfmSRwRDE1dzKFSnZ88-Abfn_ltR_8qPJi8="}, // 8 minutes
+    { timeUntil: 1200, message: "✨ Keep your eyes peeled for the magic in the sky! It’s almost here!", imagesrc: "https://img.freepik.com/free-vector/realistic-winter-north-pole-background_23-2149878150.jpg"}, // 7 minutes
+    { timeUntil: 900, message: "🎄 The holiday spirit is alive! Let’s share our cheer with everyone around!", imagesrc: "https://img.freepik.com/free-vector/santa-claus-living-room-with-christmas-tree_107791-8960.jpg"}, // 6 minutes
+    { timeUntil: 750, message: "🎉 Only a few moments left until the big reveal! Get ready for joy!", imagesrc: "https://img.freepik.com/premium-vector/winter-north-pole-arctic-cartoon_251661-601.jpg"}, // 5 minutes
+    { timeUntil: 600, message: "🎅 Excitement is building! The holiday cheer is just moments away!", imagesrc: "https://classroomclipart.com/image/content7/50879/thumb.gif"}, // 4 minutes
+    { timeUntil: 450, message: "✨ The air is filled with joy! The celebration is about to begin!", imagesrc: "https://preview.redd.it/i-built-the-north-pole-complete-with-toy-workshop-elves-v0-t5dnfme8sw7a1.png?width=640&crop=smart&auto=webp&s=e869438d0eb9ac63a0cc8f4041561294a8e9067e"}, // 3 minutes
+    { timeUntil: 300, message: "🎄 Gather your friends and family for the festivities! Let’s celebrate together!", imagesrc: "https://friendlystock.com/wp-content/uploads/2020/05/9-santa-s-workshop-in-the-north-pole-background-cartoon-clipart.jpg"}, // 2 minutes
+    { timeUntil: 150, message: "🎉 Get your cameras ready! This is a moment to cherish and share!", imagesrc: "https://media.tenor.com/images/16584611bdd47fe940181e66c2a3c3b5/tenor.gif"}, // 1 minute
+    { timeUntil: 0, message: "🎅🎈 It is currently reported that Santa is starting liftoff procedures.", imagesrc: "https://media.tenor.com/images/16584611bdd47fe940181e66c2a3c3b5/tenor.gif"} // 0 minutes
+
+];
+
+// Fetch countdown date on load
+
+fetch('/getcountdowndate')
+    .then(response => response.text())
+    
+    .then(timestamp => {
+        countdownDate = parseInt(timestamp, 10) * 1000; // Convert Unix timestamp (in seconds) to milliseconds
+        updateMessage(); // Initial call to display the message
+        setInterval(updateMessage, 45); // Start updating the message every second
+    })
+    .then(rungiftcounter)
+    .catch(error => {
+        console.error('Error fetching countdown date:', error);
+    });
+
+    let isVisible = false; // Track visibility state
+    let backgroundChanged = false; // Flag to track if the background has been changed
+let hasrefreshed = false
+// Function to update the message based on time until countdown
+function updateMessage() {
+    const now = new Date(currenttimeunixsec).getTime();
+    const timeUntilEvent = (countdownDate - now) / 1000; // Time remaining in seconds
+    let latestMessage = "🎅 No current updates!"; // Default message if no match
+console.log(timeUntilEvent)
+    // Loop through messages to find the appropriate one
+    for (const entry of messages) {
+        if (timeUntilEvent >= entry.timeUntil) {
+            if (timeUntilEvent < 10800) {
+            latestMessage = entry.message; // Store the last valid message
+            document.body.style.backgroundImage = `url('${entry.imagesrc}')`;
+            document.body.style.backgroundSize = 'auto'; // Adjust to 'cover' if needed
+            document.body.style.backgroundRepeat = 'no-repeat';
+            document.body.style.backgroundPosition = 'center';
+ 
+                    document.body.style.backgroundSize = "cover"; // Change to cover for the GIF
+            break; // Exit loop as soon as we find the last valid message
+        } }
+    }
+
+    // Check if the latest message is "ptclosed" to hide it
+    if (timeUntilEvent > 10800) {
+        document.getElementById("preptext").style.display = 'none';
+        isVisible = false; // Ensure visibility state is updated
+    } if (timeUntilEvent < 1) {
+       if (!hasrefreshed) {
+        hasrefreshed = true
+         window.location.href = "/en-us/embed/cesium"
+       }
+    } 
+    if (timeUntilEvent < 10800 && timeUntilEvent > 0) {
+        console.log("TEST")
+        // Show the message if the time condition has been met and it wasn't visible before
+       
+            console.log("TEST2")
+            document.getElementById("preptext").style.display = 'block';
+            isVisible = true; // Set visibility state to true
+        // Change background image only once
+        if (!backgroundChanged) {
+                    document.body.style.backgroundImage = "url('https://i.pinimg.com/originals/ba/5b/61/ba5b613b625e1013284f588943cd6e15.gif')";
+                    backgroundChanged = true; // Set the flag to true
+                    document.body.style.backgroundSize = "cover"; // Change to cover for the GIF
+
+                }
+    }
+
+    // Display the latest message if available
+    document.getElementById("lastCityInfo").innerHTML = latestMessage;
+}
+function rungiftcounter() {
+    
+// Function to calculate the percentage
+function findPercentage(startNum, currentNum, endNum) {
+    return ((currentNum - startNum) / (endNum - startNum)) * 100;
+}
+console.log(countdownDate)
+// Initialize variables
+const startNum = (countdownDate/1000) - 10990; // Adjusted start time (Unix timestamp)
+const currentNum = Math.floor(currenttimeunixsec / 1000); // Current Unix time
+const endNum = (countdownDate/1000)-12;
+let easelevel = Power1.easeInOut
+let localpreset;
+const startcount = 0;
+const endcount = 7586082145;
+let endweight = 75000
+var weightelement = document.getElementById("weightinfo")
+window.onload = () => {
+  // Check if localpresent is in localStorage
+  localpreset = localStorage.getItem('localpresent');
+  
+  // If not, generate a new one
+  if (!localpreset) {
+    
+    
+    // Get the current timezone offset in minutes
+    const timezoneOffset = new Date().getTimezoneOffset();
+    
+    // Calculate a weighted random number based on the timezone offset
+    const weightFactor = (timezoneOffset < 0) ? (Math.abs(timezoneOffset) * 1000) : (Math.abs(timezoneOffset) * 100);
+    
+    // Generate a random number between startcount and endcount, weighted by timezone offset
+    const randomNumber = Math.floor(Math.random() * (endcount - startcount) + startcount + weightFactor);
+    
+    // Assign the random number to localpreset
+    localpreset = randomNumber;
+    
+    // Save it to localStorage
+    localStorage.setItem('localpresent', localpreset);
+  }
+  
+  // Now localpreset holds the chosen number
+  console.log("Localpreset: ", localpreset);
+};
+
+function updateCountdown() {
+    const now = Math.floor(currenttimeunixsec / 1000); // Current time in Unix format
+    let timeLeft = endNum - now;
+
+    if (timeLeft < 0) {
+        document.getElementById('timebetween').textContent = "00h 00m 00s"; // Countdown expired
+        return;
+    }
+
+    const hours = Math.floor(timeLeft / 3600);
+    timeLeft %= 3600;
+    const minutes = Math.floor(timeLeft / 60);
+    const seconds = timeLeft % 60;
+
+    // Update the countdown display
+    document.getElementById('timebetween').textContent = 
+        `${hours.toString().padStart(2, '0')}h ${minutes.toString().padStart(2, '0')}m ${seconds.toString().padStart(2, '0')}s`;
+}
+
+// Update countdown every second
+setInterval(updateCountdown, 1000);
+updateCountdown(); // Initial call to avoid delay
+if (currentNum >= endNum) {
+    // Case 1: Past endNum
+    console.log(`End reached. Displaying endcount.`);
+    document.getElementById("giftsloaded").innerText = endcount.toLocaleString();
+    document.getElementById("giftsreadytoload").innerText = "0";
+} else if (currentNum < startNum) {
+    // Case 2: Before startNum
+    console.log(`Before startNum. Waiting for the tween to start...`);
+    document.getElementById("giftsloaded").innerText = startcount.toLocaleString();
+    document.getElementById("giftsreadytoload").innerText = endcount.toLocaleString();
+
+    const waitTime = (startNum - currentNum) * 1000; // Time to wait in milliseconds
+    setTimeout(() => {
+        console.log(`Starting tween after waiting.`);
+        TweenLite.to(
+            { value: startcount },
+            (endNum - startNum), // Duration in seconds
+            {
+                value: endcount,
+                ease: Power1.easeInOut, // Smooth easing in and out
+                onUpdate: function () {
+                    const currentValue = Math.floor(this.target.value);
+                    const readyValue = Math.floor(endcount - currentValue);
+                    console.log(currentValue);
+                    if (currentValue < parseInt(localpreset)) {
+                        document.getElementById("presentinfo").innerText = "#"+parseInt(localpreset).toLocaleString()
+                    } else {
+                    document.getElementById("presentinfo").innerText = "Your Present has been loaded! 🎁"
+                }
+                weightelement.innerText = (Math.floor(currentValue * (endweight/endcount))).toLocaleString()+" gd"
+                                    document.getElementById("giftsloaded").innerText = currentValue.toLocaleString();
+                    document.getElementById("giftsreadytoload").innerText = readyValue.toLocaleString();
+                }
+            }
+        );
+    }, waitTime);
+} else if (currentNum > startNum && currentNum < endNum) {
+    // Case 3: Between startNum and endNum
+    const percentage = findPercentage(startNum, currentNum, endNum);
+    const startValue = startcount + ((endcount - startcount) * (percentage / 100));
+    console.log(`Joining mid-run at progress: ${percentage.toFixed(2)}%`);
+if (percentage > 0.0005) {
+    easelevel = Power1.easeOut
+}
+    // Immediately set to the calculated percentage
+    document.getElementById("giftsloaded").innerText = Math.floor(startValue).toLocaleString();
+    document.getElementById("giftsreadytoload").innerText = Math.floor(endcount - startValue).toLocaleString();
+
+    // Start tween from the current progress onwards
+    TweenLite.to(
+        { value: startValue },
+        (endNum - currentNum), // Remaining duration
+        {
+            value: endcount,
+            ease: easelevel, // Smooth easing in and out
+            onUpdate: function () {
+                const currentValue = Math.floor(this.target.value);
+                const readyValue = Math.floor(endcount - currentValue);
+                console.log(currentValue);
+                if (currentValue < parseInt(localpreset)) {
+                    document.getElementById("presentinfo").innerText = "#"+parseInt(localpreset).toLocaleString()
+                } else {
+                    document.getElementById("presentinfo").innerText = "Your Present has been loaded! 🎁"
+                }
+                weightelement.innerText = (Math.floor(currentValue * (endweight/endcount))).toLocaleString()+" gd"
+                document.getElementById("giftsloaded").innerText = currentValue.toLocaleString();
+                document.getElementById("giftsreadytoload").innerText = readyValue.toLocaleString();
+            }
+        }
+    );
+}
+}
+
+
+
+      </script>

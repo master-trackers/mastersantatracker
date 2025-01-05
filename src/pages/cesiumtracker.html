@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js"></script>
+  <script src="https://cesium.com/downloads/cesiumjs/releases/1.119/Build/Cesium/Cesium.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+  <link href="https://cesium.com/downloads/cesiumjs/releases/1.119/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+  <script src="/assets/popups.js"></script>
+  <script src="/assets/timeworker.js"></script>
+  <style>
+    html,
+    body,
+    #cesiumContainer {
+      width: 100%;
+      height: 90%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      bottom: 0px;
+      position: fixed;
+      background-color: black;
+    }
+  .cesium-viewer-infoBoxContainer {
+    position: fixed !important;
+    top: 50% !important; 
+    left: 50% !important; 
+    transform: translate(-50%, -50%) !important; 
+    background-color: white !important; 
+    border: 1px solid #ccc !important;
+    border-radius: 8px !important; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2) !important; 
+    padding: 20px !important; 
+    max-width: 300px !important; 
+    z-index: 1000 !important; 
+    display: none !important; 
+}
+    #cesiumContainer {
+      filter: brightness(100%);
+      zoom: 88%;
+    }
+ 
+body {
+  zoom:100%
+}
+    .cesium-viewer-animationContainer,
+    .cesium-viewer-toolbar,
+    .cesium-viewer-timelineContainer,
+    .cesium-viewer-fullscreenContainer {
+      display: none !important;
+    }
+
+    .cesium-viewer-bottom {
+      left: 0px !important;
+    }
+
+    .cesium-credit-logoContainer {
+      bottom: 0px !important;
+    }
+
+    .cesium-credit-textContainer {
+      display: none !important;
+    }
+  </style>
+  <style>
+    .tracker-warning {
+      background-color: #fff9c4;
+      /* Yellow color */
+      border: 1px solid #ffee58;
+      /* Yellow accent color */
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      text-align: center;
+      top: 75vh;
+      position: fixed;
+      z-index: 9999999;
+    }
+
+    .overlay {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
+
+    html {
+      overflow: hidden;
+      user-select: none;
+      -moz-user-select: none;
+      /* Firefox */
+      -webkit-user-select: none;
+      /* Safari and Chrome */
+      -ms-user-select: none;
+      /* Internet Explorer/Edge */
+    }
+
+    div.tile-coords128 {
+      line-height: 128px;
+      text-align: center;
+      color: red;
+      font-size: 12.8px;
+      max-width: 128px;
+    }
+
+    div.tile-coords256 {
+      line-height: 256px;
+      text-align: center;
+      color: red;
+      font-size: 25.6px;
+      max-width: 256px;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .cesium-widget-credits {
+      width: 35%;
+      bottom: 0;
+      position: fixed;
+      left: 0;
+
+    }
+
+    /* 	Make the zoom animation slower */
+
+    /*.leaflet-zoom-anim .leaflet-zoom-animated {
+	-webkit-transition: -webkit-transform 5s cubic-bezier(0,0,0.25,1);
+	   -moz-transition:    -moz-transform 5s cubic-bezier(0,0,0.25,1);
+	     -o-transition:      -o-transform 5s cubic-bezier(0,0,0.25,1);
+	        transition:         transform 5s cubic-bezier(0,0,0.25,1);
+	}
+*/
+
+    .leaflet-pane {
+      border: none !important;
+    }
+
+    .leaflet-tile-container {
+      border: none !important;
+    }
+
+    #map,
+    .leaflet-container {
+      background-color: #333;
+      border: none !important;
+    }
+
+    /* Settings button styles */
+    .settings-btn {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .settings-btn:hover {
+      background-color: #555;
+    }
+
+    .settingsiframe {
+      width: 100%;
+      height: 100%;
+      border-color: transparent;
+
+    }
+
+    /* Settings popup styles */
+    .settings-popup {
+      width: 50%;
+      height: 50%;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 99999;
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      border-radius: 20px;
+      border-color: #f0f8ff;
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+      display: none;
+      /* Initially hidden */
+    }
+
+
+    /* Close button for the settings popup */
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: white;
+      cursor: pointer;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: linear-gradient(to bottom, #d3e4ff 0%, #f0f8ff 100%);
+    }
+
+    #overlay {
+      position: fixed;
+      top: 20%;
+      /* Adjust this value as needed */
+      right: 25px;
+      /* Adjust this value as needed */
+      z-index: 1999;
+    }
+
+    #toggleButton {
+      width: 50px;
+      /* Adjust the button size as needed */
+      height: 50px;
+      /* Adjust the button size as needed */
+      background-color: transparent;
+      border: none;
+      color: white;
+      border-radius: 50%;
+      /* Makes the button round */
+      cursor: pointer;
+    }
+
+    #symbolImage {
+      width: 100%;
+      height: 100%;
+      ;
+      border-radius: 50px;
+      z-index: 2000;
+
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #santaoverlaythingy {
+      z-index: 10000 !important;
+    }
+
+    .top-bar {
+      width: 90%;
+      height: 20%;
+      position: fixed;
+      color: white;
+      top: 16%;
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      zoom: 88%;
+      /* Center content */
+      align-items: center;
+      padding: 0;
+      /* Remove padding */
+      background-color: transparent;
+      left: 50%;
+      /* Center the bar */
+      transform: translateX(-50%);
+      /* Adjust for the bar's width */
+    }
+
+    .info-container {
+      display: flex;
+    }
+
+    .info-box {
+      flex: 1;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      background-color: #333;
+      margin: 0 10px;
+      /* Adjust margin for spacing between boxes */
+      border-radius: 10px;
+      /* Slightly curved edges */
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      /* Box shadow for depth */
+    }
+
+    .title {
+      font-size: 0.8em;
+      margin-bottom: 5px;
+    }
+
+    .data {
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+    .columntitle {
+      font-weight: bold;
+      font-size: 2em;
+    }
+    
+    .notes {
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .leaflet-control-zoom {
+      position: fixed;
+      bottom: 110px;
+      right: 20px;
+    }
+
+    .leaflet-control-zoom a {
+      color: #333;
+      /* Dark text color */
+      background-color: #d32f2f;
+      /* Candy cane red background */
+      border: 2px solid #fff;
+      /* White border */
+      border-radius: 50%;
+      /* Rounded shape */
+      width: 36px;
+      /* Adjust size as needed */
+      height: 36px;
+      /* Adjust size as needed */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.2s ease;
+      /* Smooth transitions */
+      background-image: repeating-linear-gradient(45deg,
+          #fff,
+          #fff 10px,
+          #d32f2f 10px,
+          #d32f2f 20px);
+      /* Candy cane stripes */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      /* Subtle box shadow */
+      font-size: 14px;
+      /* Font size */
+      font-weight: bold;
+      /* Font weight */
+    }
+
+    .leaflet-control-zoom a:hover {
+      background-color: #388e3c;
+      /* Christmas green background on hover */
+      transform: scale(1.1);
+      /* Slightly enlarge on hover */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      /* Larger box shadow on hover */
+    }
+
+
+
+
+    #map-container {
+      position: relative;
+      width: 100%;
+      height: calc(100vh - 160px);
+      margin-top: 50px;
+      padding-top: 100px;
+      border: 2px solid white;
+      /* White border */
+    }
+
+    .basket-icon {
+      width: 25px;
+      height: 25px;
+    }
+
+    #tween-info {
+
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      background-color: #1b1b1b;
+      border: 1px solid #cccccc85;
+      border-radius: 5px;
+      padding: 10px;
+      z-index: 200000;
+      display: none;
+      /* flex */
+      align-items: center;
+    }
+
+    #tween-speed {
+      font-weight: bold;
+      color: white;
+      margin-right: 10px;
+    }
+
+    #speed-value {
+      color: white;
+    }
+
+    #countdownButtonContainer {
+      display: flex;
+      justify-content: flex-end;
+      /* Align items to the right */
+      align-items: center;
+      height: 40px;
+    }
+
+    #countdownButton {
+      background-color: #666;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s;
+      /* Hover animation */
+    }
+
+    #countdownButton2 {
+      background-color: #666;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s;
+      /* Hover animation */
+    }
+
+    #countdownButton:hover {
+      transform: scale(1.1);
+      /* Hover animation */
+    }
+
+    #countdownButton img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    #countdownButton {
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 999999;
+    }
+
+    #chatPopup {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      z-index: 999999;
+      top: 80px;
+      ;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    #chatBox {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      position: relative;
+      z-index: 999999;
+    }
+
+    #chatMessages {
+      height: 200px;
+      overflow-y: auto;
+      margin-bottom: 10px;
+      z-index: 999999;
+    }
+
+    #userInput {
+      width: calc(100% - 72px);
+      padding: 5px;
+      margin-right: 5px;
+    }
+
+    #sendButton {
+      padding: 5px 10px;
+    }
+
+    #closeButton {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: #999;
+    }
+
+    .logo {
+      width: 30px;
+      margin-right: 1px;
+      /* Add right margin to create space between the logo and the text */
+    }
+
+    .snowflake {
+      position: absolute;
+      top: -10px;
+      color: white;
+      font-size: 1em;
+      user-select: none;
+      flex: 1 0 auto; /* adjust this based on your needs */
+      pointer-events: none;
+      zoom: 100%;
+    }
+
+
+
+#close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+    
+
+    .hidden {
+      display: none;
+    }
+
+    .container {
+      position: relative;
+      /* Required for positioning the button */
+      width: 40px;
+      /* Ensures the container takes the full width of the viewport */
+      height: 40px;
+      /* Example height, replace with your actual content height */
+      background-color: transparent;
+    }
+
+    .fixed-button {
+      position: fixed;
+      bottom: 60px;
+      left: 20px;
+      z-index: 999;
+      background-color: blue;
+      /* Background color for the button */
+      border: none;
+      /* Remove default button border */
+      padding: 10px;
+      /* Adjust padding as needed */
+      border-radius: 50%;
+      /* Makes button circular */
+    }
+
+    .fixed-button svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    /* CSS styles for the announcement container */
+    .announcement-container {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      right: 20px;
+      top: 100px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: none;
+      z-index: 129083091823098;
+    }
+
+    /* CSS styles for the announcement message */
+    .announcement-message {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    /* CSS styles for the announcement details */
+    .announcement-details {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .imagesnowy {
+      opacity: 0.8;
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1220;
+      pointer-events: none;
+      /* Allows clicking through the overlay */
+      background-image: url('https://i.gifer.com/2zGl.gif');
+      background-repeat: repeat;
+      background-size: 300px 300px;
+      /* Adjust size of the repeating GIF */
+      display: hidden
+    }
+    .image-button {
+      position: absolute;
+      top: 15%;
+      right: 15px; /* Adjust to fine-tune distance from the right */
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 12983981723;
+    }
+
+    .image-button img {
+      width: 50px; /* Adjust to your preferred size */
+      height: auto;
+    }
+    
+    #santaOverlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: none;
+      /* Initially hidden */
+      pointer-events: none;
+      /* Allows clicking through */
+    }
+
+    @media (max-width: 600px) {
+      body {
+        zoom: 36%;
+        /* Zooms the page to 150% */
+      }
+      .top-bar {
+        top: 21%;
+      }
+      #cesiumContainer {
+      filter: brightness(100%);
+    }
+      .snowflake {
+        visibility: hidden !important;
+      }
+
+    }
+
+   
+#lastCityInfo3 a {
+  font-family: 'Roboto', sans-serif; /* Desired font */
+  text-decoration: none;
+  
+  font-weight: bold; /* Thick font */
+  font-size: 20px; /* Adjust size as needed */
+  color: gold; /* Gold color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional shadow for depth */
+  transform: skew(-10deg); /* Slanted effect */
+ 
+  box-sizing: border-box; /* Include padding in width/height calculation */
+  max-width: calc(100% - 20px); /* Ensure it doesn't overflow */
+  overflow: hidden; /* Prevent overflow */
+  white-space: nowrap; /* Prevent line breaks */
+}
+#lastCityInfo3 {
+  font-family: 'Roboto', sans-serif; /* Desired font */
+  text-decoration: none;
+  
+  font-weight: bold; /* Thick font */
+  font-size: 20px; /* Adjust size as needed */
+  color: gold; /* Gold color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional shadow for depth */
+  transform: skew(-10deg); /* Slanted effect */
+ 
+  box-sizing: border-box; /* Include padding in width/height calculation */
+  max-width: calc(100% - 20px); /* Ensure it doesn't overflow */
+  overflow: hidden; /* Prevent overflow */
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+.snowflake {
+      position: absolute;
+      top: -10px;
+      color: white;
+      font-size: 1em;
+      user-select: none;
+      pointer-events: none;
+      zoom: 100%;
+      display: inline-block; /* Ensure the snowflakes are inline-block for scaling */
+  transform: scale(1.136); /* Reverse the zoom effect (1 / 0.88 ≈ 1.136) */
+    }
+
+    .overlay-link {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: 9999;
+        }
+        .overlay-link img {
+            pointer-events: auto; /* Makes the image clickable */
+        }
+  </style>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</head>
+
+<body>
+  <style>
+
+  </style>
+  <a class="overlay-link" href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">
+    <img src="https://cdn.intuji.com/2022/11/Google-Maps-1024x576.png" alt="Google Maps Credit" width="180">
+</a>
+<button id="followbutton" class="image-button" onclick="triggerFunctions()">
+  <img id="FollowButtonImage" src="/assets/unfollowicon.png" alt="Button">
+</button>
+  <div id="settingsPopup" class="settings-popup">
+    <!-- Close button -->
+    <span class="close-btn" onclick="toggleSettings()">X</span>
+    <!-- Settings page iframe -->
+    <iframe src="/embed/settings" class="settingsiframe"></iframe>
+  </div>
+  <div id="santaOverlay">
+    <img src="/assets/santa.png" alt="Santa">
+  </div>
+
+  <div class="top-bar">
+    <div class="info-container">
+      <div id="hideavailable">
+        <div class="info-box">
+          <div id="hideavailable">
+            <span class="title">Heading for:</span>
+            <img src="" id="flag" width="30px;"> <span id="nextCityInfo" class="data">LOADING!!</span>
+          </div>
+        </div>
+        <div class="info-box">
+          <span class="title">Gifts Delivered:</span>
+          <span id="basketsInfo" class="data">LOADING!!</span>
+        </div>
+        <div hidden class="info-box">
+          <span class="title">Sleigh Weight:</span>
+          <span id="sleighInfo" class="data">LOADING!!</span>
+        </div>
+        <div id="hidelocation">
+          <div class="info-box">
+            <span class="title">Arrival Time:</span>
+            <span id="arrivalTime" class="data"></span>
+          </div>
+        </div>
+      </div>
+      <div id="lastseeninfobox" class="info-box">
+        <span class="title">Last Seen:</span>
+        <span id="lastCityInfo" class="data">LOADING!!</span><br />
+        <span class="notes" id="notes"><img src="" id="flag2" width="200px;"></span>
+      </div>
+      <div id="lastseeninfobox3" class="info-box">
+        <span class="title"></span>
+        
+        <span class="notes" id="notes"><img src="" id="flag3" style="max-height: 100px;"></span><br /><span id="lastCityInfo3" class="data">LOADING!!</span>
+      </div>
+      <div class="info-box" id="launchID" hidden>
+        <span class="title">Launches in: </span><br />
+        <span id="launchTimer" class="data"></span>
+      </div>
+    </div>
+    
+  </div>
+  <div style="visibility: hidden;" id="endingtext">
+    <div class="top-bar">
+    <div class="info-box">
+      <span class="columntitle">Gift and Local Information</span><br/>
+      <span class="title">Gifts Delivered:</span>
+      <span id="basketsInfo" class="data">7,586,082,146, one for Santa 😊</span>
+
+    
+      <div id="hidelocation2">
+      <span class="title">Arrival Time:</span>
+      <span id="arrivalTime2" class="data"></span><br/>
+    <span class="title">Weather on Arrival:</span>
+      <span id="weatheronarrival" class="data"></span></div>
+    </div>
+
+    <div class="info-box">
+      <span class="columntitle">Tracker Information</span><br/>
+      <span class="title">Last Seen:</span>
+      <img src="https://i.etsystatic.com/29670587/r/il/690535/5332588770/il_fullxfull.5332588770_9o2o.jpg" id="flag" width="30px;"> <span id="lastCityInfo" class="data">Santa's Village, North Pole, Arctic.</span><br />
+      <span class="title">Notes:</span>
+      <span id="lastCityInfo" class="data">Thank you for tracking with us this year. Merry Christmas.</span><br />
+      <span class="notes" id="notes"></span>
+    </div>
+    
+    
+      
+   
+  </div></div>
+  </div><img hidden class="imagesnowy" src="" alt="Overlay GIF">
+  <div class="overlay">
+
+    <button class="settings-btn" onclick="toggleSettings()">Settings</button>
+  </div>
+  <div id="cesiumContainer"></div>
+  
+  
+
+  </script><script>
+    window.onload = async function() {
+      try {
+        // Fetch the manifest to get the correct hash
+        const response = await fetch('/scripts/manifest.json');
+        const manifest = await response.json();
+        
+        // Extract the script hash from the manifest
+        const scriptHash = manifest['santacesium'];
+  
+        // Dynamically create the script URL with the hash
+        const script = document.createElement('script');
+        script.src = `/scripts/${scriptHash}`;
+  
+        // Append the script to the body to load it
+        document.body.appendChild(script);
+      } catch (error) {
+        console.error('Failed to load script:', error);
+      }
+    };
+  </script>
+  
+  <script>
+  const numFlakes = 400; // Increased number of snowflakes
+let snowflakes = [];
+let alreadydestroyed = false;
+    
+// Create snowflakes
+for (let i = 0; i < numFlakes; i++) {
+  let snowflake = document.createElement('div');
+  snowflake.className = 'snowflake';
+  snowflake.innerHTML = '❄'; // You can use any character or image
+  document.body.appendChild(snowflake);
+  snowflakes.push({
+    el: snowflake,
+    speed: Math.random() * 3 + 1, // Adjusted speed range for more variation
+    x: Math.random() * window.innerWidth,
+    y: Math.random() * window.innerHeight,
+    size: Math.random() * 0.5 + 0.2, // Increased minimum size for more visibility
+    depth: Math.random() * 3 // Added depth for layering effect
+  });
+}
+function updateSnowflakes() {
+  snowflakes.forEach(flake => {
+    flake.y += flake.speed * flake.depth; // Move snowflake down with depth effect
+    flake.x += Math.sin(flake.y / (30 * flake.depth)); // Create slight horizontal oscillation
+
+    // Reset snowflake position if it goes out of bounds
+    if (flake.y > window.innerHeight) {
+      flake.y = -10; // Reset to top
+      flake.x = Math.random() * window.innerWidth; // Randomize X position
+    }
+    if (flake.x > window.innerWidth) {
+      flake.x = 0; // Reset to left
+    } else if (flake.x < 0) {
+      flake.x = window.innerWidth; // Reset to right
+    }
+
+    flake.el.style.transform = `translate(${flake.x}px, ${flake.y}px) scale(${flake.size})`;
+    });
+  requestAnimationFrame(updateSnowflakes);
+}
+
+// Update snowflake positions on window resize
+function resizeSnowflakes() {
+  snowflakes.forEach(flake => {
+    flake.x = Math.random() * window.innerWidth; // Reset X position
+    flake.y = Math.random() * window.innerHeight; // Reset Y position
+  });
+}
+
+// Initialize snowflakes movement
+updateSnowflakes();
+window.addEventListener('resize', resizeSnowflakes);
+
+
+    // Initialize fog settings
+    viewer.scene.fog.enabled = false;
+    // Load the single cubemap image
+
+
+    // Create the custom skybox
+    const skyBox2 = new Cesium.SkyBox({
+      sources: {
+        positiveX: "/assets/black.png",
+        negativeX: "/assets/black.png",
+        positiveY: "/assets/black.png",
+        negativeY: "/assets/black.png",
+        positiveZ: "/assets/black.png",
+        negativeZ: "/assets/black.png",
+      },
+    });
+
+    // Set the custom skybox to the scene
+    viewer.scene.skyBox = skyBox2;
+
+
+
+
+    var LOCATIONHID;
+    // Function to check locationHid status and hide the element accordingly
+    function checkLocationHid() {
+      var locationHid = localStorage.getItem('locationHid');
+      LOCATIONHID = (locationHid === 'true');
+
+      // Get the reference to the element
+      var hidelocation = document.getElementById('hidelocation');
+
+      // Hide or show the element based on LOCATIONHID value
+      if (LOCATIONHID) {
+        hidelocation.style.display = 'none';
+      } else {
+        hidelocation.style.display = 'block';
+      }
+    }
+
+    // Call the function initially to set the initial value of LOCATIONHID
+    checkLocationHid();
+
+    // Add event listener for storage changes
+    window.addEventListener('storage', function (event) {
+      if (event.key === 'locationHid') {
+        checkLocationHid();
+      }
+    });
+    window.onload = async function() {
+      try {
+ 
+  const params = new URLSearchParams(window.location.search);
+
+  // Check if 'noshow' parameter equals '1' and nothing else
+  if (params.get('noshow') === '1') {
+    
+
+    // Apply styles to .top-bar
+    const topBar = document.querySelector('.top-bar');
+    if (topBar) {
+      topBar.style.display = 'none !important';
+    }
+  }
+  
+    
+} catch (error) {
+        console.error('Failed to load script:', error);
+      }
+
+    };
+  </script>
+</body>
+
+</html>

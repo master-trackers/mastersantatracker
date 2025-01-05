@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <title>Master Trackers</title>
+    <link rel="icon" href="https://github.com/Haydenlogs/sources/blob/main/image-removebg-preview%20(3).png?raw=true" type="image/png">
+    <meta name="description" content="We have officially opened up our website to the public! Enjoy the pretracking experience for the rest of December until Christmas Eve. We'll see you again once we start tracking Santa Claus!">
+  
+    <!-- Meta tags for Bing -->
+    <meta name="msvalidate.01" content="8DF6B8C1C97521142EFB1F3437EC4E4C" />
+    <script src="/assets/timeworker.js"></script>
+    <!-- Optional Open Graph tags for better sharing on social media -->
+    <meta property="og:title" content="Master Trackers">
+    <meta property="og:description" content="We have officially opened up our website to the public! Enjoy the pretracking experience for the rest of December until Christmas Eve. We'll see you again once we start tracking Santa Claus!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://master-trackers.xyz">
+    <meta property="og:image" content="https://github.com/Haydenlogs/sources/blob/main/image-removebg-preview%20(3).png?raw=true">
+    
+    <!-- Twitter Card tags for better sharing on Twitter -->
+    <meta name="twitter:card" content="https://github.com/Haydenlogs/sources/blob/main/image-removebg-preview%20(3).png?raw=true">
+    <meta name="twitter:title" content="Master Trackers">
+    <meta name="twitter:description" content="We have officially opened up our website to the public! Enjoy the pretracking experience for the rest of December until Christmas Eve. We'll see you again once we start tracking Santa Claus!">
+    <meta name="twitter:image" content="https://github.com/Haydenlogs/sources/blob/main/image-removebg-preview%20(3).png?raw=true">
+    <link rel="stylesheet" href="/assets/htmlplayer.css"> <!-- Link to your existing html audio player CSS file -->
+
+    <!-- Canonical URL to avoid duplicate content issues -->
+    <link rel="canonical" href="https://master-trackers.xyz">
+    <meta name="msvalidate.01" content="8DF6B8C1C97521142EFB1F3437EC4E4C" />
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 17px;
+            background-color: #333;
+            /* Dark grey background */
+            color: #fff;
+            /* White text color */
+            margin: 0;
+            padding: 0;
+            position: relative;
+            height: 100vh;
+            font-weight: normal;
+        }
+
+
+        @media (max-width: 600px) {
+      body {
+        zoom: 50%;
+        /* Zooms the page to 150% */
+      }
+
+
+    }
+        #header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+            background-color: #333;
+            z-index: 999;
+            transition: background-color 0.5s ease;
+
+        }
+        #header:hover {
+    background-color: #000;
+}
+.google-translate {
+    position: fixed;
+    top: 20px; /* Adjust as needed */
+    right: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    filter: invert(1) hue-rotate(180deg); /* Dark mode effect */
+
+}
+
+#header:hover .google-translate {
+    opacity: 1;
+}
+        #logo {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        #countdown {
+            margin-top: 100px;
+            font-size: 78px;
+            /* Large font size */
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            color: #fff;
+            /* White text color */
+            margin: 0;
+            padding: 0;
+            padding-top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            /* Adjusted height for countdown */
+            font-weight: normal;
+            /* Set font weight to normal */
+        }
+
+        #launchestimate {
+            font-size: 28px;
+            /* Adjust font size as needed */
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            color: #fff;
+            /* White text color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: normal;
+            /* Set font weight to normal */
+            position: absolute;
+            bottom: 30%;
+            left: 30%;
+            right: 30%
+        }
+        #launchestimate3 {
+            font-size: 28px;
+            /* Adjust font size as needed */
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            color: #fff;
+            /* White text color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: normal;
+            /* Set font weight to normal */
+            position: absolute;
+            bottom: 30%;
+            left: 30%;
+            right: 30%
+        }
+        #launchestimate2 {
+            font-size: 28px;
+            /* Adjust font size as needed */
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            color: #fff;
+            /* White text color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: normal;
+            /* Set font weight to normal */
+            position: absolute;
+            bottom: 20%;
+            left: 30%;
+            right: 30%
+        }
+
+        /* Overlay styles */
+        .overlay {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+        }
+
+        /* Settings button styles */
+        .settings-btn {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .settings-btn:hover {
+            background-color: #555;
+        }
+
+        .settingsiframe {
+  width: 100%;
+      height: 100%;
+      border-color: transparent;
+      
+}
+    /* Settings popup styles */
+    .settings-popup {
+      width: 50%;
+      height: 50%;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 99999;
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      border-radius: 20px;
+      border-color: #f0f8ff;
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+      display: none;
+      /* Initially hidden */
+    }
+
+
+        /* Close button for the settings popup */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: white;
+            cursor: pointer;
+        }
+
+        #tween-info {
+            display: none;
+        }
+
+        #tween-speed {
+            font-weight: bold;
+            color: white;
+            margin-right: 10px;
+        }
+
+        #speed-value {
+            color: white;
+        }
+
+        #countdownButtonContainer {
+            display: flex;
+            justify-content: flex-end;
+            /* Align items to the right */
+            align-items: center;
+            height: 40px;
+        }
+
+        #countdownButton {
+            background-color: #666;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s;
+            /* Hover animation */
+        }
+
+        #countdownButton2 {
+            background-color: #666;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s;
+            /* Hover animation */
+        }
+
+        #countdownButton:hover {
+            transform: scale(1.1);
+            /* Hover animation */
+        }
+
+        #countdownButton img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        #countdownButton {
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 999999;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="tween-info" hidden>
+        <span hidden id="tween-speed">Speed:</span>
+        <span hidden id="speed-value">0 mph</span>
+        <div id="countdownButtonContainer">
+
+            <button hidden id="countdownButton">
+                <img hidden src="https://media.tenor.com/MP8oSlpFsHwAAAAj/kinder-egg.gif" alt="Kinder Egg">
+            </button>
+            <div hidden class="overlay">
+                <button class="settings-btn" onclick="toggleSettings()">Settings</button>
+            </div>
+
+        </div>
+    </div>
+    <div id="popup-container" class="popup-container hidden">
+        <div class="popup">
+            <span id="close-btn" class="close-btn">&times;</span>
+            <p>Welcome to Master Santa Trackers 2024. We are happy to see you here. During normal runs,<br />The <img
+                    src="https://github.com/Haydenlogs/sources/blob/main/image-removebg-preview%20(3).png?raw=true"
+                    alt="Emoji" width="16" height="16"> represents where Santa Claus is. <br /> The <img
+                    src="https://github.com/Haydenlogs/sources/blob/main/comhiclipartydzgx-removebg-preview.png?raw=true"
+                    alt="Emoji" width="16" height="16"> represents a present/gift that has been delivered. <br />The
+                <img src="https://banner2.cleanpng.com/20180219/eqe/kisspng-video-camera-ico-icon-camera-5a8a776b7b36e7.4789365515190239795047.jpg"
+                    alt="Emoji" width="16" height="16"> represents the ability button to change whether or not you want
+                to follow
+                Santa. <br /></br/><br/> <p><strong>It is highly recommended you change your map layout in settings for the future. You will not like the default!</strong></p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const popupContainer = document.getElementById("popup-container");
+            const closeBtn = document.getElementById("close-btn");
+
+            // Check if the popup was closed before
+            const popupClosed = localStorage.getItem("popupClosed");
+
+            if (!popupClosed) {
+                // If the popup was never closed, show it
+                popupContainer.classList.remove("hidden");
+            }
+
+            // Close the popup when close button is clicked
+            closeBtn.addEventListener("click", function () {
+                popupContainer.classList.add("hidden");
+                // Store in local storage that popup was closed
+                localStorage.setItem("popupClosed", "true");
+            });
+        });
+    </script>
+    <style>
+        .popup-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 1000;
+        }
+
+        .popup {
+            color: #fff;
+            text-align: center;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script src="https://holistic-waiting-unicorn.glitch.me/servercheck.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      
+    <div id="header">
+        <img id="logo" src="https://github.com/Haydenlogs/sources/blob/main/image-removebg-preview%20(3).png?raw=true"
+            alt="Logo">
+        <h1>Master Santa Trackers 2024</h1>
+        <div id="google_translate_element" class="google-translate"></div>
+
+    </div>
+    <!-- Overlay with settings button -->
+    <div class="overlay">
+        <button class="settings-btn" onclick="toggleSettings()">Settings</button>
+    </div>
+
+    <!-- Settings popup -->
+    <div id="settingsPopup" class="settings-popup">
+        <!-- Close button -->
+        <span class="close-btn" onclick="toggleSettings()">X</span>
+        <!-- Settings page iframe -->
+        <iframe src="/embed/settings" class="settingsiframe"></iframe>
+    </div>
+    <style>
+body {
+    margin: 0; /* Remove default margin */
+}
+
+.audio-player {
+    background-color: #003366; /* Darker blue background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    position: fixed; /* Keep it fixed at the bottom */
+    bottom: 20px; /* Space from the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust to perfectly center */
+    z-index: 1000; /* Ensure it stays above other content */
+    display: flex;
+    height: 50px;
+    align-items: center; /* Center horizontally */
+    width: 250px; /* Set a fixed width for a compact UI */
+}
+.audio-player button:hover {
+    background-color: transparent; /* Light grey on hover */
+}
+
+.audio-player h1 {
+    color: white;
+    font-size: 18px; /* Smaller font size for title */
+    text-align: center;
+    margin-right: 15px; /* Space below the title */
+
+}
+
+.audio-player-controls {
+    display: flex; /* Align play button and progress bar horizontally */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Full width for controls */
+}
+
+.audio-player button {
+    background-color: transparent; /* White button for contrast */
+    color: #003366; /* Text color to match the theme */
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.5em;
+    width: 40px; /* Set a fixed width */
+    height: 10px; /* Set a fixed height */
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+
+
+audio {
+    display: none; /* Hide the default audio controls */
+}
+#countdownButton5 {
+    display: none
+}
+#localtime {
+    font-weight: bold;
+}
+
+#localtime2 {
+    font-weight: bold;
+}
+
+.button-image {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            width: 150px; /* Adjust size as needed */
+            height: 150px;
+            cursor: pointer;
+        }
+    </style>
+    <div id="countdown"></div>
+    <div id="launchestimate">Expected Launch Time: Around <span id="localtime">UNKNOWN</span></div>
+    <div id="launchestimate3">Expected Launch time not available yet. Check back at a later date.</div>
+    <br/><div id="launchestimate2">Santa Will Be Starting Preparation Around <span id="localtime2">UNKNOWN</span></div>
+    <div class="audio-player">
+        <h1>Christmas Live Audio</h1><br/>
+        <button id="play-pause-btn" onclick="togglePlayPause()">▶️</button> <!-- Play symbol as button -->
+        <audio id="audio" loop>
+            <source src="/assets/christmasstream" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <img src="/assets/radar.gif" alt="Button" id="countdownButton5"class="button-image" onclick="handleClick()">
+
+    <script>
+        const audio = document.getElementById('audio');
+        const playPauseBtn = document.getElementById('play-pause-btn');
+        let isPlaying = true; // Track if audio is playing
+        function handleClick() {
+            
+           
+                window.location.href = "https://santa.master-trackers.xyz/map"
+            
+        }
+        function togglePlayPause() {
+            if (isPlaying) {
+                audio.pause();
+                playPauseBtn.textContent = '▶️'; // Play symbol
+            } else {
+                audio.play();
+                playPauseBtn.textContent = '⏸️'; // Pause symbol
+            }
+            isPlaying = !isPlaying; // Toggle state
+        }
+
+        // Auto-play on load
+        audio.play();
+    </script>
+    <script>
+        function openDonationScreen() {
+            // Create the iframe element
+            var iframe = document.createElement('iframe');
+
+            // Set the source to "/donationiframe"
+            iframe.src = "/donationiframe";
+
+            // Set the iframe styles
+            iframe.style.position = "fixed";
+            iframe.style.top = "50%";
+            iframe.style.left = "50%";
+            iframe.style.transform = "translate(-50%, -50%)";
+            iframe.style.width = "90vw";
+            iframe.style.height = "90vh";
+            iframe.style.border = "none";
+            iframe.style.zIndex = "9999";
+
+            // Create close button
+            var closeButton = document.createElement('button');
+            closeButton.textContent = "x";
+            closeButton.style.position = "absolute";
+            closeButton.style.top = "100px";
+            closeButton.style.right = "10px";
+            closeButton.style.padding = "5px";
+            closeButton.style.background = "rgba(0, 0, 0, 0.5)";
+            closeButton.style.color = "#fff";
+            closeButton.style.border = "none";
+            closeButton.style.borderRadius = "50%";
+            closeButton.style.cursor = "pointer";
+            closeButton.style.zIndex = "10000";
+            closeButton.onclick = function () {
+                document.body.removeChild(iframe);
+                document.body.removeChild(closeButton);
+            };
+
+            // Append the iframe and close button to the body
+            document.body.appendChild(iframe);
+            document.body.appendChild(closeButton);
+        }
+        var lastAdjustmentTime = 0; // Variable to store the last adjustment timestamp
+
+        window.onload = function () {
+            // Function to make a GET request to /visitsite endpoint
+            function getVisits() {
+                fetch('/visitsite')
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Number of people on the site:', data.peopleonthesite);
+                    })
+                    .catch(error => {
+                        console.error('Error fetching data:', error);
+                    });
+            }
+
+            // Call the getVisits function when the page loads
+            getVisits();
+        }
+        let countdownDate; // Variable to store the countdown timestamp
+// Function to get the local timezone abbreviation
+function getTimezoneAbbreviation() {
+    const options = { timeZoneName: 'short' };
+    const formatter = new Intl.DateTimeFormat('en-US', options);
+    const parts = formatter.formatToParts(new Date(currenttimeunixsec));
+    
+    // Find the 'timeZoneName' part and return its value
+    const timeZonePart = parts.find(part => part.type === 'timeZoneName');
+    return timeZonePart ? timeZonePart.value : 'UTC';
+}
+function formatCountdown(distance) {
+    // Calculate total time in months, days, hours, minutes, and seconds
+    const seconds = Math.floor((distance / 1000) % 60);
+    const minutes = Math.floor((distance / (1000 * 60)) % 60);
+    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+    const days = Math.floor((distance / (1000 * 60 * 60 * 24)) % 30); // Assuming approx 30 days in a month
+    const months = Math.floor(distance / (1000 * 60 * 60 * 24 * 30)); // Assuming approx 30 days in a month
+
+    // Create an array to hold the countdown parts
+    const parts = [];
+
+    if (months > 0) {
+        parts.push(months); // Add months
+    }
+    if (days > 0 || parts.length > 0) {
+        parts.push(days); // Add days if there are previous units
+    }
+    if (hours > 0 || parts.length > 0) {
+        parts.push(hours); // Add hours if there are previous units
+    }
+    if (minutes > 0 || parts.length > 0) {
+        parts.push(minutes); // Add minutes if there are previous units
+    }
+
+    // Add seconds with conditional padding
+    if (parts.length > 0) {
+        // Show seconds without padding if it's the only unit left
+        parts.push(seconds);
+    }
+
+    // Join the parts with ':' to create the countdown string
+    return parts.join(':');
+}
+
+
+const timezone = getTimezoneAbbreviation();
+// Fetch the countdown date from the server once
+fetch('/getcountdowndate')
+    .then(response => response.text()) // Assuming the response is text (Unix timestamp as string)
+    .then(timestamp => {
+        const countdownDate = parseInt(timestamp, 10) * 1000; // Parse Unix timestamp and convert to milliseconds
+        const threeHoursBeforeLaunch = new Date(countdownDate - 3 * 60 * 60 * 1000);
+
+        // Start the countdown update interval
+        const x = setInterval(function () {
+            // Get the current date and time in UTC
+            const now = new Date(currenttimeunixsec).getTime();
+
+            // Calculate days, hours, minutes, and seconds for the countdown
+            const distance = threeHoursBeforeLaunch - now;
+// Calculate time components
+let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+let days = Math.floor((distance % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
+let months = Math.floor(distance / (1000 * 60 * 60 * 24 * 30));
+// Format the countdown string
+// Format the countdown string
+let countdownString = "";
+if (distance > 0) {
+    let countdownString = formatCountdown(distance)
+    document.getElementById("countdown").innerHTML = countdownString;
+
+} else {
+    clearInterval(x); // Stop the countdown
+    countdownString = "Waiting in Redirect Queue." // Final message
+}
+
+
+// Display the countdown
+
+            
+            if (days < 1 && hours < 6) {
+                document.getElementById("countdownButton5").style.display = "block";
+            } else {
+                document.getElementById("countdownButton5").style.display = "none";
+            }
+            const fiveDaysInMillis = 5 * 24 * 60 * 60 * 1000;
+            if (distance <= fiveDaysInMillis) {
+    document.getElementById("launchestimate2").style.display = "block";
+    document.getElementById("launchestimate").style.display = "block";
+
+    // Calculate the time one hour before the local launch time
+    const oneHourBeforeLaunch = new Date(threeHoursBeforeLaunch); // Assuming threeHoursBeforeLaunch is defined
+    const oneHourBeforeLaunchString = oneHourBeforeLaunch.toLocaleString('en-US', { 
+        hour12: true, 
+        hour: 'numeric', 
+        minute: '2-digit', 
+        timeZoneName: 'short', 
+        weekday: 'long', 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+    });
+    document.getElementById("localtime2").innerHTML = oneHourBeforeLaunchString;
+} else {
+    document.getElementById("launchestimate2").style.display = "none";
+    document.getElementById("launchestimate").style.display = "none";
+}
+
+const fiveDaysInMillis2 = 13 * 24 * 60 * 60 * 1000;
+if (distance <= fiveDaysInMillis2) {
+    // Calculate the local time based on the countdown date
+    const localLaunchTime = new Date(countdownDate); // Assuming countdownDate is defined
+    const localLaunchTimeString = localLaunchTime.toLocaleString('en-US', { 
+        hour12: true, 
+        hour: 'numeric', 
+        minute: '2-digit', 
+        timeZoneName: 'short', 
+        weekday: 'long', 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+    });
+    document.getElementById("localtime").innerHTML = localLaunchTimeString;
+    document.getElementById("launchestimate").style.display = "block";
+    document.getElementById("launchestimate3").style.display = "none";
+} else {
+    document.getElementById("launchestimate").style.display = "none";
+    document.getElementById("launchestimate3").style.display = "block";
+}
+
+           
+            // If the countdown is finished, display a message
+            if (distance < 2) {
+                clearInterval(x);
+               
+                    setTimeout(() => {
+                        window.location.href = "/map"
+                    }, 1000);
+                
+                
+                document.getElementById("countdown").innerHTML = "Waiting in Redirect Queue.";
+            }
+        }, 50); // Update every 50 milliseconds
+    })
+    .catch(error => {
+        console.error('Error fetching countdown date:', error);
+        document.getElementById("countdown").innerHTML = "Error fetching countdown date.";
+    });
+
+
+
+
+
+       
+        // Function to toggle settings popup visibility
+        function toggleSettings() {
+            var settingsPopup = document.getElementById('settingsPopup');
+            if (settingsPopup.style.display === 'block') {
+                settingsPopup.style.display = 'none';
+            } else {
+                settingsPopup.style.display = 'block';
+            }
+        }
+// Replace with your IP geolocation API endpoint
+const ipapiUrl = 'https://ipapi.co/json/'; // ipapi endpoint
+
+// Function to fetch IP and country, then send a hit
+async function fetchIpAndSendHit() {
+  try {
+    // Step 1: Get IP and country
+    const ipResponse = await fetch(ipapiUrl);
+    if (!ipResponse.ok) {
+      throw new Error('Failed to fetch IP information');
+    }
+
+    const ipData = await ipResponse.json();
+    const ip = ipData.ip;
+    const country = ipData.country_code; // Or ipData.country_name for country name
+
+    console.log(`IP: ${ip}, Country: ${country}`);
+
+    // Step 2: Send hit with number and country
+    const hitResponse = await fetch(`/hit/3?country=${country}`);
+    if (!hitResponse.ok) {
+      throw new Error('Failed to send hit');
+    }
+
+    // Handle successful response
+    console.log('Hit sent successfully');
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+
+// Call the function to perform the operations
+fetchIpAndSendHit();
+
+    </script>
+</body>
+
+</html>

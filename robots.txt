@@ -1,0 +1,21 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /refresherpage/
+Disallow: /newdomain/
+Disallow: /donationiframe/
+Disallow: /embed/settings/
+Disallow: /en-us/embed/ended.html
+Disallow: /en-us/embed/index.html
+Disallow: /en-us/embed/localtime/
+Disallow: /en-us/embed/map/
+Disallow: /en-us/embed/losttrack/
+Disallow: /en-us/embed/tracker/
+Disallow: /emails/subscribe/
+Disallow: /incidents/
+Disallow: /incident/*
+Disallow: /maintenance/*
+Disallow: /embed/settings/
+Disallow: /en-us/*
+
+# Specify the location of the XML sitemap (if applicable)
+Sitemap: http://master-trackers.xyz/sitemap.xml

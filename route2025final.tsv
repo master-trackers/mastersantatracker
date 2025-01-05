@@ -1,0 +1,554 @@
+Unix Arrival Arrival	Unix Arrival	Unix Arrival Departure	City	Region	CC	Locale	Eggs Delivered	Carrots eaten	Latitude	Longitude	Population Num	Population Year	Elevation Meter	Arrival Stoppage Time	Timezone	Wikipedia attr	Country
+0	0	0	Countdown	pt	https://i.etsystatic.com/29670587/r/il/690535/5332588770/il_fullxfull.5332588770_9o2o.jpg	en-US	6280000000	0	90	0	0	0	0	0	Pacific/Easter		
+1	1	1	Santa's Village	pt	https://i.etsystatic.com/29670587/r/il/690535/5332588770/il_fullxfull.5332588770_9o2o.jpg	en-US	0	0	90	0	0	0	0	0	Pacific/Easter		
+1766574028	1766574028	1766574028	North Pole	Arctic	https://i.etsystatic.com/29670587/r/il/690535/5332588770/il_fullxfull.5332588770_9o2o.jpg		29372457	nil	90.0	0.0	0	nil	0	0	nil	nil	United States
+1766574388	1766574388	1766574388	DSP Satellite Tracking Santa	Post-Launch	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		44058685	nil	69.85589050051509	-172.267	0	nil	0	72.0	nil	nil	Mexico
+1766574478	1766574478	1766574478	Uelen	Russia	RU		58744914	nil	66.01684256103084	-169.80916669999996	0	nil	0	18.0	nil	nil	Russia
+1766574508	1766574508	1766574508	Lavrentiya	Russia	RU		73431143	nil	65.43899348384545	-170.9888889	0	nil	0	6.0	nil	nil	Russia
+1766574598	1766574598	1766574598	Anadyr	Russia	RU		88117371	nil	64.58474502099625	177.5169444	0	nil	0	18.0	nil	nil	Russia
+1766574838	1766574838	1766574838	Magadan	Russia	RU		102803600	nil	59.38379767621775	150.8057917	0	nil	0	48.0	nil	nil	Russia
+1766575438	1766575438	1766575438	Esso	Russia	RU		117489829	nil	55.75176051694891	158.694722	0	nil	0	120.0	nil	nil	Russia
+1766575558	1766575558	1766575558	Wake Island	U.S. Minor Outlying Islands	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		132176057	nil	19.165400772537673	166.644989	0	nil	0	24.0	nil	nil	
+1766575798	1766575798	1766575798	Majuro	Marshall Islands	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		146862286	nil	7.04362829899485	171.38137	0	nil	0	48.0	nil	nil	Marshall Islands
+1766575948	1766575948	1766575948	Yaren	Nauru	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		161548514	nil	-0.5382328236685531	166.917145	0	nil	0	30.0	nil	nil	Nauru
+1766576068	1766576068	1766576068	Tarawa	Kiribati	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		176234743	nil	1.320159015264788	172.97905300000002	0	nil	0	24.0	nil	nil	Kiribati
+1766576263	1766576263	1766576263	Funafuti	Tuvalu	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		190920972	nil	-8.460481364151244	179.21667	0	nil	0	39.0	nil	nil	Tuvalu
+1766576443	1766576443	1766576443	Taga	Samoa	WS		205607200	nil	-13.699354471050137	-172.51668449999997	0	nil	0	36.0	nil	nil	Samoa
+1766576593	1766576593	1766576593	Tongatapu	Tonga	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		220293429	nil	-21.009201450112194	-175.2035083	0	nil	0	30.0	nil	nil	Tonga
+1766576893	1766576893	1766576893	Auckland	New Zealand	NZ		234979658	nil	-36.69953182037323	174.77042	0	nil	0	60.0	nil	nil	New Zealand
+1766576953	1766576953	1766576953	Gisborne	New Zealand	NZ		249665886	nil	-38.47490580067053	178.01777799999996	0	nil	0	12.0	nil	nil	New Zealand
+1766577073	1766577073	1766577073	Christchurch	New Zealand	NZ		264352115	nil	-43.33889028324138	172.63776700000003	0	nil	0	24.0	nil	nil	New Zealand
+1766577253	1766577253	1766577253	Chatham Island	New Zealand	NZ		279038343	nil	-43.80109318483747	-176.5183194	0	nil	0	36.0	nil	nil	New Zealand
+1766577823	1766577823	1766577823	McMurdo Station	Antarctica	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		293724572	nil	-77.7662921762981	166.6718528	0	nil	0	114.0	nil	nil	Austria
+1766578303	1766578303	1766578303	Queenstown	New Zealand	NZ		308410801	nil	-44.83870314432942	168.6625	0	nil	0	96.0	nil	nil	New Zealand
+1766578783	1766578783	1766578783	Suva	Fiji	FJ		323097029	nil	-18.01009415577496	178.437576	0	nil	0	96.0	nil	nil	Fiji
+1766579008	1766579008	1766579008	Nouméa	New Caledonia	NC		337783258	nil	-22.144230331119424	166.45220830000002	0	nil	0	45.0	nil	nil	New Caledonia
+1766579128	1766579128	1766579128	Vanuatu		https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		352469487	nil	-16.545645175826216	168.022003	0	nil	0	24.0	nil	nil	
+1766579308	1766579308	1766579308	Honiara	Solomon Islands	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		367155715	nil	-9.369673770182473	159.94974440000001	0	nil	0	36.0	nil	nil	Solomon Islands
+1766579338	1766579338	1766579338	Auki	Solomon Islands	SB		381841944	nil	-8.708916887282278	160.699997	0	nil	0	6.0	nil	nil	Solomon Islands
+1766579638	1766579638	1766579638	Palikir	Federated States of Micronesia	FM		396528173	nil	6.871290007741574	158.158081	0	nil	0	60.0	nil	nil	Micronesia
+1766580298	1766580298	1766580298	Kurilsk	Kuril Islands	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		411214401	nil	44.414604564162495	147.146782	0	nil	0	132.0	nil	nil	
+1766580478	1766580478	1766580478	Nogliki	Russia	RU		425900630	nil	51.62534454532134	143.16666700000002	0	nil	0	36.0	nil	nil	Russia
+1766580778	1766580778	1766580778	Yakutsk	Russia	RU		440586858	nil	61.88570833631222	129.729507	0	nil	0	60.0	nil	nil	Russia
+1766581018	1766581018	1766581018	Birobidzhan	Russia	RU		455273087	nil	48.59620123526759	132.932657	0	nil	0	48.0	nil	nil	Russia
+1766581138	1766581138	1766581138	Trudovoye	Russia	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		469959316	nil	43.09126077674113	132.083298	0	nil	0	24.0	nil	nil	Russia
+1766581168	1766581168	1766581168	Arsenyev	Russia	RU		484645544	nil	43.97483817425407	133.2689833	0	nil	0	6.0	nil	nil	Russia
+1766581288	1766581288	1766581288	Komsomolsk-on-Amur	Russia	RU		499331773	nil	50.377777503485994	137.0	0	nil	0	24.0	nil	nil	Russia
+1766581378	1766581378	1766581378	Nevelsk	Sakhalin Island	RU		514018002	nil	46.47623844501958	141.851975	0	nil	0	18.0	nil	nil	Russia
+1766581918	1766581918	1766581918	San Vincente	Saipan, Northern Mariana Islands	MP		528704230	nil	15.056788747613012	145.74000000000004	0	nil	0	108.0	nil	nil	Northern Mariana Islands
+1766581963	1766581963	1766581963	Santa Rita	Guam	GU		543390459	nil	13.29969578076185	144.66888900000004	0	nil	0	9.0	nil	nil	Guam
+1766582338	1766582338	1766582338	Kimbe	Papua New Guinea	PG		558076687	nil	-5.51350445906887	150.142807	0	nil	0	75.0	nil	nil	Papua New Guinea
+1766582428	1766582428	1766582428	Port Moresby	Papua New Guinea	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		572762916	nil	-9.417271498925949	147.18852200000003	0	nil	0	18.0	nil	nil	Papua New Guinea
+1766582503	1766582503	1766582503	Daru	Papua New Guinea	PG		587449145	nil	-9.01772439817191	143.207947	0	nil	0	15.0	nil	nil	Papua New Guinea
+1766582668	1766582668	1766582668	Cooktown	Australia	AU		602135373	nil	-15.37038610160476	145.251528	0	nil	0	33.0	nil	nil	Australia
+1766582878	1766582878	1766582878	Rockhampton	Australia	AU		616821602	nil	-23.234411785039885	150.503662	0	nil	0	42.0	nil	nil	Australia
+1766582968	1766582968	1766582968	Maryborough	Australia	AU		631507831	nil	-25.387970263886572	152.7014472	0	nil	0	18.0	nil	nil	Australia
+1766583028	1766583028	1766583028	Brisbane	Australia	AU		646194059	nil	-27.311680606942904	153.022827	0	nil	0	12.0	nil	nil	Australia
+1766583178	1766583178	1766583178	Sydney	Australia	AU		660880288	nil	-33.691774002636976	151.206955	0	nil	0	30.0	nil	nil	Australia
+1766583238	1766583238	1766583238	Canberra	Australia	AU		675566517	nil	-35.125248395704844	149.12655600000002	0	nil	0	12.0	nil	nil	Australia
+1766583328	1766583328	1766583328	Melbourne	Australia	AU		690252745	nil	-37.631281908164695	144.967148	0	nil	0	18.0	nil	nil	Australia
+1766583418	1766583418	1766583418	Hobart	Tasmania	AU		704938974	nil	-42.68870699125675	147.325	0	nil	0	18.0	nil	nil	Australia
+1766583628	1766583628	1766583628	Adelaide	Australia	AU		719625202	nil	-34.745663937381835	138.599884	0	nil	0	42.0	nil	nil	Australia
+1766583838	1766583838	1766583838	Alice Springs	Australia	AU		734311431	nil	-23.562006546458328	133.880936	0	nil	0	42.0	nil	nil	Australia
+1766584048	1766584048	1766584048	Darwin	Australia	AU		748997660	nil	-12.38662303050576	130.84315500000002	0	nil	0	42.0	nil	nil	Australia
+1766584168	1766584168	1766584168	Dili	East Timor	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		763683888	nil	-8.502165393939741	125.5784806	0	nil	0	24.0	nil	nil	Timor-Leste
+1766584408	1766584408	1766584408	Sorong	West Papua	ID		778370117	nil	-0.8608661858469409	131.25	0	nil	0	48.0	nil	nil	Indonesia
+1766584588	1766584588	1766584588	Babeldaob	Palau	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		793056346	nil	7.4613239686877	134.5775361	0	nil	0	36.0	nil	nil	
+1766584888	1766584888	1766584888	Iwo Jima	Japan	JP		807742574	nil	24.632844125283146	141.315979	0	nil	0	60.0	nil	nil	Japan
+1766585248	1766585248	1766585248	Sapporo	Japan	JP		822428803	nil	42.86869885093169	141.35505280000004	0	nil	0	72.0	nil	nil	Japan
+1766585428	1766585428	1766585428	Tokyo	Japan	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		837115031	nil	35.488366919953094	139.740921	0	nil	0	36.0	nil	nil	Japan
+1766585503	1766585503	1766585503	Kanazawa	Japan	JP		851801260	nil	36.377102611172745	136.656417	0	nil	0	15.0	nil	nil	Japan
+1766585548	1766585548	1766585548	Nagoya	Japan	JP		866487489	nil	35.00230249840144	136.9	0	nil	0	9.0	nil	nil	Japan
+1766585578	1766585578	1766585578	Kyoto	Japan	JP		881173717	nil	34.84051824945739	135.7526306	0	nil	0	6.0	nil	nil	Japan
+1766585653	1766585653	1766585653	Hiroshima	Japan	JP		895859946	nil	34.21952280375863	132.4759	0	nil	0	15.0	nil	nil	Japan
+1766585713	1766585713	1766585713	Shimonoseki	Japan	JP		910546175	nil	33.771940337654755	130.933333	0	nil	0	12.0	nil	nil	Japan
+1766585773	1766585773	1766585773	Nagasaki	Japan	JP		925232403	nil	32.60370916518912	129.859275	0	nil	0	12.0	nil	nil	Japan
+1766585953	1766585953	1766585953	Naha	Okinawa, Japan	JP		939918632	nil	26.058880952348638	127.68762200000002	0	nil	0	36.0	nil	nil	Japan
+1766586163	1766586163	1766586163	Jeju City	South Korea	KR		954604860	nil	33.33597249054642	126.5232	0	nil	0	42.0	nil	nil	South Korea
+1766586223	1766586223	1766586223	Busan	South Korea	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		969291089	nil	34.98567504228349	129.066667	0	nil	0	12.0	nil	nil	South Korea
+1766586283	1766586283	1766586283	Daejeon	South Korea	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		983977318	nil	36.16746507074037	127.38500000000002	0	nil	0	12.0	nil	nil	South Korea
+1766586328	1766586328	1766586328	Seoul	South Korea	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		998663546	nil	37.37131820245768	126.97737900000001	0	nil	0	9.0	nil	nil	South Korea
+1766586388	1766586388	1766586388	Pyongyang	North Korea	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		1013349775	nil	38.83133029198865	125.73805600000001	0	nil	0	12.0	nil	nil	North Korea
+1766586448	1766586448	1766586448	Shenyang	China	CN		1028036004	nil	41.59736700455232	123.40612	0	nil	0	12.0	nil	nil	China
+1766586568	1766586568	1766586568	Harbin	China	CN		1042722232	nil	45.56283100893288	126.62252000000001	0	nil	0	24.0	nil	nil	China
+1766586628	1766586628	1766586628	Mudanjiang	China	CN		1057408461	nil	44.38622413412136	129.611008	0	nil	0	12.0	nil	nil	China
+1766586808	1766586808	1766586808	Great Wall	China	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		1072094690	nil	40.486801022229166	117.23193	0	nil	0	36.0	nil	nil	Australia
+1766586838	1766586838	1766586838	Beijing	China	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		1086780918	nil	39.71673480022762	116.387909	0	nil	0	6.0	nil	nil	China
+1766586958	1766586958	1766586958	Qingdao	China	CN		1101467147	nil	35.90451180002249	120.34272	0	nil	0	24.0	nil	nil	China
+1766587078	1766587078	1766587078	Shanghai	China	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		1116153375	nil	31.077299277543382	121.472618	0	nil	0	24.0	nil	nil	China
+1766587228	1766587228	1766587228	Taipei	Taiwan	TW		1130839604	nil	24.933007128620666	121.56419400000001	0	nil	0	30.0	nil	nil	Taiwan
+1766587528	1766587528	1766587528	Davao City	Philippines	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		1145525833	nil	7.033040822231107	125.61277000000001	0	nil	0	60.0	nil	nil	Philippines
+1766587708	1766587708	1766587708	Manila	Philippines	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		1160212061	nil	14.51596322380041	121.00588999999998	0	nil	0	36.0	nil	nil	Philippines
+1766587888	1766587888	1766587888	Hong Kong		https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		1174898290	nil	22.11545189229394	114.1667	0	nil	0	36.0	nil	nil	
+1766587918	1766587918	1766587918	Guangzhou	China	CN		1189584519	nil	22.96879325396699	113.267616	0	nil	0	6.0	nil	nil	China
+1766588038	1766588038	1766588038	Changsha	China	CN		1204270747	nil	28.06792052045256	112.939	0	nil	0	24.0	nil	nil	China
+1766588188	1766588188	1766588188	Xi'an	China	CN		1218956976	nil	34.08441211874884	108.93183100000002	0	nil	0	30.0	nil	nil	China
+1766588308	1766588308	1766588308	Chongqing	China	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		1233643204	nil	29.41699760684027	106.5678667	0	nil	0	24.0	nil	nil	China
+1766588368	1766588368	1766588368	Chengdu	China	CN		1248329433	nil	30.501436485670556	104.071022	0	nil	0	12.0	nil	nil	China
+1766588518	1766588518	1766588518	Kunming	China	CN		1263015662	nil	24.903736829423252	102.702011	0	nil	0	30.0	nil	nil	China
+1766588728	1766588728	1766588728	Haikou	China	CN		1277701890	nil	19.895134340166518	110.3488	0	nil	0	42.0	nil	nil	China
+1766589028	1766589028	1766589028	Bandar Seri Begawan	Brunei	BN		1292388119	nil	4.857759620332332	114.94245900000001	0	nil	0	60.0	nil	nil	Brunei
+1766589088	1766589088	1766589088	Bintulu	Malaysia	MY		1307074348	nil	3.1756811919764116	113.068398	0	nil	0	12.0	nil	nil	Malaysia
+1766589238	1766589238	1766589238	Sampit	Indonesia	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		1321760576	nil	-2.5163959621293555	112.95000000000002	0	nil	0	30.0	nil	nil	Indonesia
+1766589538	1766589538	1766589538	Broome	Australia	AU		1336446805	nil	-17.84053673666018	122.240517	0	nil	0	60.0	nil	nil	Australia
+1766589688	1766589688	1766589688	Newman	Australia	AU		1351133034	nil	-23.216954429491413	119.73504440000004	0	nil	0	30.0	nil	nil	Australia
+1766589868	1766589868	1766589868	Perth	Australia	AU		1365819262	nil	-31.78046471834766	115.85723900000002	0	nil	0	36.0	nil	nil	Australia
+1766589958	1766589958	1766589958	Geraldton	Australia	AU		1380505491	nil	-28.61420848633435	114.62606799999999	0	nil	0	18.0	nil	nil	Australia
+1766590348	1766590348	1766590348	The Settlement	Christmas Island	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		1395191719	nil	-10.355283643257186	105.67882220000001	0	nil	0	78.0	nil	nil	Christmas Island
+1766590543	1766590543	1766590543	Padang	Indonesia	ID		1409877948	nil	-0.9436415595194232	100.353056	0	nil	0	39.0	nil	nil	Indonesia
+1766590723	1766590723	1766590723	Jakarta	Indonesia	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		1424564177	nil	-6.130441803558814	106.82782	0	nil	0	36.0	nil	nil	Indonesia
+1766590933	1766590933	1766590933	Natuna Besar	Indonesia	ID		1439250405	nil	3.921689483786506	108.212586	0	nil	0	42.0	nil	nil	Indonesia
+1766591083	1766591083	1766591083	Singapore		https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		1453936634	nil	1.281531047398344	103.852	0	nil	0	30.0	nil	nil	
+1766591173	1766591173	1766591173	Pekanbaru	Indonesia	ID		1468622863	nil	0.5132114088545973	101.44167	0	nil	0	18.0	nil	nil	Indonesia
+1766591233	1766591233	1766591233	Kuala Lumpur	Malaysia	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		1483309091	nil	3.083921643246444	101.69117000000001	0	nil	0	12.0	nil	nil	Malaysia
+1766591293	1766591293	1766591293	Terengganu	Malaysia	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		1497995320	nil	5.294184632079275	103.1341013	0	nil	0	12.0	nil	nil	Malaysia
+1766591443	1766591443	1766591443	Hat Yai	Thailand	TH		1512681548	nil	6.960642887789658	100.46398059999999	0	nil	0	30.0	nil	nil	Thailand
+1766591503	1766591503	1766591503	Phi Phi Islands	Thailand	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		1527367777	nil	7.692078945840208	98.778908	0	nil	0	12.0	nil	nil	Philippines
+1766591653	1766591653	1766591653	Bangkok	Thailand	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		1542054006	nil	13.664722269613994	100.504822	0	nil	0	30.0	nil	nil	Thailand
+1766591773	1766591773	1766591773	Phnom Penh	Cambodia	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		1556740234	nil	11.489386750400048	104.913208	0	nil	0	24.0	nil	nil	Cambodia
+1766591893	1766591893	1766591893	Da Nang	Vietnam	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		1571426463	nil	15.931464015103407	108.216667	0	nil	0	24.0	nil	nil	Vietnam
+1766592013	1766592013	1766592013	Hanoi	Vietnam	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		1586112692	nil	20.897383508835315	105.847122	0	nil	0	24.0	nil	nil	Vietnam
+1766592163	1766592163	1766592163	Chiang Mai	Thailand	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		1600798920	nil	18.66987982239495	98.9865	0	nil	0	30.0	nil	nil	Thailand
+1766592253	1766592253	1766592253	Vientiane	Laos	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		1615485149	nil	17.852702449905973	102.611519	0	nil	0	18.0	nil	nil	Laos
+1766592403	1766592403	1766592403	Yangon	Burma	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		1630171377	nil	16.697679094511486	96.15469400000002	0	nil	0	30.0	nil	nil	Türkiye
+1766592643	1766592643	1766592643	Lhasa	Tibet, China	CN		1644857606	nil	29.480490712573687	91.140856	0	nil	0	48.0	nil	nil	China
+1766592883	1766592883	1766592883	Zhangye	China	CN		1659543835	nil	38.74456062876319	100.457314	0	nil	0	48.0	nil	nil	China
+1766593063	1766593063	1766593063	Ulaanbaatar	Mongolia	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		1674230063	nil	47.73705486062967	106.912308	0	nil	0	36.0	nil	nil	Mongolia
+1766593483	1766593483	1766593483	Norilsk	Russia	RU		1688916292	nil	69.20237865366005	88.22360000000002	0	nil	0	84.0	nil	nil	Russia
+1766593783	1766593783	1766593783	Burmistrovo	Russia	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		1703602521	nil	54.45267000856892	82.836984	0	nil	0	60.0	nil	nil	
+1766593933	1766593933	1766593933	Astana	Kazakhstan	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		1718288749	nil	51.00136639195029	71.432091	0	nil	0	30.0	nil	nil	Kazakhstan
+1766594113	1766594113	1766594113	Bishkek	Kyrgyzstan	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		1732974978	nil	42.6782001035533	74.587891	0	nil	0	36.0	nil	nil	Kyrgyzstan
+1766594473	1766594473	1766594473	Gangtok	Inida	IN		1747661207	nil	27.173372872484176	88.62000000000002	0	nil	0	72.0	nil	nil	India
+1766594503	1766594503	1766594503	Thimphu	Bhutan	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		1762347435	nil	27.31107246061018	89.661888	0	nil	0	6.0	nil	nil	Bhutan
+1766594593	1766594593	1766594593	Dhaka	Bangladesh	BD		1777033664	nil	23.56843414293132	90.407112	0	nil	0	18.0	nil	nil	Bangladesh
+1766594653	1766594653	1766594653	Kolkata	India	IN		1791719892	nil	22.43651310937501	88.3639	0	nil	0	12.0	nil	nil	India
+1766594773	1766594773	1766594773	Kathmandu	Nepal	NP		1806406121	nil	27.543933944132807	85.31749699999999	0	nil	0	24.0	nil	nil	Nepal
+1766594953	1766594953	1766594953	Mussoorie	India	IN		1821092350	nil	30.289922872468257	78.07424	0	nil	0	36.0	nil	nil	India
+1766595013	1766595013	1766595013	New Delhi	India	IN		1835778578	nil	28.47447725772932	77.21618889	0	nil	0	12.0	nil	nil	India
+1766595433	1766595433	1766595433	Colombo	Sri Lanka	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		1850464807	nil	6.881272201931607	79.8722	0	nil	0	84.0	nil	nil	Sri Lanka
+1766595673	1766595673	1766595673	Addu City	Maldives	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		1865151036	nil	-0.6370071858009526	73.157997	0	nil	0	48.0	nil	nil	Maldives
+1766596033	1766596033	1766596033	Bangalore	India	IN		1879837264	nil	12.88700689309695	77.60482	0	nil	0	72.0	nil	nil	India
+1766596213	1766596213	1766596213	Mumbai	India	IN		1894523493	nil	18.957632351721553	72.875877	0	nil	0	36.0	nil	nil	India
+1766596303	1766596303	1766596303	Ahmedabad	India	IN		1909209721	nil	22.89504922735709	72.6167	0	nil	0	18.0	nil	nil	India
+1766596423	1766596423	1766596423	Karachi	Pakistan	PK		1923895950	nil	24.743169234367233	67.028511	0	nil	0	24.0	nil	nil	Pakistan
+1766596633	1766596633	1766596633	Lahore	Pakistan	PK		1938582179	nil	31.368144235430194	74.303482	0	nil	0	42.0	nil	nil	Pakistan
+1766596708	1766596708	1766596708	Islamabad	Pakistan	PK		1953268407	nil	33.53240915020665	73.075912	0	nil	0	15.0	nil	nil	Pakistan
+1766596768	1766596768	1766596768	Gilgit	Pakistan	PK		1967954636	nil	35.7382250252053	74.308333	0	nil	0	12.0	nil	nil	Pakistan
+1766596858	1766596858	1766596858	Dushanbe	Tajikistan	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		1982640865	nil	38.371901223953024	68.774971	0	nil	0	18.0	nil	nil	Tajikistan
+1766596903	1766596903	1766596903	Samarkand	Uzbekistan	UZ		1997327093	nil	39.45067268756002	66.9412	0	nil	0	9.0	nil	nil	Uzbekistan
+1766597113	1766597113	1766597113	Karsakpay	Kazakhstan	KZ		2012013322	nil	47.642373544494276	66.72713611	0	nil	0	42.0	nil	nil	Kazakhstan
+1766597308	1766597308	1766597308	Chelyabinsk	Russia	RU		2026699551	nil	54.986060470120485	61.40000200000001	0	nil	0	39.0	nil	nil	Russia
+1766597353	1766597353	1766597353	Yekaterinburg	Russia	RU		2041385779	nil	56.65686190690295	60.58333300000001	0	nil	0	9.0	nil	nil	Russia
+1766597623	1766597623	1766597623	Volgograd	Russia	RU		2056072008	nil	48.512712638676554	44.452970000000015	0	nil	0	54.0	nil	nil	Russia
+1766597923	1766597923	1766597923	Ashgabat	Turkmenistan	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		2070758236	nil	37.76382275824941	58.390319999999996	0	nil	0	60.0	nil	nil	Turkmenistan
+1766598193	1766598193	1766598193	Dubai	United Arab Emirates	AE		2085444465	nil	25.12119926221746	55.30864999999999	0	nil	0	54.0	nil	nil	United Arab Emirates
+1766598283	1766598283	1766598283	Muscat Governorate	Oman	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		2100130694	nil	23.468176520302055	58.54024167	0	nil	0	18.0	nil	nil	Oman
+1766598373	1766598373	1766598373	Abu Dhabi	United Arab Emirates	AE		2114816922	nil	24.324421898891224	54.37173800000001	0	nil	0	18.0	nil	nil	United Arab Emirates
+1766598673	1766598673	1766598673	Tehran	Iran	IR		2129503151	nil	35.5139759141082	51.424400000000006	0	nil	0	60.0	nil	nil	Iran
+1766598763	1766598763	1766598763	Baku	Azerbaijan	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		2144189380	nil	40.18830061800519	49.802841	0	nil	0	18.0	nil	nil	Azerbaijan
+1766598853	1766598853	1766598853	Tbilisi	Georgia	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		2158875608	nil	41.530723389306424	44.783131	0	nil	0	18.0	nil	nil	Georgia
+1766598883	1766598883	1766598883	Yerevan	Armenia	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		2173561837	nil	39.99312159791156	44.555494	0	nil	0	6.0	nil	nil	Armenia
+1766598943	1766598943	1766598943	Ganja	Azerbaijan	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		2188248065	nil	40.494255553535936	46.34875100000001	0	nil	0	12.0	nil	nil	Azerbaijan
+1766598973	1766598973	1766598973	Vanadzor	Armenia	AM		2202934294	nil	40.62256280176457	44.48830000000001	0	nil	0	6.0	nil	nil	Armenia
+1766599153	1766599153	1766599153	Khorramabad	Iran	IR		2217620523	nil	33.31095094413013	48.35583300000001	0	nil	0	36.0	nil	nil	Iran
+1766599363	1766599363	1766599363	Manama	Bahrain	BH		2232306751	nil	26.06445465361606	50.583332999999996	0	nil	0	42.0	nil	nil	Bahrain
+1766599393	1766599393	1766599393	Doha	Qatar	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		2246992980	nil	25.14621910107813	51.519445000000005	0	nil	0	6.0	nil	nil	Qatar
+1766599633	1766599633	1766599633	Socotra Island	Yemen	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		2261679209	nil	12.442986941854505	53.905315	0	nil	0	48.0	nil	nil	Yemen
+1766599873	1766599873	1766599873	Mogadishu	Somalia	SO		2276365437	nil	2.027517068186875	45.344139000000006	0	nil	0	48.0	nil	nil	Somalia
+1766600113	1766600113	1766600113	Victoria	Seychelles	SC		2291051666	nil	-4.567866291875532	55.453331000000006	0	nil	0	48.0	nil	nil	Seychelles
+1766600293	1766600293	1766600293	Verte Rocks	Glorioso Islands	IE		2305737894	nil	-11.495893754556784	47.33171889000001	0	nil	0	36.0	nil	nil	Ireland
+1766600503	1766600503	1766600503	Saint-Denis	Réunion	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		2320424123	nil	-20.764767359491135	55.47104000000001	0	nil	0	42.0	nil	nil	
+1766600563	1766600563	1766600563	Port Louis	Mauritius	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		2335110352	nil	-20.03259848400894	57.501720000000006	0	nil	0	12.0	nil	nil	Mauritius
+1766601073	1766601073	1766601073	Port-aux-Français		https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		2349796580	nil	-49.01956699189168	70.13	0	nil	0	102.0	nil	nil	France
+1766601823	1766601823	1766601823	Antananarivo	Madagascar	MG		2364482809	nil	-18.795406775934048	47.52908333	0	nil	0	150.0	nil	nil	Madagascar
+1766601973	1766601973	1766601973	Moroni	Union of the Comoros	KM		2379169038	nil	-11.597965923523494	43.264388999999994	0	nil	0	30.0	nil	nil	Comoros
+1766602093	1766602093	1766602093	Zanzibar	Tanzania	TZ		2393855266	nil	-6.094935490815742	39.3621	0	nil	0	24.0	nil	nil	Tanzania
+1766602213	1766602213	1766602213	Nairobi	Kenya	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		2408541495	nil	-1.2687523879268456	36.806261	0	nil	0	24.0	nil	nil	Kenya
+1766602423	1766602423	1766602423	Addis Ababa	Ethiopia	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		2423227724	nil	8.963334238385748	38.746792	0	nil	0	42.0	nil	nil	Ethiopia
+1766602543	1766602543	1766602543	Djibouti	Djibouti	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		2437913952	nil	11.519460116544577	43.14806000000001	0	nil	0	24.0	nil	nil	Djibouti
+1766602633	1766602633	1766602633	Sana'a	Yemen	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		2452600181	nil	15.25557314288842	44.20753333	0	nil	0	18.0	nil	nil	Yemen
+1766602813	1766602813	1766602813	Mecca	Saudi Arabia	SA		2467286409	nil	21.29918193558886	39.828388	0	nil	0	36.0	nil	nil	Saudi Arabia
+1766602993	1766602993	1766602993	Riyadh	Saudi Arabia	SA		2481972638	nil	24.50178592531631	46.714585	0	nil	0	36.0	nil	nil	Saudi Arabia
+1766603113	1766603113	1766603113	Kuwait City	Kuwait	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		2496658867	nil	29.187922435592245	47.99720833000001	0	nil	0	24.0	nil	nil	Kuwait
+1766603143	1766603143	1766603143	Al Basrah	Iraq	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		2511345095	nil	30.351957883649582	47.82337222	0	nil	0	6.0	nil	nil	Iraq
+1766603233	1766603233	1766603233	Baghdad	Iraq	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		2526031324	nil	33.162147375328665	44.39389	0	nil	0	18.0	nil	nil	Iraq
+1766603413	1766603413	1766603413	Adana	Turkey	TR		2540717553	nil	36.8152031117952	35.321333	0	nil	0	36.0	nil	nil	Türkiye
+1766603713	1766603713	1766603713	Kyiv	Ukraine	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		2555403781	nil	50.260933485804195	30.523333000000004	0	nil	0	60.0	nil	nil	Ukraine
+1766603893	1766603893	1766603893	Moscow	Russia	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		2570090010	nil	55.577716970070774	37.61497500000001	0	nil	0	36.0	nil	nil	Russia
+1766604193	1766604193	1766604193	Pechora	Russia	RU		2584776238	nil	65.01966599410504	57.24999999999999	0	nil	0	60.0	nil	nil	Russia
+1766604493	1766604493	1766604493	St. Petersburg	Russia	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		2599462467	nil	59.765993490452885	30.306114999999995	0	nil	0	60.0	nil	nil	Russia
+1766604553	1766604553	1766604553	Tartu	Estonia	EE		2614148696	nil	58.20446613892428	26.72614	0	nil	0	12.0	nil	nil	Estonia
+1766604628	1766604628	1766604628	Mikkeli	Finland	FI		2628834924	nil	61.522332570288626	27.266667	0	nil	0	15.0	nil	nil	Finland
+1766604673	1766604673	1766604673	Helsinki	Finland	FI		2643521153	nil	60.00481313738723	24.932580000000005	0	nil	0	9.0	nil	nil	Finland
+1766604763	1766604763	1766604763	Riga	Latvia	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		2658207382	nil	56.769825528984704	24.114901	0	nil	0	18.0	nil	nil	Latvia
+1766604838	1766604838	1766604838	Vilnius	Lithuania	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		2672893610	nil	54.50812589289761	25.269258	0	nil	0	15.0	nil	nil	Lithuania
+1766605063	1766605063	1766605063	Odessa	Ukraine	UA		2687579839	nil	46.29352527040261	30.743444	0	nil	0	45.0	nil	nil	Ukraine
+1766605108	1766605108	1766605108	Chișinău	Moldova	MD		2702266068	nil	46.820306710955755	28.860600000000005	0	nil	0	9.0	nil	nil	Moldova
+1766605183	1766605183	1766605183	Bucharest	Romania	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		2716952296	nil	44.2419253766468	26.102965	0	nil	0	15.0	nil	nil	Romania
+1766605243	1766605243	1766605243	Plovdiv	Bulgaria	BG		2731638525	nil	41.944338257307585	24.74829	0	nil	0	12.0	nil	nil	Bulgaria
+1766605318	1766605318	1766605318	Istanbul	Turkey	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		2746324753	nil	40.82232773337449	28.974399999999992	0	nil	0	15.0	nil	nil	Türkiye
+1766605393	1766605393	1766605393	Ankara	Turkey	TR		2761010982	nil	39.75363685334944	32.86048	0	nil	0	15.0	nil	nil	Türkiye
+1766605573	1766605573	1766605573	Van	Turkey	TR		2775697211	nil	38.30226057586874	43.40925556	0	nil	0	36.0	nil	nil	Türkiye
+1766605813	1766605813	1766605813	Antalya	Turkey	TR		2790383439	nil	36.69448060827222	30.70920500000001	0	nil	0	48.0	nil	nil	Türkiye
+1766605933	1766605933	1766605933	Santorini	Greece	GR		2805069668	nil	36.23632714619656	25.431700000000003	0	nil	0	24.0	nil	nil	Greece
+1766605993	1766605993	1766605993	Athens	Greece	GR		2819755897	nil	37.79128524846675	23.7278	0	nil	0	12.0	nil	nil	Greece
+1766606053	1766606053	1766606053	Izmir	Turkey	TR		2834442125	nil	38.23297530178029	27.128299999999996	0	nil	0	12.0	nil	nil	Türkiye
+1766606293	1766606293	1766606293	Amman	Jordan	JO		2849128354	nil	31.777475653658595	35.933331	0	nil	0	48.0	nil	nil	Jordan
+1766606323	1766606323	1766606323	Tel Aviv	Isreal	IL		2863814582	nil	31.8937767535399	34.783333	0	nil	0	6.0	nil	nil	Israel
+1766606413	1766606413	1766606413	Nicosia	Cyprus	CY		2878500811	nil	34.985708633637294	33.366699000000004	0	nil	0	18.0	nil	nil	Cyprus
+1766606473	1766606473	1766606473	Zahle	Lebanon	LB		2893187040	nil	33.655597352190085	35.916667	0	nil	0	12.0	nil	nil	Lebanon
+1766606533	1766606533	1766606533	Bethlehem	Palestine	PS		2907873268	nil	31.538192690309362	35.2	0	nil	0	12.0	nil	nil	Palestinian Territories
+1766606638	1766606638	1766606638	Cairo	Egypt	EG		2922559497	nil	29.890045898418833	31.2262	0	nil	0	21.0	nil	nil	Egypt
+1766606683	1766606683	1766606683	Alexandria	Egypt	EG		2937245726	nil	31.02200388449674	29.88987	0	nil	0	9.0	nil	nil	Egypt
+1766606833	1766606833	1766606833	Luxor	Egypt	EG		2951931954	nil	25.552318639326213	32.649395	0	nil	0	30.0	nil	nil	Egypt
+1766607073	1766607073	1766607073	Asmara	Eritrea	ER		2966618183	nil	15.225013318663157	38.925	0	nil	0	48.0	nil	nil	Eritrea
+1766607223	1766607223	1766607223	Khartoum	Sudan	SD		2981304411	nil	15.491582785819139	32.518829	0	nil	0	30.0	nil	nil	Sudan
+1766607493	1766607493	1766607493	Juba	South Sudan	SS		2995990640	nil	4.817251234950055	31.60463	0	nil	0	54.0	nil	nil	South Sudan
+1766607613	1766607613	1766607613	Kampala	Uganda	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		3010676869	nil	0.32320223018062116	32.586971	0	nil	0	24.0	nil	nil	Uganda
+1766607703	1766607703	1766607703	Kigali	Rwanda	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		3025363097	nil	-1.9308827575957648	30.05945000000001	0	nil	0	18.0	nil	nil	Rwanda
+1766607748	1766607748	1766607748	Bujumbura	Burundi	BI		3040049326	nil	-3.349967592979581	29.356070000000003	0	nil	0	9.0	nil	nil	Burundi
+1766607913	1766607913	1766607913	Kamina	Democratic Republic of the Congo	CD		3054735555	nil	-8.678818580458307	25.01086	0	nil	0	33.0	nil	nil	Democratic Republic of the Congo
+1766608093	1766608093	1766608093	Lusaka	Zambia	ZM		3069421783	nil	-15.310562937599869	28.282400000000006	0	nil	0	36.0	nil	nil	Zambia
+1766608213	1766608213	1766608213	Lilongwe	Malawi	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		3084108012	nil	-13.7914511172221	33.7733	0	nil	0	24.0	nil	nil	Malawi
+1766608363	1766608363	1766608363	Beira	Mozambique	MZ		3098794241	nil	-19.69766631225871	34.851009999999995	0	nil	0	30.0	nil	nil	Mozambique
+1766608483	1766608483	1766608483	Bulawayo	Zimbabwe	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		3113480469	nil	-20.04795363698275	28.58115	0	nil	0	24.0	nil	nil	Zimbabwe
+1766608603	1766608603	1766608603	Gaborone	Botswana	BW		3128166698	nil	-24.509720275350098	25.919064999999993	0	nil	0	24.0	nil	nil	Botswana
+1766608663	1766608663	1766608663	Johannesburg	South Africa	ZA		3142852926	nil	-26.052822686273615	28.040034999999996	0	nil	0	12.0	nil	nil	South Africa
+1766608753	1766608753	1766608753	Maputo	Mozambique	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		3157539155	nil	-25.81552115401119	32.5833	0	nil	0	18.0	nil	nil	Mozambique
+1766608873	1766608873	1766608873	Maseru	Lesotho	LS		3172225384	nil	-29.174751131578628	27.499700999999998	0	nil	0	24.0	nil	nil	Lesotho
+1766609053	1766609053	1766609053	Cape Town	South Africa	ZA		3186911612	nil	-33.74112298676523	18.42197000000001	0	nil	0	36.0	nil	nil	South Africa
+1766609293	1766609293	1766609293	Windhoek	Namibia	NA		3201597841	nil	-22.435546298078084	17.090739999999997	0	nil	0	48.0	nil	nil	Namibia
+1766609593	1766609593	1766609593	Luanda	Angola	AO		3216284070	nil	-8.91884561721101	13.312591000000001	0	nil	0	60.0	nil	nil	Angola
+1766609713	1766609713	1766609713	Kinshasa	Democratic Republic of the Congo	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		3230970298	nil	-4.296156562849119	15.322222	0	nil	0	24.0	nil	nil	Democratic Republic of the Congo
+1766609803	1766609803	1766609803	Moanda	Gabon	GA		3245656527	nil	-1.5561848809714036	13.2	0	nil	0	18.0	nil	nil	Gabon
+1766609923	1766609923	1766609923	Port-Gentil	Gabon	GA		3260342755	nil	-0.7216767919746679	8.787300000000002	0	nil	0	24.0	nil	nil	Gabon
+1766610013	1766610013	1766610013	Malabo	Equatorial Guinea	GQ		3275028984	nil	3.724907896253854	8.777619999999999	0	nil	0	18.0	nil	nil	Equatorial Guinea
+1766610073	1766610073	1766610073	Yaoundé	Cameroon	CM		3289715213	nil	3.8409701147079667	11.51538056	0	nil	0	12.0	nil	nil	Cameroon
+1766610253	1766610253	1766610253	Bangui	Central African Republic	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		3304401441	nil	4.344170407448524	18.562778	0	nil	0	36.0	nil	nil	Central African Republic
+1766610493	1766610493	1766610493	Abuja	Nigeria	NG		3319087670	nil	9.006977835911247	7.48333	0	nil	0	48.0	nil	nil	Nigeria
+1766610613	1766610613	1766610613	Cotonou	Benin	BJ		3333773899	nil	6.31472069369743	2.4400900000000005	0	nil	0	24.0	nil	nil	Benin
+1766610808	1766610808	1766610808	Agadez	Niger	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		3348460127	nil	16.86419880786383	7.986197222000004	0	nil	0	39.0	nil	nil	Niger
+1766610988	1766610988	1766610988	Ati	Chad	TD		3363146356	nil	13.129075518529667	18.338011	0	nil	0	36.0	nil	nil	Chad
+1766611228	1766611228	1766611228	Sabha	Libya	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		3377832585	nil	26.86926508571719	14.459240000000001	0	nil	0	48.0	nil	nil	Libya
+1766611363	1766611363	1766611363	Tripoli	Libya	LY		3392518813	nil	32.70249905395256	13.18732	0	nil	0	27.0	nil	nil	Libya
+1766611438	1766611438	1766611438	Valletta	Malta	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		3407205042	nil	35.71094326597318	14.51178	0	nil	0	15.0	nil	nil	Malta
+1766611588	1766611588	1766611588	Rome	Italy	IT		3421891270	nil	41.71188124228749	12.495760000000004	0	nil	0	30.0	nil	nil	Italy
+1766611663	1766611663	1766611663	Fonni	Sardinia, Italy	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		3436577499	nil	39.928801701870825	9.2526	0	nil	0	15.0	nil	nil	Italy
+1766611708	1766611708	1766611708	Ajaccio	Corsica, France	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		3451263728	nil	41.717564530084324	8.711370000000002	0	nil	0	9.0	nil	nil	France
+1766611783	1766611783	1766611783	Fidenza	Italy	IT		3465949956	nil	44.67386415488816	10.061594999999999	0	nil	0	15.0	nil	nil	Italy
+1766611828	1766611828	1766611828	San Marino		https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		3480636185	nil	43.74445001479557	12.4407	0	nil	0	9.0	nil	nil	
+1766611933	1766611933	1766611933	Dubrovnik	Croatia	HR		3495322414	nil	42.451042015656434	18.110657999999997	0	nil	0	21.0	nil	nil	Croatia
+1766611963	1766611963	1766611963	Podgorica	Montenegro	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		3510008642	nil	42.24383680428467	19.263901	0	nil	0	6.0	nil	nil	Montenegro
+1766612008	1766612008	1766612008	Tirana	Albania	AL		3524694871	nil	41.13156583471752	19.825150000000008	0	nil	0	9.0	nil	nil	Albania
+1766612068	1766612068	1766612068	Veles	Republic of Macedonia	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		3539381099	nil	41.52671969358993	21.769501	0	nil	0	12.0	nil	nil	North Macedonia
+1766612098	1766612098	1766612098	Pristina	Kosovo	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		3554067328	nil	42.4720879939315	21.166200999999997	0	nil	0	6.0	nil	nil	Kosovo
+1766612158	1766612158	1766612158	Sarajevo	Bosnia and Herzegovina	BA		3568753557	nil	43.65749907052778	18.26979167	0	nil	0	12.0	nil	nil	Bosnia and Herzegovina
+1766612278	1766612278	1766612278	Venice	Italy	IT		3583439785	nil	45.24089036466938	12.316700000000003	0	nil	0	24.0	nil	nil	Italy
+1766612338	1766612338	1766612338	Maribor	Slovenia	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		3598126014	nil	46.369837293575124	15.6482	0	nil	0	12.0	nil	nil	Slovenia
+1766612428	1766612428	1766612428	Belgrade	Serbia	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		3612812243	nil	44.61996238189465	20.462419	0	nil	0	18.0	nil	nil	Serbia
+1766612488	1766612488	1766612488	Budapest	Hungary	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		3627498471	nil	47.314485612273224	19.06482	0	nil	0	12.0	nil	nil	Hungary
+1766612548	1766612548	1766612548	Kraków	Poland	PL		3642184700	nil	49.87052657238622	19.932600000000004	0	nil	0	12.0	nil	nil	Poland
+1766612638	1766612638	1766612638	Vienna	Austria	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		3656870928	nil	48.01125366135325	16.368799	0	nil	0	18.0	nil	nil	Austria
+1766612728	1766612728	1766612728	Freising	Germany	DE		3671557157	nil	48.21175161982838	11.741185	0	nil	0	18.0	nil	nil	Germany
+1766612788	1766612788	1766612788	Prague	Czech Republic	CZ		3686243386	nil	49.88957256458182	14.43323	0	nil	0	12.0	nil	nil	Czech Republic
+1766612848	1766612848	1766612848	Bratislava	Slovakia	SK		3700929614	nil	47.957172889394144	17.106699999999996	0	nil	0	12.0	nil	nil	Slovakia
+1766612968	1766612968	1766612968	Warsaw	Poland	PL		3715615843	nil	52.048880716782584	21.009390000000003	0	nil	0	24.0	nil	nil	Poland
+1766613028	1766613028	1766613028	Gdansk	Poland	PL		3730302072	nil	54.17067118036393	18.65111999999999	0	nil	0	12.0	nil	nil	Poland
+1766613148	1766613148	1766613148	Stockholm	Sweden	SE		3744988300	nil	59.163168168952	18.06284	0	nil	0	24.0	nil	nil	Sweden
+1766613328	1766613328	1766613328	Berlin	Germany	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		3759674529	nil	52.330075546624286	13.376987	0	nil	0	36.0	nil	nil	Germany
+1766613418	1766613418	1766613418	Copenhagen	Denmark	DK		3774360758	nil	55.496876845881545	12.569354999999998	0	nil	0	18.0	nil	nil	Denmark
+1766613808	1766613808	1766613808	Alta	Norway	NO		3789046986	nil	69.84303423968197	23.268476	0	nil	0	78.0	nil	nil	Norway
+1766613988	1766613988	1766613988	Trondheim	Norway	NO		3803733215	nil	63.27545270298625	10.393332999999998	0	nil	0	36.0	nil	nil	Norway
+1766614078	1766614078	1766614078	Bergen	Norway	NO		3818419443	nil	60.22510834687946	5.33275	0	nil	0	18.0	nil	nil	Norway
+1766614258	1766614258	1766614258	Wolfsburg	Germany	DE		3833105672	nil	52.236899220427084	10.787222000000003	0	nil	0	36.0	nil	nil	Germany
+1766614408	1766614408	1766614408	Zurich	Switzerland	CH		3847791901	nil	47.18526005002031	8.539550000000004	0	nil	0	30.0	nil	nil	Switzerland
+1766614468	1766614468	1766614468	Kaiserslautern	Germany	DE		3862478129	nil	49.25452022578314	7.768889000000001	0	nil	0	12.0	nil	nil	Germany
+1766614558	1766614558	1766614558	Munich	Germany	DE		3877164358	nil	47.942006313003155	11.566667000000002	0	nil	0	18.0	nil	nil	Germany
+1766614633	1766614633	1766614633	Basel	Switzerland	CH		3891850587	nil	47.36301550532426	7.590556000000003	0	nil	0	15.0	nil	nil	Switzerland
+1766614723	1766614723	1766614723	Hallstatt	Austria	AT		3906536815	nil	47.37030483869574	13.648999999999997	0	nil	0	18.0	nil	nil	Austria
+1766614813	1766614813	1766614813	Brescia	Italy	IT		3921223044	nil	45.34927132532703	10.216667000000001	0	nil	0	18.0	nil	nil	Italy
+1766614858	1766614858	1766614858	Vaduz	Liechtenstein	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		3935909272	nil	46.95341804215505	9.518865999999997	0	nil	0	9.0	nil	nil	Liechtenstein
+1766615008	1766615008	1766615008	Amsterdam	The Netherlands	NL		3950595501	nil	52.18687564101428	4.89319	0	nil	0	30.0	nil	nil	Netherlands
+1766615068	1766615068	1766615068	Vleteren	Belgium	BE		3965281730	nil	50.741246527397585	2.732755	0	nil	0	12.0	nil	nil	Belgium
+1766615113	1766615113	1766615113	Roermond	The Netherlands	NL		3979967958	nil	51.0119318443048	5.983332999999999	0	nil	0	9.0	nil	nil	Netherlands
+1766615143	1766615143	1766615143	Brussels	Belgium	BE		3994654187	nil	50.65253759613674	4.356400000000002	0	nil	0	6.0	nil	nil	Belgium
+1766615203	1766615203	1766615203	Luxembourg	Luxembourg	LU		4009340416	nil	49.41950047251793	6.12997	0	nil	0	12.0	nil	nil	Luxembourg
+1766615278	1766615278	1766615278	Paris	France	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		4024026644	nil	48.666164356917996	2.3412	0	nil	0	15.0	nil	nil	France
+1766615368	1766615368	1766615368	Limoges	France	FR		4038712873	nil	45.63644737411839	1.2619500000000001	0	nil	0	18.0	nil	nil	France
+1766615473	1766615473	1766615473	Metz	France	FR		4053399102	nil	48.92975639998998	6.177778000000001	0	nil	0	21.0	nil	nil	France
+1766615548	1766615548	1766615548	Geneva	Switzerland	CH		4068085330	nil	46.01609152068107	6.142701	0	nil	0	15.0	nil	nil	Switzerland
+1766615623	1766615623	1766615623	Monaco		https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		4082771559	nil	43.54672323451999	7.425483000000001	0	nil	0	15.0	nil	nil	
+1766615683	1766615683	1766615683	Marseille	France	FR		4097457787	nil	43.101663480808845	5.372474999999999	0	nil	0	12.0	nil	nil	France
+1766615788	1766615788	1766615788	Andorra la Vella	Andorra	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		4112144016	nil	42.31579612190021	1.5225	0	nil	0	21.0	nil	nil	Andorra
+1766615878	1766615878	1766615878	Bilbao	Spain	ES		4126830245	nil	43.07661891999287	-2.946119000000001	0	nil	0	18.0	nil	nil	Spain
+1766615998	1766615998	1766615998	Barcelona	Spain	ES		4141516473	nil	41.194778322807494	2.168745	0	nil	0	24.0	nil	nil	Spain
+1766616148	1766616148	1766616148	Madrid	Spain	ES		4156202702	nil	40.23045285450437	-3.705774	0	nil	0	30.0	nil	nil	Spain
+1766616298	1766616298	1766616298	Palma	Majorca	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		4170888931	nil	39.38262260371087	2.646939999999999	0	nil	0	30.0	nil	nil	United States
+1766616508	1766616508	1766616508	Tangier	Morocco	MA		4185575159	nil	35.58434786325432	-5.8	0	nil	0	42.0	nil	nil	Morocco
+1766616568	1766616568	1766616568	Córdoba	Spain	ES		4200261388	nil	37.691591293768	-4.778403	0	nil	0	12.0	nil	nil	Spain
+1766616808	1766616808	1766616808	Tunis	Tunisia	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		4214947616	nil	36.61425675292506	10.17263	0	nil	0	48.0	nil	nil	Tunisia
+1766617048	1766617048	1766617048	Ain Salah	Algeria	DZ		4229633845	nil	27.039354014290417	2.479991667	0	nil	0	48.0	nil	nil	Algeria
+1766617288	1766617288	1766617288	Diré	Mali	ML		4244320074	nil	16.163850058057378	-3.3983166670000005	0	nil	0	48.0	nil	nil	Mali
+1766617468	1766617468	1766617468	Kiffa	Mauritania	MR		4259006302	nil	16.511897642414386	-11.403879999999997	0	nil	0	36.0	nil	nil	Mauritania
+1766617588	1766617588	1766617588	Bamako	Mali	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		4273692531	nil	12.57095226109038	-7.986480000000001	0	nil	0	24.0	nil	nil	Mali
+1766617708	1766617708	1766617708	Bobo-Dioulasso	Burkina Faso	BF		4288378760	nil	11.105131198789628	-4.2917700000000005	0	nil	0	24.0	nil	nil	Burkina Faso
+1766617858	1766617858	1766617858	Lomé	Togo	TG		4303064988	nil	6.089730343775006	1.2274500000000002	0	nil	0	30.0	nil	nil	Togo
+1766618023	1766618023	1766618023	São Tomé	São Tomé and Principe	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		4317751217	nil	0.33202244295520955	6.733940000000001	0	nil	0	33.0	nil	nil	Sao Tome and Principe
+1766618233	1766618233	1766618233	Kumasi	Ghana	GH		4332437445	nil	6.642747292072564	-1.6219600000000003	0	nil	0	42.0	nil	nil	Ghana
+1766618308	1766618308	1766618308	Bouaké	Côte d'Ivoire	CI		4347123674	nil	7.634819249301498	-5.025147222	0	nil	0	15.0	nil	nil	Côte d'Ivoire
+1766618428	1766618428	1766618428	Monrovia	Liberia	LR		4361809903	nil	6.258926417590935	-10.797160000000002	0	nil	0	24.0	nil	nil	Liberia
+1766618518	1766618518	1766618518	Freetown	Sierra Leone	SL		4376496131	nil	8.42992163906402	-13.23806	0	nil	0	18.0	nil	nil	Sierra Leone
+1766618578	1766618578	1766618578	Labé	Guinea	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		4391182360	nil	11.243189766624402	-12.289325	0	nil	0	12.0	nil	nil	Guinea
+1766618638	1766618638	1766618638	Bissau	Guinea-Bissau	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		4405868589	nil	11.789898831003624	-15.62816	0	nil	0	12.0	nil	nil	Guinea-Bissau
+1766618668	1766618668	1766618668	Banjul	The Gambia	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		4420554817	nil	13.369572914073183	-16.58128900000001	0	nil	0	6.0	nil	nil	The Gambia
+1766618698	1766618698	1766618698	Touba	Senegal	SN		4435241046	nil	14.764603834798452	-15.878719999999996	0	nil	0	6.0	nil	nil	Senegal
+1766618758	1766618758	1766618758	Nouakchott	Mauritania	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		4449927275	nil	17.97080865437557	-15.978420000000003	0	nil	0	12.0	nil	nil	Mauritania
+1766618878	1766618878	1766618878	Dakhla	Western Sahara	EH		4464613503	nil	23.557686808836962	-15.93285833	0	nil	0	24.0	nil	nil	Western Sahara
+1766618998	1766618998	1766618998	Smara	Western Sahara	EH		4479299732	nil	26.579526532236528	-11.677980000000002	0	nil	0	24.0	nil	nil	Western Sahara
+1766619088	1766619088	1766619088	Agadir	Morocco	MA		4493985960	nil	30.264038874573	-9.599206000000002	0	nil	0	18.0	nil	nil	Morocco
+1766619178	1766619178	1766619178	Casablanca	Morocco	MA		4508672189	nil	33.42821095250831	-7.631939999999998	0	nil	0	18.0	nil	nil	Morocco
+1766619298	1766619298	1766619298	Lisbon	Portugal	PT		4523358418	nil	38.53804880507109	-9.15021	0	nil	0	24.0	nil	nil	Portugal
+1766619358	1766619358	1766619358	Porto	Portugal	PT		4538044646	nil	40.958852930243545	-8.610314	0	nil	0	12.0	nil	nil	Portugal
+1766619598	1766619598	1766619598	Southampton	England	GB		4552730875	nil	50.71151512455699	-1.4	0	nil	0	48.0	nil	nil	United Kingdom
+1766619658	1766619658	1766619658	London	England	GB		4567417104	nil	51.31870304337214	-0.12714400000000003	0	nil	0	12.0	nil	nil	United Kingdom
+1766619748	1766619748	1766619748	Cardiff	Wales	GB		4582103332	nil	51.2956767464848	-3.183333	0	nil	0	18.0	nil	nil	United Kingdom
+1766619868	1766619868	1766619868	Durham	England	GB		4596789561	nil	54.59457154820762	-1.5732999999999997	0	nil	0	24.0	nil	nil	United Kingdom
+1766619928	1766619928	1766619928	Carlisle	England	GB		4611475789	nil	54.70972863731284	-2.944	0	nil	0	12.0	nil	nil	United Kingdom
+1766619988	1766619988	1766619988	Edinburgh	Scotland	GB		4626162018	nil	55.77540608935975	-3.2027740000000002	0	nil	0	12.0	nil	nil	United Kingdom
+1766620108	1766620108	1766620108	Belfast	Northern Ireland	GB		4640848247	nil	54.4180807407811	-5.916700000000001	0	nil	0	24.0	nil	nil	United Kingdom
+1766620168	1766620168	1766620168	Dublin	Ireland	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		4655534475	nil	53.16358257989577	-6.248274	0	nil	0	12.0	nil	nil	Ireland
+1766620258	1766620258	1766620258	Cork	Ireland	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		4670220704	nil	51.7113220830343	-8.472774000000001	0	nil	0	18.0	nil	nil	Ireland
+1766620498	1766620498	1766620498	Tórshavn	Faroe Islands	FO		4684906933	nil	61.86123501160365	-6.769549999999999	0	nil	0	48.0	nil	nil	Faroe Islands
+1766620678	1766620678	1766620678	Reykjavík	Iceland	IS		4699593161	nil	63.98600854670423	-21.902479	0	nil	0	36.0	nil	nil	Iceland
+1766621158	1766621158	1766621158	Ponta Delgada	São Miguel, The Azores	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		4714279390	nil	37.55350176923166	-25.668570000000006	0	nil	0	96.0	nil	nil	Portugal
+1766621518	1766621518	1766621518	Mindelo	Cape Verde	CV		4728965619	nil	16.77262094707506	-24.99061	0	nil	0	72.0	nil	nil	Cape Verde
+1766621938	1766621938	1766621938	Natal	Brazil	BR		4743651847	nil	-5.756332341699119	-35.21118400000001	0	nil	0	84.0	nil	nil	Brazil
+1766622088	1766622088	1766622088	Salvador	Brazil	BR		4758338076	nil	-12.899301284111392	-38.51670000000001	0	nil	0	30.0	nil	nil	Brazil
+1766622778	1766622778	1766622778	King Edward Point	South Georgia and the South Sandwich Islands	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		4773024304	nil	-54.10090576019279	-36.49381944	0	nil	0	138.0	nil	nil	
+1766623078	1766623078	1766623078	Palmer Station	Antarctica	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		4787710533	nil	-64.62547744081213	-64.053055	0	nil	0	60.0	nil	nil	Canada
+1766623318	1766623318	1766623318	Stanley	Falkland Islands	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		4802396762	nil	-51.507909802101274	-57.85156110999999	0	nil	0	48.0	nil	nil	Falkland Islands
+1766623498	1766623498	1766623498	Punta Arenas	Chile	CL		4817082990	nil	-52.96629848293665	-70.897459	0	nil	0	36.0	nil	nil	Chile
+1766623558	1766623558	1766623558	Río Gallegos	Argentina	AR		4831769219	nil	-51.443465311857956	-69.228073	0	nil	0	12.0	nil	nil	Argentina
+1766623738	1766623738	1766623738	Comodoro Rivadavia	Argentina	AR		4846455448	nil	-45.667249041425144	-67.475429	0	nil	0	36.0	nil	nil	Argentina
+1766623918	1766623918	1766623918	San Carlos de Bariloche	Argentina	AR		4861141676	nil	-40.95942440583731	-71.3	0	nil	0	36.0	nil	nil	Argentina
+1766624128	1766624128	1766624128	Santiago	Chile	CL		4875827905	nil	-33.260556513884	-70.650564	0	nil	0	42.0	nil	nil	Chile
+1766624368	1766624368	1766624368	Montevideo	Uruguay	UY		4890514133	nil	-34.70056844541329	-56.16544	0	nil	0	48.0	nil	nil	Uruguay
+1766624548	1766624548	1766624548	Asunción	Paraguay	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		4905200362	nil	-25.156695889464523	-57.621948	0	nil	0	36.0	nil	nil	Paraguay
+1766624728	1766624728	1766624728	São Paulo	Brazil	BR		4919886591	nil	-23.35960706496052	-46.6167	0	nil	0	36.0	nil	nil	Brazil
+1766624788	1766624788	1766624788	Rio de Janeiro	Brazil	BR		4934572819	nil	-22.770633038525506	-43.243599999999994	0	nil	0	12.0	nil	nil	Brazil
+1766624968	1766624968	1766624968	Brasília	Brazil	BR		4949259048	nil	-15.678060286488282	-47.928661000000005	0	nil	0	36.0	nil	nil	Brazil
+1766625388	1766625388	1766625388	Cayenne	French Guiana	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		4963945277	nil	4.901737273362418	-52.33033399999999	0	nil	0	84.0	nil	nil	
+1766625448	1766625448	1766625448	Paramaribo	Suriname	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		4978631505	nil	5.7853068922583875	-55.17385099999999	0	nil	0	12.0	nil	nil	Suriname
+1766625688	1766625688	1766625688	Manaus	Brazil	BR		4993317734	nil	-3.1030245327465558	-60.020649000000006	0	nil	0	48.0	nil	nil	Brazil
+1766625928	1766625928	1766625928	Georgetown	Guyana	GY		5008003962	nil	6.7594800532622346	-58.154831	0	nil	0	48.0	nil	nil	Guyana
+1766626048	1766626048	1766626048	San Fernando	Trinidad and Tobago	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		5022690191	nil	10.215506295164177	-61.45859099999999	0	nil	0	24.0	nil	nil	Trinidad and Tobago
+1766626093	1766626093	1766626093	St. George's	Grenada	GD		5037376420	nil	11.974317959961189	-61.75167778	0	nil	0	9.0	nil	nil	Grenada
+1766626123	1766626123	1766626123	Kingstown	Saint Vincent and the Grenadines	VC		5052062648	nil	13.071439568275617	-61.227668999999985	0	nil	0	6.0	nil	nil	Saint Vincent and the Grenadines
+1766626168	1766626168	1766626168	Bridgetown	Barbados	BB		5066748877	nil	13.007435990690352	-59.611938	0	nil	0	9.0	nil	nil	Barbados
+1766626213	1766626213	1766626213	Castries	Saint Lucia	LC		5081435106	nil	13.921640395548389	-60.989689	0	nil	0	9.0	nil	nil	Saint Lucia
+1766626243	1766626243	1766626243	Saint-Pierre	Martinique	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		5096121334	nil	14.649306861006755	-61.17497778	0	nil	0	6.0	nil	nil	
+1766626273	1766626273	1766626273	Roseau	Dominica	DM		5110807563	nil	15.204318523492912	-61.38607	0	nil	0	6.0	nil	nil	Dominica
+1766626318	1766626318	1766626318	Port-Louis	Guadeloupe	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		5125493792	nil	16.313705229878963	-61.52845556	0	nil	0	9.0	nil	nil	
+1766626348	1766626348	1766626348	St. John's	Antigua and Barbuda	AG		5140180020	nil	17.007833234293734	-61.840431	0	nil	0	6.0	nil	nil	Antigua and Barbuda
+1766626393	1766626393	1766626393	Basseterre	Saint Kitts and Nevis	KN		5154866249	nil	17.187761099649144	-62.72193900000001	0	nil	0	9.0	nil	nil	Saint Kitts and Nevis
+1766626438	1766626438	1766626438	Philipsburg	Sint Maarten	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		5169552477	nil	17.913050913030943	-63.044411	0	nil	0	9.0	nil	nil	
+1766627158	1766627158	1766627158	Ikeq Island	Greenland	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		5184238706	nil	59.75908334594562	-44.25836944000001	0	nil	0	144.0	nil	nil	Ireland
+1766627278	1766627278	1766627278	Tasiilaq	Greenland	GL		5198924935	nil	65.46856898833764	-37.631111	0	nil	0	24.0	nil	nil	Greenland
+1766627458	1766627458	1766627458	STSS satellite tracking over Greenland		https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		5213611163	nil	70.63594254992468	-50.50599999999999	0	nil	0	36.0	nil	nil	
+1766627698	1766627698	1766627698	Alert	Nunavut, Canada	CA		5228297392	nil	82.43322568176569	-62.25	0	nil	0	48.0	nil	nil	Canada
+1766627998	1766627998	1766627998	Clyde River	Canada	CA		5242983621	nil	70.35234003966411	-68.586111	0	nil	0	60.0	nil	nil	Canada
+1766628178	1766628178	1766628178	Nuuk	Greenland	GL		5257669849	nil	64.02378027829224	-51.73888900000001	0	nil	0	36.0	nil	nil	Greenland
+1766628598	1766628598	1766628598	Air Escort to St. John's	Newfoundland and Labrador, Canada	CA		5272356078	nil	47.36952953334768	-52.711788	0	nil	0	84.0	nil	nil	Canada
+1766628688	1766628688	1766628688	Deer Lake	Newfoundland and Labrador, Canada	CA		5287042306	nil	48.98072108644641	-57.43119800000001	0	nil	0	18.0	nil	nil	Canada
+1766628808	1766628808	1766628808	Happy Valley-Goose Bay	Newfoundland and Labrador, Canada	CA		5301728535	nil	53.12106678712674	-60.38503300000001	0	nil	0	24.0	nil	nil	Canada
+1766628988	1766628988	1766628988	Halifax	Nova Scotia, Canada	CA		5316414764	nil	44.45375953626678	-63.573919000000004	0	nil	0	36.0	nil	nil	Canada
+1766629033	1766629033	1766629033	Charlottetown	Prince Edward Island, Canada	CA		5331100992	nil	46.04661744801691	-63.12916700000001	0	nil	0	9.0	nil	nil	Canada
+1766629063	1766629063	1766629063	Moncton	New Brunswick, Canada	CA		5345787221	nil	45.94047999632305	-64.771389	0	nil	0	6.0	nil	nil	Canada
+1766629183	1766629183	1766629183	Cape Cod tracking over Atlantic		FR		5360473450	nil	40.56677674434113	-65.601	0	nil	0	24.0	nil	nil	France
+1766629363	1766629363	1766629363	Hamilton	Bermuda	BM		5375159678	nil	32.11944657911319	-64.782	0	nil	0	36.0	nil	nil	Bermuda
+1766629663	1766629663	1766629663	San Juan	Puerto Rico	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		5389845907	nil	18.35085687640841	-66.10665399999999	0	nil	0	60.0	nil	nil	
+1766629813	1766629813	1766629813	Oranjestad	Aruba	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		5404532136	nil	12.455998582212116	-70.03270000000002	0	nil	0	30.0	nil	nil	
+1766629843	1766629843	1766629843	Willemstad	Curaçao	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		5419218364	nil	12.033357867502753	-68.93602	0	nil	0	6.0	nil	nil	
+1766629903	1766629903	1766629903	Caracas	Venezuela	VE		5433904593	nil	10.427341286678157	-66.898277	0	nil	0	12.0	nil	nil	Venezuela
+1766630203	1766630203	1766630203	Amazon Rainforest	Brazil	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		5448590821	nil	-5.282022449516236	-65.52254444	0	nil	0	60.0	nil	nil	Brazil
+1766630443	1766630443	1766630443	Santa Cruz de la Sierra	Bolivia	BO		5463277050	nil	-17.678722380890488	-63.18450899999999	0	nil	0	48.0	nil	nil	Bolivia
+1766630563	1766630563	1766630563	La Paz	Bolivia	BO		5477963279	nil	-16.39514128529216	-68.14216111	0	nil	0	24.0	nil	nil	Bolivia
+1766630683	1766630683	1766630683	Cusco	Peru	PE		5492649507	nil	-13.434789277253072	-71.97238611	0	nil	0	24.0	nil	nil	Peru
+1766630983	1766630983	1766630983	Quito	Ecuador	EC		5507335736	nil	-0.21549830774632325	-78.51669167	0	nil	0	60.0	nil	nil	Ecuador
+1766631133	1766631133	1766631133	Bogotá	Colombia	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		5522021965	nil	4.6253463910323305	-74.11779	0	nil	0	30.0	nil	nil	Colombia
+1766631433	1766631433	1766631433	Kingston	Jamaica	JM		5536708193	nil	17.878351355890075	-76.8036	0	nil	0	60.0	nil	nil	Jamaica
+1766631523	1766631523	1766631523	Port-au-Prince	Haiti	HT		5551394422	nil	18.427256292285882	-72.343102	0	nil	0	18.0	nil	nil	Haiti
+1766631583	1766631583	1766631583	Santo Domingo	Dominican Republic	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		5566080650	nil	18.36988526746035	-69.910004	0	nil	0	12.0	nil	nil	Dominican Republic
+1766631733	1766631733	1766631733	Santiago de Cuba	Cuba	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		5580766879	nil	19.896361161669514	-75.813917	0	nil	0	30.0	nil	nil	Cuba
+1766631913	1766631913	1766631913	Havana	Cuba	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		5595453108	nil	22.97816019974547	-82.388588	0	nil	0	36.0	nil	nil	Cuba
+1766632033	1766632033	1766632033	Nassau	The Bahamas	BS		5610139336	nil	24.91984288878157	-77.34024	0	nil	0	24.0	nil	nil	Bahamas
+1766632108	1766632108	1766632108	Fort Lauderdale	Florida, United States	US		5624825565	nil	25.981463037457484	-80.15	0	nil	0	15.0	nil	nil	United States
+1766632168	1766632168	1766632168	Key West	Florida, United States	US		5639511794	nil	24.414553837332907	-81.783611	0	nil	0	12.0	nil	nil	United States
+1766632288	1766632288	1766632288	Orlando	Florida, United States	US		5654198022	nil	28.378768364948737	-81.38	0	nil	0	24.0	nil	nil	United States
+1766632378	1766632378	1766632378	Savannah	Georgia, United States	US		5668884251	nil	31.908176309605384	-81.091111	0	nil	0	18.0	nil	nil	United States
+1766632468	1766632468	1766632468	Columbus	Georgia, United States	US		5683570479	nil	32.318098508425784	-84.940278	0	nil	0	18.0	nil	nil	United States
+1766632528	1766632528	1766632528	Marietta	Georgia, United States	US		5698256708	nil	33.77527236233255	-84.540556	0	nil	0	12.0	nil	nil	United States
+1766632618	1766632618	1766632618	Easley	South Carolina, United States	US		5712942937	nil	34.643142184964056	-82.590278	0	nil	0	18.0	nil	nil	United States
+1766632768	1766632768	1766632768	Myrtle Beach	South Carolina, United States	US		5727629165	nil	33.56654176273784	-78.869475	0	nil	0	30.0	nil	nil	United States
+1766632858	1766632858	1766632858	Holly Ridge	North Caolina, United States	US		5742315394	nil	34.31253618473435	-77.553056	0	nil	0	18.0	nil	nil	United States
+1766632978	1766632978	1766632978	Moyock	North Carolina, United States	US		5757001623	nil	36.340837202100964	-76.178056	0	nil	0	24.0	nil	nil	United States
+1766633008	1766633008	1766633008	Norfolk	Virginia, United States	US		5771687851	nil	36.662433845552414	-76.285278	0	nil	0	6.0	nil	nil	United States
+1766633098	1766633098	1766633098	Richmond	Virginia, United States	US		5786374080	nil	37.3550560849703	-77.436667	0	nil	0	18.0	nil	nil	United States
+1766633248	1766633248	1766633248	Milton	Delaware, United States	US		5801060309	nil	38.58984487354689	-75.309914	0	nil	0	30.0	nil	nil	United States
+1766633353	1766633353	1766633353	Washington	D.C., United States	US		5815746537	nil	38.7024388990787	-77.031959	0	nil	0	21.0	nil	nil	United States
+1766633413	1766633413	1766633413	Annapolis	Maryland, United States	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		5830432766	nil	38.78500634486632	-76.501111	0	nil	0	12.0	nil	nil	United States
+1766633533	1766633533	1766633533	State College	Pennsylvania, United States	US		5845118994	nil	40.6031454734827	-77.860001	0	nil	0	24.0	nil	nil	United States
+1766633653	1766633653	1766633653	Philadelphia	Pennsylvania, United States	US		5859805223	nil	39.762946676627834	-75.16245400000001	0	nil	0	24.0	nil	nil	United States
+1766633713	1766633713	1766633713	Atlantic City	New Jersey, United States	US		5874491452	nil	39.17422097429202	-74.426521	0	nil	0	12.0	nil	nil	United States
+1766633833	1766633833	1766633833	New York City	New York, United States	US		5889177680	nil	40.524369985138094	-74.007124	0	nil	0	24.0	nil	nil	United States
+1766633983	1766633983	1766633983	Newport	Rhode Island, United States	US		5903863909	nil	41.29909710514667	-71.31	0	nil	0	30.0	nil	nil	United States
+1766634043	1766634043	1766634043	Southampton	New York, United States	US		5918550138	nil	40.69391696761671	-72.38953000000001	0	nil	0	12.0	nil	nil	United States
+1766634193	1766634193	1766634193	Ipswich	Massachusetts, United States	US		5933236366	nil	42.487442568237455	-70.841156	0	nil	0	30.0	nil	nil	United States
+1766634283	1766634283	1766634283	Nantucket	Massachusetts, United States	US		5947922595	nil	41.09291775383783	-70.098679	0	nil	0	18.0	nil	nil	United States
+1766634388	1766634388	1766634388	Simsbury	Connecticut, United States	US		5962608823	nil	41.679350752389894	-72.825278	0	nil	0	21.0	nil	nil	United States
+1766634508	1766634508	1766634508	Greensboro	Vermont, United States	US		5977295052	nil	44.38373051431007	-72.296111	0	nil	0	24.0	nil	nil	United States
+1766634628	1766634628	1766634628	Portsmouth	New Hampshire, United States	US		5991981281	nil	42.879810149408065	-70.762553	0	nil	0	24.0	nil	nil	United States
+1766634718	1766634718	1766634718	Berlin	New Hampshire, United States	US		6006667509	nil	44.28051347368947	-71.176261	0	nil	0	18.0	nil	nil	United States
+1766634778	1766634778	1766634778	Brunswick	Maine, United States	US		6021353738	nil	43.71857295327316	-69.963056	0	nil	0	12.0	nil	nil	United States
+1766634808	1766634808	1766634808	Augusta	Maine, United States	US		6036039967	nil	44.125677743567984	-69.776207	0	nil	0	6.0	nil	nil	United States
+1766635048	1766635048	1766635048	Saguenay	Quebec, Canada	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		6050726195	nil	48.225536268022616	-71.066667	0	nil	0	48.0	nil	nil	Canada
+1766635153	1766635153	1766635153	Quebec City	Quebec, Canada	CA		6065412424	nil	46.62067021038775	-71.219359	0	nil	0	21.0	nil	nil	Canada
+1766635273	1766635273	1766635273	Montreal	Quebec, Canada	CA		6080098653	nil	45.319898580773135	-73.554431	0	nil	0	24.0	nil	nil	Canada
+1766635453	1766635453	1766635453	Radisson	Quebec, Canada	CA		6094784881	nil	53.60999863975626	-77.617778	0	nil	0	36.0	nil	nil	Canada
+1766635633	1766635633	1766635633	Ottawa	Ontario, Canada	CA		6109471110	nil	45.22936903612563	-75.69118400000002	0	nil	0	36.0	nil	nil	Canada
+1766635753	1766635753	1766635753	Albany	New York, United States	US		6124157338	nil	42.4607752583785	-73.757222	0	nil	0	24.0	nil	nil	United States
+1766635873	1766635873	1766635873	Lakewood	New York, United States	US		6138843567	nil	41.91285897938391	-79.333104	0	nil	0	24.0	nil	nil	United States
+1766635933	1766635933	1766635933	Niagara Falls	Ontario, Canada	CA		6153529796	nil	42.887955847114526	-79.07470000000002	0	nil	0	12.0	nil	nil	Canada
+1766635978	1766635978	1766635978	Toronto	Ontario, Canada	CA		6168216024	nil	43.45638278961659	-79.385324	0	nil	0	9.0	nil	nil	Canada
+1766636098	1766636098	1766636098	Timmins	Ontario, Canada	CA		6182902253	nil	48.275581769173016	-81.333333	0	nil	0	24.0	nil	nil	Canada
+1766636248	1766636248	1766636248	Peawanuck	Ontario, Canada	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		6197588482	nil	54.835677266360435	-85.41666700000002	0	nil	0	30.0	nil	nil	Canada
+1766636398	1766636398	1766636398	Thunder Bay	Ontario, Canada	CA		6212274710	nil	48.2154643508886	-89.2467	0	nil	0	30.0	nil	nil	Canada
+1766636518	1766636518	1766636518	Midland	Michigan, United States	US		6226960939	nil	43.42339310039995	-84.247222	0	nil	0	24.0	nil	nil	United States
+1766636578	1766636578	1766636578	Kalamazoo	Michigan, United States	US		6241647167	nil	42.10020985020452	-85.587229	0	nil	0	12.0	nil	nil	United States
+1766636698	1766636698	1766636698	Erie	Pennsylvania, United States	US		6256333396	nil	41.9380560873069	-80.085239	0	nil	0	24.0	nil	nil	United States
+1766636818	1766636818	1766636818	Cleveland	Ohio, United States	US		6271019625	nil	41.29133077971495	-81.669722	0	nil	0	24.0	nil	nil	United States
+1766636908	1766636908	1766636908	Columbus	Ohio, United States	US		6285705853	nil	39.77288341026936	-83.000556	0	nil	0	18.0	nil	nil	United States
+1766636998	1766636998	1766636998	Charleston	West Virginia, United States	US		6300392082	nil	38.16011324831341	-81.633333	0	nil	0	18.0	nil	nil	United States
+1766637088	1766637088	1766637088	Indianapolis	Indiana, United States	US		6315078311	nil	39.57780926248733	-86.14996399999998	0	nil	0	18.0	nil	nil	United States
+1766637208	1766637208	1766637208	Lexington	Kentucky, United States	US		6329764539	nil	37.84312522470116	-84.494722	0	nil	0	24.0	nil	nil	United States
+1766637328	1766637328	1766637328	Loretto	Tennessee, United States	US		6344450768	nil	34.897547279551866	-87.438889	0	nil	0	24.0	nil	nil	United States
+1766637388	1766637388	1766637388	Chattanooga	Tennessee, United States	US		6359136996	nil	34.86484469557345	-85.267222	0	nil	0	12.0	nil	nil	United States
+1766637448	1766637448	1766637448	Montgomery	Alabama, United States	US		6373823225	nil	32.18791739944236	-86.279167	0	nil	0	12.0	nil	nil	United States
+1766637508	1766637508	1766637508	Headland	Alabama, United States	US		6388509454	nil	31.18259718216025	-85.33972199999998	0	nil	0	12.0	nil	nil	United States
+1766637568	1766637568	1766637568	Pensacola	Florida, United States	US		6403195682	nil	30.25308018379535	-87.217239	0	nil	0	12.0	nil	nil	United States
+1766637748	1766637748	1766637748	Cancún	Mexico	MX		6417881911	nil	21.032956702606494	-86.84822778	0	nil	0	36.0	nil	nil	Mexico
+1766637898	1766637898	1766637898	Belize City	Belize	BZ		6432568140	nil	17.385578050225767	-88.18158	0	nil	0	30.0	nil	nil	Belize
+1766638018	1766638018	1766638018	Tegucigalpa	Honduras	HN		6447254368	nil	14.004441486987687	-87.211967	0	nil	0	24.0	nil	nil	Honduras
+1766638078	1766638078	1766638078	San Miguel	El Salvador	SV		6461940597	nil	13.385557978146188	-88.173393	0	nil	0	12.0	nil	nil	El Salvador
+1766638168	1766638168	1766638168	Managua	Nicaragua	NI		6476626826	nil	12.0500272984441	-86.253891	0	nil	0	18.0	nil	nil	Nicaragua
+1766638318	1766638318	1766638318	Limón	Costa Rica	CR		6491313054	nil	9.922917084944654	-83.037628	0	nil	0	30.0	nil	nil	Costa Rica
+1766638438	1766638438	1766638438	Panama City	Panama	PA		6505999283	nil	8.905870746279017	-79.536621	0	nil	0	24.0	nil	nil	Panama
+1766638708	1766638708	1766638708	Galápagos National Park	Ecuador	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		6520685511	nil	-0.6033865756371075	-91.05823333	0	nil	0	54.0	nil	nil	Ecuador
+1766639008	1766639008	1766639008	Guatemala	Guatemala	GT		6535371740	nil	14.524315946725299	-90.52491	0	nil	0	60.0	nil	nil	Guatemala
+1766639308	1766639308	1766639308	Ciudad Frontera	Mexico	MX		6550057969	nil	26.77093970679218	-101.449	0	nil	0	60.0	nil	nil	Mexico
+1766639488	1766639488	1766639488	New Orleans	Louisiana, United States	US		6564744197	nil	29.78749136192614	-90.077749	0	nil	0	36.0	nil	nil	United States
+1766639548	1766639548	1766639548	Lake Charles	Louisiana, United States	US		6579430426	nil	30.047638295148015	-93.20861100000002	0	nil	0	12.0	nil	nil	United States
+1766639668	1766639668	1766639668	Tupelo	Mississippi, United States	US		6594116655	nil	34.08088562641152	-88.72583300000001	0	nil	0	24.0	nil	nil	United States
+1766639788	1766639788	1766639788	Shreveport	Louisiana, United States	US		6608802883	nil	32.34042633541796	-93.747274	0	nil	0	24.0	nil	nil	United States
+1766639908	1766639908	1766639908	Eureka Springs	Arkansas, United States	US		6623489112	nil	36.21942444668008	-93.738333	0	nil	0	24.0	nil	nil	United States
+1766640058	1766640058	1766640058	St. Louis	Missouri, United States	US		6638175340	nil	38.44019951974292	-90.19951400000001	0	nil	0	30.0	nil	nil	United States
+1766640178	1766640178	1766640178	Overland Park	Kansas, United States	US		6652861569	nil	38.794169171845795	-94.670833	0	nil	0	24.0	nil	nil	United States
+1766640328	1766640328	1766640328	Peoria	Illinois, United States	US		6667547798	nil	40.50198733631984	-89.58776400000002	0	nil	0	30.0	nil	nil	United States
+1766640448	1766640448	1766640448	Des Moines	Iowa, United States	US		6682234026	nil	41.39881088573881	-93.615659	0	nil	0	24.0	nil	nil	United States
+1766640628	1766640628	1766640628	Munster	Indiana, United States	US		6696920255	nil	41.37352004040179	-87.512541	0	nil	0	36.0	nil	nil	United States
+1766640748	1766640748	1766640748	Cedar Rapids	Iowa, United States	US		6711606484	nil	41.81699841620462	-91.64389999999999	0	nil	0	24.0	nil	nil	United States
+1766640808	1766640808	1766640808	New Glarus	Wisconsin, United States	US		6726292712	nil	42.622639960738105	-89.63512199999998	0	nil	0	12.0	nil	nil	United States
+1766640898	1766640898	1766640898	Port Washington	Wisconsin, United States	US		6740978941	nil	43.20125358612034	-87.88111100000002	0	nil	0	18.0	nil	nil	United States
+1766640958	1766640958	1766640958	Waukesha	Wisconsin, United States	US		6755665170	nil	42.81975846870139	-88.23166700000002	0	nil	0	12.0	nil	nil	United States
+1766641018	1766641018	1766641018	Chicago	Illinois, United States	US		6770351398	nil	41.69293785064763	-87.63240900000001	0	nil	0	12.0	nil	nil	United States
+1766641138	1766641138	1766641138	Amherst	Wisconsin, United States	US		6785037627	nil	44.258440996598885	-89.284836	0	nil	0	24.0	nil	nil	United States
+1766641258	1766641258	1766641258	Brooklyn Center	Minnesota, United States	US		6799723855	nil	44.88365886467327	-93.332728	0	nil	0	24.0	nil	nil	United States
+1766641288	1766641288	1766641288	St. Cloud	Minnesota, United States	US		6814410084	nil	45.37346991213589	-94.16669722	0	nil	0	6.0	nil	nil	United States
+1766641408	1766641408	1766641408	Winnipeg	Manitoba, Canada	CA		6829096313	nil	49.71003470691927	-97.13749444000001	0	nil	0	24.0	nil	nil	Canada
+1766641588	1766641588	1766641588	Sand Lakes Provincial Park	Manitoba, Canada	CA		6843782541	nil	57.63019650395034	-98.70745556	0	nil	0	36.0	nil	nil	Canada
+1766641723	1766641723	1766641723	Prince Albert	Saskatchewan, Canada	CA		6858468770	nil	53.01469140963568	-105.745819	0	nil	0	27.0	nil	nil	Canada
+1766641813	1766641813	1766641813	Moose Jaw	Saskatchewan, Canada	CA		6873154999	nil	50.204206526255255	-105.551944	0	nil	0	18.0	nil	nil	Canada
+1766641963	1766641963	1766641963	Minot	North Dakota, United States	US		6887841227	nil	48.04485992329809	-101.29607400000002	0	nil	0	30.0	nil	nil	United States
+1766642083	1766642083	1766642083	Rapid City	South Dakota, United States	US		6902527456	nil	43.88889097893341	-103.230889	0	nil	0	24.0	nil	nil	United States
+1766642203	1766642203	1766642203	Watertown	South Dakota, United States	US		6917213684	nil	44.70700450262672	-97.115073	0	nil	0	24.0	nil	nil	United States
+1766642353	1766642353	1766642353	Rockwell City	Iowa, United States	US		6931899913	nil	42.20676837678183	-94.63005900000002	0	nil	0	30.0	nil	nil	United States
+1766642533	1766642533	1766642533	Pine Bluffs	Wyoming, United States	US		6946586142	nil	40.98886050582333	-104.068611	0	nil	0	36.0	nil	nil	United States
+1766642593	1766642593	1766642593	Holyoke	Colorado, United States	US		6961272370	nil	40.391936043871986	-102.30111099999999	0	nil	0	12.0	nil	nil	United States
+1766642683	1766642683	1766642683	La Vista	Nebraska, United States	US		6975958599	nil	40.993819356044625	-96.039444	0	nil	0	18.0	nil	nil	United States
+1766642773	1766642773	1766642773	Goodland	Kansas, United States	US		6990644828	nil	39.1622955533587	-101.71027799999999	0	nil	0	18.0	nil	nil	United States
+1766642833	1766642833	1766642833	Wichita	Kansas, United States	US		7005331056	nil	37.7887873101154	-100.86416700000001	0	nil	0	12.0	nil	nil	United States
+1766642923	1766642923	1766642923	Tulsa	Oklahoma, United States	US		7020017285	nil	35.94830625115943	-95.937222	0	nil	0	18.0	nil	nil	United States
+1766643043	1766643043	1766643043	Amarillo	Texas, United States	US		7034703513	nil	35.02619356896898	-101.83389299999999	0	nil	0	24.0	nil	nil	United States
+1766643133	1766643133	1766643133	Post	Texas, United States	US		7049389742	nil	33.01561802934722	-101.380556	0	nil	0	18.0	nil	nil	United States
+1766643223	1766643223	1766643223	Dallas	Texas, United States	US		7064075971	nil	32.60322502395507	-96.795404	0	nil	0	18.0	nil	nil	United States
+1766643313	1766643313	1766643313	Houston	Texas, United States	US		7078762199	nil	29.594898308445206	-95.369784	0	nil	0	18.0	nil	nil	United States
+1766643433	1766643433	1766643433	San Marcos	Texas, United States	US		7093448428	nil	29.713491415928733	-97.938889	0	nil	0	24.0	nil	nil	United States
+1766643478	1766643478	1766643478	Kingsville	Texas, United States	US		7108134657	nil	27.357620887048313	-97.86555600000001	0	nil	0	9.0	nil	nil	United States
+1766643598	1766643598	1766643598	Monterrey	Mexico	MX		7122820885	nil	25.52104096504697	-100.309959	0	nil	0	24.0	nil	nil	Mexico
+1766643718	1766643718	1766643718	Guadalajara	Mexico	MX		7137507114	nil	20.560730740235854	-103.351059	0	nil	0	24.0	nil	nil	Mexico
+1766643898	1766643898	1766643898	Uruapan	Mexico	MX		7152193343	nil	19.300496310717683	-102.062778	0	nil	0	36.0	nil	nil	Mexico
+1766644018	1766644018	1766644018	Acapulco	Mexico	MX		7166879571	nil	16.744402744700615	-99.906969	0	nil	0	24.0	nil	nil	Mexico
+1766644108	1766644108	1766644108	Mexico City	Mexico	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		7181565800	nil	19.31151636218875	-99.13285100000002	0	nil	0	18.0	nil	nil	Mexico
+1766644348	1766644348	1766644348	Torreon	Mexico	MX		7196252028	nil	25.390077645043963	-103.44861100000001	0	nil	0	48.0	nil	nil	Mexico
+1766644528	1766644528	1766644528	Chihuahua	Mexico	MX		7210938257	nil	28.47809502046257	-106.07205899999998	0	nil	0	36.0	nil	nil	Mexico
+1766644708	1766644708	1766644708	El Paso	Texas, United States	US		7225624486	nil	31.587220958692786	-106.488611	0	nil	0	36.0	nil	nil	United States
+1766644858	1766644858	1766644858	Santa Fe	New Mexico, United States	US		7240310714	nil	35.48517448039382	-105.964444	0	nil	0	30.0	nil	nil	United States
+1766644978	1766644978	1766644978	Durango	Colorado, United States	US		7254996943	nil	37.08802471581143	-107.871692	0	nil	0	24.0	nil	nil	United States
+1766645128	1766645128	1766645128	Colorado Springs	Colorado, United States	US		7269683172	nil	38.64565558461607	-104.821814	0	nil	0	30.0	nil	nil	United States
+1766645218	1766645218	1766645218	Estes Park	Colorado, United States	US		7284369400	nil	40.18736471876192	-105.525514	0	nil	0	18.0	nil	nil	United States
+1766645248	1766645248	1766645248	Moab	Utah, United States	US		7299055629	nil	38.38507572790884	-109.549722	0	nil	0	6.0	nil	nil	United States
+1766645368	1766645368	1766645368	Jackson	Wyoming, United States	US		7313741857	nil	43.28321925689791	-110.769167	0	nil	0	24.0	nil	nil	United States
+1766645488	1766645488	1766645488	Billings	Montana, United States	US		7328428086	nil	45.5916349757561	-108.505794	0	nil	0	24.0	nil	nil	United States
+1766645608	1766645608	1766645608	Great Falls	Montana, United States	US		7343114315	nil	47.315432686456525	-111.306074	0	nil	0	24.0	nil	nil	United States
+1766645758	1766645758	1766645758	Calgary	Alberta, Canada	CA		7357800543	nil	50.856963159775134	-114.063014	0	nil	0	30.0	nil	nil	Canada
+1766645878	1766645878	1766645878	Edmonton	Alberta, Canada	CA		7372486772	nil	53.36213196016243	-113.490374	0	nil	0	24.0	nil	nil	Canada
+1766645998	1766645998	1766645998	Fort McMurray	Alberta, Canada	CA		7387173001	nil	56.550425721959876	-111.38030200000001	0	nil	0	24.0	nil	nil	Canada
+1766646118	1766646118	1766646118	Cold Lake	Alberta, Canada	CA		7401859229	nil	54.26776823918745	-110.166667	0	nil	0	24.0	nil	nil	Canada
+1766646298	1766646298	1766646298	Yellowknife	Northwest Territories, Canada	CA		7416545458	nil	62.29638751373215	-114.370954	0	nil	0	36.0	nil	nil	Canada
+1766646478	1766646478	1766646478	Tuktut Nogait National Park	Northwest Territories, Canada	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		7431231687	nil	68.70106248194476	-122.04408330000001	0	nil	0	36.0	nil	nil	Canada
+1766646598	1766646598	1766646598	Délįne	Northwest Territories, Canada	CA		7445917915	nil	65.04109763606914	-123.41799900000001	0	nil	0	24.0	nil	nil	Canada
+1766646838	1766646838	1766646838	Fort St. John	British Columbia, Canada	CA		7460604144	nil	56.07448546998807	-120.847459	0	nil	0	48.0	nil	nil	Canada
+1766647078	1766647078	1766647078	Cranbrook	British Columbia, Canada	CA		7475290372	nil	49.32338878157335	-115.768701	0	nil	0	48.0	nil	nil	Canada
+1766647168	1766647168	1766647168	Missoula	Montana, United States	US		7489976601	nil	46.68075476174939	-113.996234	0	nil	0	18.0	nil	nil	United States
+1766647228	1766647228	1766647228	Coeur d'Alene	Idaho, United States	US		7504662830	nil	47.501164004083336	-116.78000000000002	0	nil	0	12.0	nil	nil	United States
+1766647408	1766647408	1766647408	Ogden	Utah, United States	US		7519349058	nil	41.037144270560546	-111.96111099999999	0	nil	0	36.0	nil	nil	United States
+1766647588	1766647588	1766647588	Flagstaff	Arizona, United States	US		7534035287	nil	35.01719410110664	-111.651304	0	nil	0	36.0	nil	nil	United States
+1766647678	1766647678	1766647678	Goodyear	Arizona, United States	US		7548721516	nil	33.27324533936776	-112.35833300000002	0	nil	0	18.0	nil	nil	United States
+1766647858	1766647858	1766647858	Farmington	New Mexico, United States	US		7563407744	nil	36.56738797757168	-108.189722	0	nil	0	36.0	nil	nil	United States
+1766647948	1766647948	1766647948	Albuquerque	New Mexico, United States	US		7578093973	nil	34.93001027939312	-106.61	0	nil	0	18.0	nil	nil	United States
+1766648098	1766648098	1766648098	Tucson	Arizona, United States	US		7592780201	nil	32.04822700114715	-110.969754	0	nil	0	30.0	nil	nil	United States
+1766648398	1766648398	1766648398	Cabo San Lucas	Mexico	MX		7607466430	nil	22.743380427766542	-109.9142	0	nil	0	60.0	nil	nil	Mexico
+1766648698	1766648698	1766648698	Ensenada	Mexico	MX		7622152659	nil	31.611250802857658	-116.6	0	nil	0	60.0	nil	nil	Mexico
+1766648758	1766648758	1766648758	San Diego	California, United States	US		7636838887	nil	32.54093653187794	-117.16171900000002	0	nil	0	12.0	nil	nil	United States
+1766648848	1766648848	1766648848	29 Palms	California, United States	US		7651525116	nil	33.957043290493424	-116.05416700000002	0	nil	0	18.0	nil	nil	United States
+1766648908	1766648908	1766648908	Moreno Valley	California, United States	US		7666211345	nil	33.765026574609976	-117.228333	0	nil	0	12.0	nil	nil	United States
+1766648968	1766648968	1766648968	Anaheim	California, United States	US		7680897573	nil	33.65834162260187	-117.88972200000002	0	nil	0	12.0	nil	nil	United States
+1766649088	1766649088	1766649088	Las Vegas	Nevada, United States	US		7695583802	nil	35.98875940168379	-115.139974	0	nil	0	24.0	nil	nil	United States
+1766649298	1766649298	1766649298	Fresno	California, United States	US		7710270030	nil	36.56567828913629	-119.76666700000001	0	nil	0	42.0	nil	nil	United States
+1766649418	1766649418	1766649418	San Francisco	California, United States	US		7724956259	nil	37.59094208742908	-122.419644	0	nil	0	24.0	nil	nil	United States
+1766649658	1766649658	1766649658	Elko	Nevada, United States	US		7739642488	nil	40.64537463084973	-115.76762900000003	0	nil	0	48.0	nil	nil	United States
+1766649868	1766649868	1766649868	Boise	Idaho, United States	US		7754328716	nil	43.423690144634605	-116.201667	0	nil	0	42.0	nil	nil	United States
+1766649988	1766649988	1766649988	Bend	Oregon, United States	US		7769014945	nil	43.865907557684515	-121.31530999999998	0	nil	0	24.0	nil	nil	United States
+1766650078	1766650078	1766650078	Tillamook	Oregon, United States	US		7783701174	nil	45.26287002252286	-123.8425	0	nil	0	18.0	nil	nil	United States
+1766650138	1766650138	1766650138	Portland	Oregon, United States	US		7798387402	nil	45.31939212498492	-122.67562899999999	0	nil	0	12.0	nil	nil	United States
+1766650258	1766650258	1766650258	Tacoma	Washington, United States	US		7813073631	nil	47.0495060145678	-122.459444	0	nil	0	24.0	nil	nil	United States
+1766650318	1766650318	1766650318	Seattle	Washington, United States	US		7827759860	nil	47.411874506461146	-122.329437	0	nil	0	12.0	nil	nil	United States
+1766650378	1766650378	1766650378	Victoria	British Columbia, Canada	CA		7842446088	nil	48.23719116551899	-123.364514	0	nil	0	12.0	nil	nil	Canada
+1766650438	1766650438	1766650438	Everett	Washington, United States	US		7857132317	nil	47.78775041054277	-122.20080000000002	0	nil	0	12.0	nil	nil	United States
+1766650498	1766650498	1766650498	Vancouver	British Columbia, Canada	CA		7871818545	nil	49.07002820765097	-123.11335799999999	0	nil	0	12.0	nil	nil	Canada
+1766650588	1766650588	1766650588	Merritt	British Columbia, Canada	CA		7886504774	nil	49.92210369629756	-120.787376	0	nil	0	18.0	nil	nil	Canada
+1766650708	1766650708	1766650708	Comox	British Columbia, Canada	CA		7901191003	nil	49.483567849160394	-124.92681900000001	0	nil	0	24.0	nil	nil	Canada
+1766650918	1766650918	1766650918	Kitimat	British Columbia, Canada	CA		7915877231	nil	53.87191903564319	-128.65506	0	nil	0	42.0	nil	nil	Canada
+1766651158	1766651158	1766651158	Juneau	Alaska, United States	US		7930563460	nil	58.12742629918475	-134.406794	0	nil	0	48.0	nil	nil	United States
+1766651638	1766651638	1766651638	Fairbanks	Alaska, United States	US		7945249689	nil	64.69669844249265	-147.722059	0	nil	0	96.0	nil	nil	United States
+1766651818	1766651818	1766651818	Anchorage	Alaska, United States	US		7959935917	nil	61.05485264529156	-149.858384	0	nil	0	36.0	nil	nil	United States
+1766652298	1766652298	1766652298	Nome	Alaska, United States	US		7974622146	nil	64.34961512026891	-165.40579400000001	0	nil	0	96.0	nil	nil	United States
+1766652898	1766652898	1766652898	Kodiak	Alaska, United States	US		7989308374	nil	57.61929463878024	-152.3942	0	nil	0	120.0	nil	nil	United States
+1766653678	1766653678	1766653678	E-3 Sentry Tracking Santa over Pacific		FR		8003994603	nil	42.84407259108443	-155.382	0	nil	0	156.0	nil	nil	France
+1766654878	1766654878	1766654878	Princeville	Kauai, Hawaii, United States	US		8018680832	nil	22.089189337100322	-159.485278	0	nil	0	240.0	nil	nil	United States
+1766654953	1766654953	1766654953	Honolulu	Hawaii, United States	US		8033367060	nil	21.174821517073305	-157.857614	0	nil	0	15.0	nil	nil	United States
+1766655013	1766655013	1766655013	Kula	Maui, Hawaii, United States	US		8048053289	nil	20.731363785089115	-156.5080167	0	nil	0	12.0	nil	nil	United States
+1766655103	1766655103	1766655103	Hilo	Hawaii, United States	US		8062739518	nil	19.597320980107757	-155.081858	0	nil	0	18.0	nil	nil	United States
+1766655913	1766655913	1766655913	Palmyra Atoll	U.S. Minor Outlying Islands	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		8077425746	nil	5.844221352986703	-162.083333	0	nil	0	162.0	nil	nil	US Minor Outlying Islands
+1766656693	1766656693	1766656693	Midway Atoll	U.S. Minor Outlying Islands	https://dg.imgix.net/let-it-snow-gw92kvsv-en/landscape/let-it-snow-gw92kvsv-849cbd4d478faab465556539f22b0805.jpg?ts=1577132675&ixlib=rails-4.3.1&auto=format%2Ccompress&fit=min&w=700&h=394&dpr=2&ch=Width%2CDPR		8092111975	nil	28.047011621359623	-177.378098	0	nil	0	156.0	nil	nil	
+1766657833	1766657833	1766657833	North Pole	Arctic	https://i.etsystatic.com/29670587/r/il/690535/5332588770/il_fullxfull.5332588770_9o2o.jpg		8106798204	nil	0	0	0	nil	0	228.0	nil	nil	Solomon Islands

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christmas Countdown</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    video#bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .clock-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+      color: white;
+      font-size: 3em;
+      text-align: center;
+    }
+    /* Styling the FlipClock labels (Days, Hours, Minutes, Seconds) */
+    .clock-container .flip-clock-label {
+      color: white !important;
+      text-shadow: 1px 1px 2px grey !important; /* Grey outline */
+      font-size: 0.5em; /* Adjust size if necessary */
+      text-transform: uppercase; /* Optional, makes labels uppercase */
+    }
+    /* Increase the size of the flip numbers */
+    .waiting-message {
+      display: none;
+      justify-content: center;
+      color: white;
+      font-size: 3em;
+      text-align: center;
+    }
+  </style>
+  <!-- Include jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- FlipClock CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.7/flipclock.min.css">
+</head>
+<body>
+
+  <!-- Video as Background -->
+  <video id="bg-video" autoplay muted loop>
+    <source src="https://master-trackers.xyz/assets/christmasloop.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Flip Clock Container -->
+  <div class="clock-container">
+    <div id="countdown"></div>
+  </div>
+
+  <!-- Message to display after countdown -->
+  <div class="waiting-message">Waiting For Santa's Go!</div>
+
+  <!-- FlipClock JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.7/flipclock.min.js"></script>
+  <script>
+    // Target timestamp for UTC: 1735030800 (converted to milliseconds)
+    const targetDate = (1735030800-10800) * 1000;
+
+    // Current time and time difference
+    const now = new Date().getTime();
+    const timeRemaining = (targetDate - now) / 1000; // Time remaining in seconds
+
+    // Initialize FlipClock
+    const clock = $('#countdown').FlipClock(timeRemaining, {
+      clockFace: 'DailyCounter',
+      countdown: true,
+      callbacks: {
+        stop: function() {
+          if (clock.getTime().time === 0) {
+            // Hide countdown and show the message
+            $('.clock-container').hide();
+            $('.waiting-message').show();
+          }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Master Trackers - Santa Tracker</title>
+  <link rel="icon" href="https://github.com/Haydenlogs/sources/blob/main/image-removebg-preview%20(3).png?raw=true" type="image/png">
+  <meta name="msvalidate.01" content="8DF6B8C1C97521142EFB1F3437EC4E4C" />
+  <meta name="description" content="And he's off! Master Trackers has officially started tracking Santa Claus.">
+  <script src="/assets/timeworker.js"></script>
+  <!-- Meta tags for Bing -->
+  <meta name="msvalidate.01" content="8DF6B8C1C97521142EFB1F3437EC4E4C" />
+  
+  <!-- Optional Open Graph tags for better sharing on social media -->
+  <meta property="og:title" content="Master Trackers - Santa Tracker">
+  <meta property="og:description" content="And he's off! Master Trackers has officially started tracking Santa Claus.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://master-trackers.xyz">
+  <meta property="og:image" content="https://github.com/Haydenlogs/sources/blob/main/image-removebg-preview%20(3).png?raw=true">
+  
+  <!-- Twitter Card tags for better sharing on Twitter -->
+  <meta name="twitter:card" content="https://github.com/Haydenlogs/sources/blob/main/image-removebg-preview%20(3).png?raw=true">
+  <meta name="twitter:title" content="Master Trackers - Santa Tracker">
+  <meta name="twitter:description" content="And he's off! Master Trackers has officially started tracking Santa Claus.">
+  <meta name="twitter:image" content="https://github.com/Haydenlogs/sources/blob/main/image-removebg-preview%20(3).png?raw=true">
+  
+  <!-- Canonical URL to avoid duplicate content issues -->
+  <link rel="canonical" href="http://master-trackers.xyz">
+  <!-- Leaflet CSS -->
+  <script type="text/javascript" src="L.TileLayer.NoGap.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flag-icons@4.4.3/index.js"></script>
+  <div class="tracker-warning" hidden>
+    <p>Tracker may be running slow. Please wait for updates.</p>
+  </div>
+  
+
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <!-- Leaflet.label CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.label/0.2.4/leaflet.label.css" />
+  <style>
+    .tracker-warning {
+      background-color: #fff9c4;
+      /* Yellow color */
+      border: 1px solid #ffee58;
+      /* Yellow accent color */
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      text-align: center;
+      top: 75vh;
+      position: fixed;
+      z-index: 9999999;
+    }
+
+    .overlay {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
+
+    html {
+      overflow: hidden;
+      user-select: none;
+      -moz-user-select: none;
+      /* Firefox */
+      -webkit-user-select: none;
+      /* Safari and Chrome */
+      -ms-user-select: none;
+      /* Internet Explorer/Edge */
+    }
+
+    div.tile-coords128 {
+      line-height: 128px;
+      text-align: center;
+      color: red;
+      font-size: 12.8px;
+      max-width: 128px;
+    }
+
+    div.tile-coords256 {
+      line-height: 256px;
+      text-align: center;
+      color: red;
+      font-size: 25.6px;
+      max-width: 256px;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    /* 	Make the zoom animation slower */
+
+    /*.leaflet-zoom-anim .leaflet-zoom-animated {
+	-webkit-transition: -webkit-transform 5s cubic-bezier(0,0,0.25,1);
+	   -moz-transition:    -moz-transform 5s cubic-bezier(0,0,0.25,1);
+	     -o-transition:      -o-transform 5s cubic-bezier(0,0,0.25,1);
+	        transition:         transform 5s cubic-bezier(0,0,0.25,1);
+	}
+*/
+
+    .leaflet-pane {
+      border: none !important;
+    }
+
+    .leaflet-tile-container {
+      border: none !important;
+    }
+
+    #map, .leaflet-container  {
+      background-color: #333;
+      border: none !important;
+    }
+
+    /* Settings button styles */
+    .settings-btn {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .settings-btn:hover {
+      background-color: #555;
+    }
+
+    .settingsiframe {
+  width: 100%;
+      height: 100%;
+      border-color: transparent;
+      
+}
+    /* Settings popup styles */
+    .settings-popup {
+      width: 50%;
+      height: 50%;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 99999;
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      border-radius: 20px;
+      border-color: #f0f8ff;
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+      display: none;
+      /* Initially hidden */
+    }
+
+
+    /* Close button for the settings popup */
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: white;
+      cursor: pointer;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: linear-gradient(to bottom, #d3e4ff 0%, #f0f8ff 100%);
+    }
+
+    #overlay {
+      position: fixed;
+      top: 150px;
+      /* Adjust this value as needed */
+      right: 25px;
+      /* Adjust this value as needed */
+      z-index: 1999;
+    }
+
+    #toggleButton {
+      width: 50px;
+      /* Adjust the button size as needed */
+      height: 50px;
+      /* Adjust the button size as needed */
+      background-color: transparent;
+      border: none;
+      color: white;
+      border-radius: 50%;
+      /* Makes the button round */
+      cursor: pointer;
+    }
+
+    #symbolImage {
+      width: 100%;
+      height: 100%;
+      ;
+      border-radius: 50px;
+      z-index: 2000;
+
+    }
+
+    .hidden {
+      display: none;
+    }
+
+
+    .top-bar {
+      position: fixed;
+      color: white;
+      top: 100px;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px;
+      background-color: transparent;
+    }
+
+    .info-container {
+      display: flex;
+    }
+
+    .info-box {
+      flex: 1;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      background-color: #333;
+      margin: 0 10px;
+      /* Adjust margin for spacing between boxes */
+      border-radius: 10px;
+      /* Slightly curved edges */
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      /* Box shadow for depth */
+    }
+
+    .title {
+      font-size: 0.8em;
+      margin-bottom: 5px;
+    }
+
+    .data {
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+
+    .notes {
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .leaflet-control-zoom {
+      position: fixed;
+      bottom: 110px;
+      right: 20px;
+    }
+
+    .leaflet-control-zoom a {
+      color: #333;
+      /* Dark text color */
+      background-color: #d32f2f;
+      /* Candy cane red background */
+      border: 2px solid #fff;
+      /* White border */
+      border-radius: 50%;
+      /* Rounded shape */
+      width: 36px;
+      /* Adjust size as needed */
+      height: 36px;
+      /* Adjust size as needed */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.2s ease;
+      /* Smooth transitions */
+      background-image: repeating-linear-gradient(45deg,
+          #fff,
+          #fff 10px,
+          #d32f2f 10px,
+          #d32f2f 20px);
+      /* Candy cane stripes */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      /* Subtle box shadow */
+      font-size: 14px;
+      /* Font size */
+      font-weight: bold;
+      /* Font weight */
+    }
+
+    .leaflet-control-zoom a:hover {
+      background-color: #388e3c;
+      /* Christmas green background on hover */
+      transform: scale(1.1);
+      /* Slightly enlarge on hover */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      /* Larger box shadow on hover */
+    }
+
+
+
+
+    #map-container {
+      position: relative;
+      width: 100%;
+      height: calc(100vh - 160px);
+      margin-top: 50px;
+      padding-top: 100px;
+      border: 2px solid white;
+      /* White border */
+    }
+
+    .basket-icon {
+      width: 25px;
+      height: 25px;
+    }
+
+    #tween-info {
+
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      background-color: #1b1b1b;
+      border: 1px solid #cccccc85;
+      border-radius: 5px;
+      padding: 10px;
+      z-index: 200000;
+      display: none;
+      /* flex */
+      align-items: center;
+    }
+
+    #tween-speed {
+      font-weight: bold;
+      color: white;
+      margin-right: 10px;
+    }
+
+    #speed-value {
+      color: white;
+    }
+
+    #countdownButtonContainer {
+      display: flex;
+      justify-content: flex-end;
+      /* Align items to the right */
+      align-items: center;
+      height: 40px;
+    }
+
+    #countdownButton {
+      background-color: #666;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s;
+      /* Hover animation */
+    }
+
+    #countdownButton2 {
+      background-color: #666;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s;
+      /* Hover animation */
+    }
+
+    #countdownButton:hover {
+      transform: scale(1.1);
+      /* Hover animation */
+    }
+
+    #countdownButton img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    #countdownButton {
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 999999;
+    }
+
+    #chatPopup {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      z-index: 999999;
+      top: 80px;
+      ;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    #chatBox {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      position: relative;
+      z-index: 999999;
+    }
+
+    #chatMessages {
+      height: 200px;
+      overflow-y: auto;
+      margin-bottom: 10px;
+      z-index: 999999;
+    }
+
+    #userInput {
+      width: calc(100% - 72px);
+      padding: 5px;
+      margin-right: 5px;
+    }
+
+    #sendButton {
+      padding: 5px 10px;
+    }
+
+    #closeButton {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: #999;
+    }
+
+    .logo {
+      width: 30px;
+      margin-right: 1px;
+      /* Add right margin to create space between the logo and the text */
+    }
+
+    .popup-container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+      z-index: 1000;
+    }
+
+    .popup {
+      color: #fff;
+      text-align: center;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 24px;
+      color: #fff;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .container {
+      position: relative;
+      /* Required for positioning the button */
+      width: 40px;
+      /* Ensures the container takes the full width of the viewport */
+      height: 40px;
+      /* Example height, replace with your actual content height */
+      background-color: transparent;
+    }
+
+    .fixed-button {
+      position: fixed;
+      bottom: 60px;
+      left: 20px;
+      z-index: 999;
+      background-color: blue;
+      /* Background color for the button */
+      border: none;
+      /* Remove default button border */
+      padding: 10px;
+      /* Adjust padding as needed */
+      border-radius: 50%;
+      /* Makes button circular */
+    }
+
+    .fixed-button svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    /* CSS styles for the announcement container */
+    .announcement-container {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      right: 20px;
+      top: 100px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: none;
+      z-index: 129083091823098;
+    }
+
+    /* CSS styles for the announcement message */
+    .announcement-message {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    /* CSS styles for the announcement details */
+    .announcement-details {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- Overlay with settings button -->
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- Settings popup -->
+  <div id="settingsPopup" class="settings-popup">
+    <!-- Close button -->
+    <span class="close-btn" onclick="toggleSettings()">X</span>
+    <!-- Settings page iframe -->
+    <iframe src="/embed/settings" class="settingsiframe"></iframe>
+  </div>
+  <div id="announcementContainer" class="announcement-container">
+    <div id="announcementMessage" class="announcement-message"></div>
+    <div id="announcementDetails" class="announcement-details"></div>
+  </div>
+  <div class="top-bar">
+    <div class="info-container">
+      <div id="hideavailable">
+        <div class="info-box">
+          <div id="hideavailable">
+            <span class="title">Heading for:</span>
+            <img src="" id="flag" width="30px;"> <span id="nextCityInfo" class="data">LOADING!!</span>
+          </div>
+        </div>
+        <div class="info-box">
+          <span class="title">Gifts Delivered:</span>
+          <span id="basketsInfo" class="data">LOADING!!</span>
+        </div>
+        <div id="hidelocation">
+          <div class="info-box">
+            <span class="title">Arrival Time:</span>
+            <span id="arrivalTime" class="data"></span>
+          </div>
+        </div>
+      </div>
+      <div class="info-box">
+        <span class="title">Last Seen:</span>
+        <span id="lastCityInfo" class="data">LOADING!!</span><br />
+        <span class="notes" id="notes"><img src="" id="flag2" width="200px;"></span>
+      </div>
+      <div class="info-box" id="launchID" hidden>
+        <span class="title">Launches in: </span><br />
+        <span id="launchTimer" class="data"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="overlay">
+    <button id="toggleButton" onclick="toggleSymbol()">
+      <div id="symbolContainer">
+        <img id="symbolImage"
+          src="https://github.com/Haydenlogs/sources/blob/main/image_2024-07-15_102605601.png?raw=true" alt="Symbol">
+      </div>
+
+    </button>
+
+  </div>
+  <div id="map-container"></div>
+  <!-- Attribution -->
+  <div class="leaflet-attribution">
+    Map data &copy; <a href="https://www.google.com/maps">Google Maps</a>
+  </div>
+
+  <!-- Leaflet JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <!-- Leaflet.label JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.label/0.2.4/leaflet.label.js"></script>
+  <div class="overlay">
+    <button class="settings-btn" onclick="toggleSettings()">Settings</button>
+  </div>
+  <div id="tween-info">
+    <div id="countdownButtonContainer">
+
+      <button id="countdownButton2" onclick="openSubscriptionScreen()"><img width="15px"
+          src="https://www.freeiconspng.com/thumbs/email-icon/email-icon--clipart-best-22.png"></button>
+      <button id="countdownButton">
+        <img src="https://media.tenor.com/MP8oSlpFsHwAAAAj/kinder-egg.gif" alt="Kinder Egg">
+      </button> | <p id="tween-speed"></p>
+
+
+    </div>
+  </div>
+  <div id="chatPopup" style="display: none;">
+    <div id="chatBox">
+      <h1>
+        LIVE WORLD CHAT
+      </h1>
+      <button id="closeButton">&times;</button>
+      <div id="chatMessages"></div>
+      <input type="text" id="userInput" placeholder="Type your message...">
+      <button id="sendButton">Send</button>
+    </div>
+  </div>
+  <div id="popup-container" class="popup-container hidden">
+    <div class="popup">
+      <span id="close-btn" class="close-btn">&times;</span>
+      <p>Welcome to Master Santa Trackers <span id="year"></span>. We are happy to see you here. During normal runs,<br />The <img
+          src="https://github.com/Haydenlogs/sources/blob/main/image-removebg-preview%20(3).png?raw=true" alt="Emoji"
+          width="16" height="16"> represents where Santa Claus is. <br /> The <img
+          src="https://github.com/Haydenlogs/sources/blob/main/comhiclipartydzgx-removebg-preview.png?raw=true"
+          alt="Emoji" width="16" height="16"> represents a present/gift that has been delivered. <br />The <img
+          src="https://banner2.cleanpng.com/20180219/eqe/kisspng-video-camera-ico-icon-camera-5a8a776b7b36e7.4789365515190239795047.jpg"
+          alt="Emoji" width="16" height="16"> represents the ability button to change whether or not you want to follow
+        Santa. <br />
+    </div>
+  </div>
+  <div hidden class="container">
+    <!-- Your content here -->
+    <button class="fixed-button">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+        <path fill="white" d="M0 0h24v24H0z" fill="none" />
+        <path fill="white"
+          d="M21.2 11.2l-1.4-2.4c-.1-.2-.4-.2-.6-.1l-1.7 1.2c-.4-.3-.9-.4-1.4-.2l-2.1-1c0-.4-.2-.8-.6-1.1l-.4-2.3c0-.2-.3-.4-.5-.4h-2.5c-.2 0-.4.2-.5.4l-.4 2.3c-.4.3-.8.6-1.2.9l-2.1-1c-.2-.1-.5-.1-.7.1L2.8 9.9c-.2.2-.2.5 0 .7l1.4 2.4c.1.2.1.5-.1.7l-1.7 1.2c-.1.1-.1.3 0 .5l1.7 2.9c.1.2.4.3.6.1l2-1.4c.4.3.9.4 1.4.2l2.1 1c0 .4.2.8.6 1.1l.4 2.3c0 .2.3.4.5.4h2.5c.2 0 .4-.2.5-.4l.4-2.3c.4-.3.8-.6 1.2-.9l2 1c.2.1.5.1.7-.1l1.7-2.9c.2-.2.2-.5.1-.7zM12 16c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z" />
+      </svg>
+    </button>
+
+  </div>
+  <script>
+    window.onload = async function() {
+      try {
+        // Fetch the manifest to get the correct hash
+        const response = await fetch('/scripts/manifest.json');
+        const manifest = await response.json();
+        
+        // Extract the script hash from the manifest
+        const scriptHash = manifest['main'];
+  
+        // Dynamically create the script URL with the hash
+        const script = document.createElement('script');
+        script.src = `/scripts/${scriptHash}`;
+  
+        // Append the script to the body to load it
+        document.body.appendChild(script);
+      } catch (error) {
+        console.error('Failed to load script:', error);
+      }
+    };
+  </script>
+</body>
+<style>
+  @media (max-width: 600px) {
+  body {
+  zoom: 50%; /* Zooms the page to 150% */
+}
+
+}
+  .discord-button {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    z-index: 9999;
+  }
+
+  .discord-button button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+  }
+
+  .discord-button button:hover {
+    background-color: #555;
+  }
+
+
+  .discord-button button img {
+    height: 15px;
+    margin-left: 5px;
+    border-radius: 3px;
+  }
+</style>
+<!-- Fixed position Discord button -->
+<div class="discord-button">
+  <button onclick="window.open('https://discord.gg/AVSJQmF6zP')">
+    Discord <img
+      src="https://static.vecteezy.com/system/resources/previews/006/892/625/original/discord-logo-icon-editorial-free-vector.jpg"
+      hidden alt="Discord Icon">
+  </button>
+</div>
+
+</html><script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get the current year
+    var currentYear = new Date().getFullYear();
+    
+    // Select all span elements with the id 'year'
+    var yearElements = document.querySelectorAll('span#year');
+    
+    // Update the text content of each element to the current year
+    yearElements.forEach(function(element) {
+      element.textContent = currentYear;
+    });
+  });
+</script>

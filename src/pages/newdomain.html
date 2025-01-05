@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>We've Moved!</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+  }
+  h1 {
+    color: #333;
+  }
+  .move-button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  .move-button:hover {
+    background-color: #45a049;
+  }
+  .move-button::after {
+    
+    display: inline-block;
+    margin-left: 10px;
+    transition: margin-left 0.3s ease;
+  }
+  .move-button:hover::after {
+    margin-left: 15px;
+  }
+</style>
+</head>
+<body>
+  <h1>We've Moved!</h1>
+  <p>We have a new website location. Click the button below to visit. The new website is located at http://master-trackers.xyz.</p>
+  <a href="http://master-trackers.xyz" class="move-button">Visit New Site</a>
+</body>
+</html>

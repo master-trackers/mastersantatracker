@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #00c3ff;
+            /* Red background */
+            padding: 10px 20px;
+            color: white;
+            border: 2px solid white;
+            height: 80px;
+            /* Increased height for better spacing */
+            position: relative;
+        }
+
+        .logo {
+            height: 50px;
+            /* Adjusted logo height */
+            margin-right: 2px;
+            /* Reduced space between logo and title */
+        }
+
+        .info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-grow: 1;
+            /* Allow info to take remaining space */
+        }
+
+        .countdown,
+        .status,
+        .gifts {
+            font-size: 1.7rem;
+            margin: 0 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .countdown div,
+        .status div,
+        .gifts div {
+            text-align: center;
+            text-shadow: 1px 1px 2px black;
+            /* Text outline */
+        }
+
+        .separator {
+            height: 40px;
+            border-left: 2px solid white;
+            margin: 0 10px;
+        }
+
+        .tracker-title {
+            font-size: 1.5rem;
+            margin-top: 5px;
+            /* Added margin for spacing */
+            font-weight: bold;
+            /* Made title bold */
+            text-shadow: 1px 1px 2px black;
+            /* Text outline */
+        }
+
+        .topbar-content {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            /* Allow content to expand */
+            justify-content: flex-start;
+            /* Align items to the start */
+        }
+
+        .vertical-line {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: white;
+        }
+
+        .left-line {
+            left: 0;
+        }
+
+        .right-line {
+            right: 0;
+        }
+
+        /* Additional styles for heading titles */
+        .heading {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            /* Space below the heading */
+            text-shadow: 1px 1px 2px black;
+            /* Text outline */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="topbar">
+        <div class="vertical-line left-line"></div>
+        <div class="vertical-line right-line"></div>
+        <div class="topbar-content">
+            <div class="info">
+                <img src="https://master-trackers.xyz/assets/santa.png" alt="Logo" class="logo">
+                <div class="tracker-title">Master Santa Tracker</div>
+                <div class="separator"></div>
+                <div class="countdown" id="dynamicContent">
+                    <div class="heading" id="waitingmessage">Waiting on Santa Claus</div>
+                </div>
+                <div class="gifts">
+                    <div class="heading" id="giftsWrapped2">Gifts Wrapped:</div>
+                    <div id="giftsWrapped">7,586,082,146</div>
+                </div>
+                <div class="gifts">
+                    <div class="heading" id="giftsTitle">Gifts Delivered:</div>
+                    <div id="giftsDelivered">0</div>
+                </div>
+                <div class="gifts">
+                    <div class="heading" id="takeOffWeight">Sleigh Takeoff Weight:</div>
+                    <div id="takeOffWeightValue">300 lbs/136 kgs</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function () {
+            const element = document.getElementById('giftsWrapped');
+            const elementLabel = document.getElementById('giftsWrapped2');
+            const targetValue = 7586082146;
+            const duration = 2000; // 2 seconds
+            const startTime = performance.now();
+
+            function animateNumber(currentTime) {
+                const elapsedTime = currentTime - startTime;
+                const progress = Math.min(elapsedTime / duration, 1); // Ensure progress does not exceed 1
+                const currentValue = Math.floor(progress * targetValue);
+
+                element.textContent = `${currentValue.toLocaleString()} Gifts`; // Display number with commas
+
+                if (progress < 1) {
+                    requestAnimationFrame(animateNumber); // Continue the animation until complete
+                }
+            }
+
+            requestAnimationFrame(animateNumber);
+        };
+        async function fetchRouteData() {
+            try {
+                const response = await fetch('https://temp.master-trackers.xyz/route');
+                const routeData = await response.json();
+                processRouteData(routeData);
+            } catch (error) {
+                console.error('Error fetching route data:', error);
+            }
+        }
+
+        function processRouteData(routeData) {
+            let nextStop = null;
+            let totalGiftsDelivered = 0;
+            let totalGiftsLoaded = 0;  // Track loaded gifts
+            const currentUnixTime = Math.floor(Date.now() / 1000);
+
+            for (const stop of routeData) {
+                if (stop["Unix Arrival Arrival"] && stop["Unix Arrival Arrival"] > currentUnixTime) {
+                    nextStop = stop;
+                    totalGiftsLoaded = stop["Eggs Delivered"] || 0;  // Get gifts loaded for the next stop
+                    break;
+                } else if (stop["Unix Arrival Arrival"] && stop["Unix Arrival Arrival"] <= currentUnixTime) {
+                    totalGiftsDelivered += stop["Eggs Delivered"] || 0;
+                }
+            }
+
+            // Start counting up gifts delivered
+            if (nextStop) {
+                startCountdownAndUpdateGifts(nextStop, totalGiftsDelivered, totalGiftsLoaded);
+            } else {
+                updateGiftsDelivered(totalGiftsDelivered);
+            }
+        }
+
+        function startCountdownAndUpdateGifts(nextStop, currentGiftsDelivered, targetGiftsLoaded) {
+            const arrivalTime = nextStop["Unix Arrival Arrival"];
+            const timeRemaining = arrivalTime - Math.floor(Date.now() / 1000);
+
+            startCountdown(timeRemaining);
+            updateGifts(currentGiftsDelivered, targetGiftsLoaded, timeRemaining);
+        }
+
+
+        window.onload = function () {
+            const element = document.getElementById('giftsWrapped');
+            const elementLabel = document.getElementById('giftsWrapped2');
+            const targetValue = 7586082146;
+            const duration = 2000; // 2 seconds
+            const startTime = performance.now();
+
+            function animateNumber(currentTime) {
+                const elapsedTime = currentTime - startTime;
+                const progress = Math.min(elapsedTime / duration, 1); // Ensure progress does not exceed 1
+                const currentValue = Math.floor(progress * targetValue);
+
+                element.textContent = `${currentValue.toLocaleString()} Gifts`; // Display number with commas
+
+                if (progress < 1) {
+                    requestAnimationFrame(animateNumber); // Continue the animation until complete
+                }
+            }
+
+            requestAnimationFrame(animateNumber);
+        };
+
+        function updateGifts(currentGiftsDelivered, targetGiftsLoaded, duration) {
+    const giftsElement = document.getElementById('giftsDelivered');
+    const giftsTitleElement = document.getElementById('giftsTitle');
+    const stautsmessage = document.getElementById('waitingmessage');
+    const weightElement = document.getElementById("takeOffWeightValue");
+    const giftsWrappedLabel = document.getElementById("giftsWrapped2");
+    const giftsWrappedElement = document.getElementById("giftsWrapped");
+
+    // Change "Gifts Wrapped:" to "Gifts Ready to Load:"
+    let giftsReadyToLoad = 7586082146;
+
+    // Update titles and messages
+    giftsTitleElement.innerText = "Gifts Loaded:";
+    giftsElement.innerText = "Santa's Elves have not started loading any gifts.";
+    stautsmessage.innerText = "Santa's Elves will start loading in the next 30 minutes.";
+
+    // Check if it's time to start updating the loaded gifts
+    const checkStartCondition = () => {
+        const now = new Date();
+        const minutes = now.getMinutes();
+        const seconds = now.getSeconds();
+
+        // Condition to start updating the counter
+        if (minutes === 12 && seconds >= 37) {
+            const adjustedDuration = duration - 15; // Subtract 15 seconds from the total duration
+            const startTime = Date.now();
+            const endTime = startTime + adjustedDuration * 1000;
+            const totalGiftsToDeliver = targetGiftsLoaded - currentGiftsDelivered;
+            const totalUpdates = (adjustedDuration * 1000) / 30; // Total number of updates every 30ms
+            const incrementPerUpdate = totalGiftsToDeliver / totalUpdates; // Gifts added per update
+            stautsmessage.innerText = "Waiting on Santa Claus' 'Go!' Message!";
+
+            // Timer to update the gifts
+            const giftsTimer = setInterval(() => {
+                const currentTime = Date.now();
+                const remainingTime = (endTime - currentTime) / 1000;
+                giftsWrappedLabel.innerText = "Gifts Ready to Load:";
+                if (remainingTime <= 0) {
+                    // Ensure we hit the target exactly when the time is up
+                    currentGiftsDelivered = targetGiftsLoaded;
+                    clearInterval(giftsTimer);
+                    giftsElement.innerText = `${targetGiftsLoaded.toLocaleString()} Gifts`;
+                    giftsWrappedElement.textContent = `0 Gifts`; // All gifts have been loaded
+                    fetchRouteData(); // Fetch next route data after completion
+                    return;
+                }
+
+                // Increment the gifts by a calculated amount per update
+                currentGiftsDelivered = Math.min(currentGiftsDelivered + incrementPerUpdate, targetGiftsLoaded);
+
+                // Update the gifts loaded count
+                giftsElement.innerText = `${Math.floor(currentGiftsDelivered).toLocaleString()} Gifts`;
+
+                // Decrease the gifts ready to load
+                giftsReadyToLoad = Math.max(0, giftsReadyToLoad - incrementPerUpdate);
+                giftsWrappedElement.textContent = `${Math.floor(giftsReadyToLoad).toLocaleString()} Gifts`;
+
+                // Update the weight
+                const pounds = Math.floor((currentGiftsDelivered * 5) + 300);
+                const kilograms = Math.floor(pounds * 0.453592);
+                weightElement.innerText = `${formatWeight(pounds)} lbs / ${formatWeight(kilograms)} kgs`;
+            }, 30); // Update every 30ms
+        } else {
+            // Check again in 1 second if the condition is not met
+            setTimeout(checkStartCondition, 1000);
+        }
+    };
+
+    checkStartCondition(); // Start checking for the correct time
+}
+
+
+        function formatWeight(value) {
+            if (value >= 1_000_000_000) {
+                return (value / 1_000_000_000).toFixed(1) + 'b';
+            } else if (value >= 1_000_000) {
+                return (value / 1_000_000).toFixed(1) + 'm';
+            } else {
+                return value.toLocaleString(); // For values below 1 million, just show the full number
+            }
+        }
+
+
+
+        function startCountdown(seconds) {
+            // Optional: You can implement countdown logic here if needed
+            console.log(`Countdown started for ${seconds} seconds`);
+        }
+
+        fetchRouteData();
+
+
+    </script>
+
+</body>
+
+</html>

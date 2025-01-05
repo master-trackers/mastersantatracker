@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Cities</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            margin: 0;
+            padding: 20px;
+            color: #FFFFFF;
+        }
+        .container {
+            padding-top: 75px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        input[type="text"], button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .tab {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: white;
+            color: #333;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .tab h3 {
+            margin-top: 0;
+        }
+        .info {
+            flex: 1;
+        }
+        .flag {
+            margin-left: 20px;
+        }
+        .results {
+            margin-top: 20px;
+        }
+        .flag img {
+            width: 50px;
+            height: auto;
+            border: 1px solid #ccc;
+        }
+        #header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+            background-color: #333;
+            z-index: 999;
+        }
+
+        #logo2 {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin: 0;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img id="logo2" src="https://github.com/Haydenlogs/sources/blob/main/image-removebg-preview%20(3).png?raw=true" alt="Logo">
+        <h1>Master Santa Trackers 2024</h1></div>
+    <div class="container">
+        <center><h1>City List</h1>
+        <input type="text" id="search-query" placeholder="Search City" onkeyup="filterResults()"></center>
+        <div id="results" class="results">Loading, please wait...</div>
+    </div>
+
+    <script>
+        let cities = [];
+
+        function unixToReadable(unix) {
+            if (!unix) return '';
+            const date = new Date(unix * 1000);
+            return date.toLocaleString();
+        }
+
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        }
+
+        function loadCities() {
+            fetch('https://temp.master-trackers.xyz/route')
+                .then(response => response.json())
+                .then(data => {
+                    cities = data.filter(item => 
+                        item.City &&
+                   !item.Region.includes("pt") &&
+                        !item.City.includes("Countdown") &&
+                        !item.City.includes("Santa Claus prep text hidden pt 1")
+                    ); // Filter out unwanted entries
+                    displayResults(cities);
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        function displayResults(results) {
+            
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = ''; // Clear current results
+
+            if (results.length === 0) {
+                resultsDiv.innerHTML = '<p>No results found. It may be because not all cities are on here. Maybe try the nearest big cities?</p>';
+                return;
+            }
+
+            results.forEach(result => {
+                const tab = document.createElement('div');
+                tab.classList.add('tab');
+if (result.City === "Santa's Village") {
+    const cityCountry = `${result.City}, ${result.Region}`;
+                const popyear = result["Population Year"]
+                const Latitude = result["Latitude"]
+                const Longitude = result["Longitude"]
+                const Elevation = result["Elevation Meter"]
+                const DeliveringTime = result["Arrival Stoppage Time"]
+                const Timezone = result["Timezone"]
+                var CountryCode = result["CC"].toLowerCase()
+                if (CountryCode === "https://thumbs.dreamstime.com/b/north-pole-alaska-united-states-flag-background-fabric-texture-192776654.jpg") {
+                    CountryCode = "NP"
+                } else if (CountryCode === "https://i.pinimg.com/originals/99/6b/03/996b039f7bf783160ad664bc12ca27b3.jpg") {
+                    CountryCode = "ISS"
+
+                } else {
+                    CountryCode = CountryCode.toUpperCase()
+                }
+                const arrivalTime = unixToReadable(parseInt(result["Unix Arrival Arrival"]) - parseInt(result["Arrival Stoppage Time"])+(parseInt(result["Arrival Stoppage Time"])/1.2));
+                const departureTime = unixToReadable(result["Unix Arrival Arrival"]);
+                const actualArrivalTime = unixToReadable(parseInt(result["Unix Arrival Arrival"]) - parseInt(result["Arrival Stoppage Time"]))
+                const eggsDelivered = numberWithCommas(result["Eggs Delivered"]);
+                const Population = numberWithCommas(result["Population Num"]);
+                var flagURL = `https://flagcdn.com/48x36/${result.CC.toLowerCase()}.png`; // Flag URL
+                if (flagURL === "https://flagcdn.com/48x36/https://thumbs.dreamstime.com/b/north-pole-alaska-united-states-flag-background-fabric-texture-192776654.jpg.png") {
+                    flagURL = "https://thumbs.dreamstime.com/b/north-pole-alaska-united-states-flag-background-fabric-texture-192776654.jpg"
+                } else if (flagURL === "https://flagcdn.com/48x36/https://i.pinimg.com/originals/99/6b/03/996b039f7bf783160ad664bc12ca27b3.jpg.png") {
+                    flagURL = "https://i.pinimg.com/originals/99/6b/03/996b039f7bf783160ad664bc12ca27b3.jpg"
+                }
+// Function to get the local timezone abbreviation
+function getTimezoneAbbreviation() {
+    const options = { timeZoneName: 'short' };
+    const formatter = new Intl.DateTimeFormat('en-US', options);
+    const parts = formatter.formatToParts(new Date());
+    
+    // Find the 'timeZoneName' part and return its value
+    const timeZonePart = parts.find(part => part.type === 'timeZoneName');
+    return timeZonePart ? timeZonePart.value : 'UTC';
+}
+
+const timezone = getTimezoneAbbreviation();
+console.log(timezone);
+
+                tab.innerHTML = `
+                    <div class="info">
+                        <h3><img width="20px;" src="${flagURL}" alt="${result.CC} flag"> ${cityCountry}</h3>
+                        <p><strong>Scheduled Launch/Land Time:</strong> ${(actualArrivalTime)} ${timezone}</p>
+                        <p><strong>Estimated Launch/Land Time:</strong> ${(actualArrivalTime)} ${timezone}</p>
+                        <p><strong>Gifts Delivered:</strong> ${eggsDelivered}</p>
+                        <p><strong>Latitude:</strong> ${Latitude}</p>
+                        <p><strong>Longitude:</strong> ${Longitude}</p>
+                        <p><strong>Population:</strong> 1 Person and 1,881,235,618 elves as of 1922</p>
+                        <p><strong>Elevation:</strong> ${Elevation} feet</p>
+                        <p><strong>Delivering Time:</strong> ${DeliveringTime} Seconds</p>
+                        <p><strong>Timezone:</strong> ${Timezone}</p>
+                        <p><strong>Country Code:</strong> ${CountryCode}</p>
+                        <p>All times are shown in local timezone.</p>
+
+                        <p><a href="${result['Wikipedia attr']}" target="_blank">More Info on Wikipedia</a></p>
+                    </div>
+                    
+                `;
+
+                resultsDiv.appendChild(tab);
+            
+} else {
+                const cityCountry = `${result.City}, ${result.Region}`;
+                const popyear = result["Population Year"]
+                const Latitude = result["Latitude"]
+                const Longitude = result["Longitude"]
+                const Elevation = result["Elevation Meter"]
+                const DeliveringTime = result["Arrival Stoppage Time"]
+                const Timezone = result["Timezone"]
+                var CountryCode = result["CC"].toLowerCase()
+                if (CountryCode === "https://thumbs.dreamstime.com/b/north-pole-alaska-united-states-flag-background-fabric-texture-192776654.jpg") {
+                    CountryCode = "NP"
+                } else if (CountryCode === "https://i.pinimg.com/originals/99/6b/03/996b039f7bf783160ad664bc12ca27b3.jpg") {
+                    CountryCode = "ISS"
+
+                } else {
+                    CountryCode = CountryCode.toUpperCase()
+                }
+                const arrivalTime = unixToReadable(parseInt(result["Unix Arrival Arrival"]) - parseInt(result["Arrival Stoppage Time"])+(parseInt(result["Arrival Stoppage Time"])/1.2));
+                const departureTime = unixToReadable(result["Unix Arrival Arrival"]);
+                const actualArrivalTime = unixToReadable(parseInt(result["Unix Arrival Arrival"]) - parseInt(result["Arrival Stoppage Time"]))
+                let actualActualArrivalTime = "N/A";
+let actualActualDepartureTime = "N/A";
+
+if (Date.now() / 1000 > result["Unix Arrival Arrival"]) {
+  actualActualArrivalTime = arrivalTime;
+  actualActualDepartureTime = departureTime;
+}
+                const eggsDelivered = numberWithCommas(result["Eggs Delivered"]);
+                const Population = numberWithCommas(result["Population Num"]);
+                var flagURL = `https://flagcdn.com/48x36/${result.CC.toLowerCase()}.png`; // Flag URL
+                if (flagURL === "https://flagcdn.com/48x36/https://thumbs.dreamstime.com/b/north-pole-alaska-united-states-flag-background-fabric-texture-192776654.jpg.png") {
+                    flagURL = "https://thumbs.dreamstime.com/b/north-pole-alaska-united-states-flag-background-fabric-texture-192776654.jpg"
+                } else if (flagURL === "https://flagcdn.com/48x36/https://i.pinimg.com/originals/99/6b/03/996b039f7bf783160ad664bc12ca27b3.jpg.png") {
+                    flagURL = "https://i.pinimg.com/originals/99/6b/03/996b039f7bf783160ad664bc12ca27b3.jpg"
+                }
+// Function to get the local timezone abbreviation
+function getTimezoneAbbreviation() {
+    const options = { timeZoneName: 'short' };
+    const formatter = new Intl.DateTimeFormat('en-US', options);
+    const parts = formatter.formatToParts(new Date());
+    
+    // Find the 'timeZoneName' part and return its value
+    const timeZonePart = parts.find(part => part.type === 'timeZoneName');
+    return timeZonePart ? timeZonePart.value : 'UTC';
+}
+
+const timezone = getTimezoneAbbreviation();
+console.log(timezone);
+
+                tab.innerHTML = `
+                    <div class="info">
+                       <h3><img width="20px;" src="${flagURL}" alt="${result.CC} flag"> ${cityCountry}</h3>
+                        <p><strong>Scheduled Arrival Time:</strong> ${(actualArrivalTime)} ${timezone}</p>
+                        <p><strong>Estimated Arrival Time:</strong> ${(arrivalTime)} ${timezone} <i>(as of November)</i></p>
+                        <p><strong>Actual Arrival Time:</strong> ${actualActualArrivalTime} ${timezone}</p>
+                        <p><strong>Scheduled Departure Time:</strong> ${departureTime} ${timezone}</p>
+                        <p><strong>Estimated Departure Time:</strong> ${departureTime} ${timezone} <i>(as of November)</i></p>
+                        <p><strong>Actual Departure Time:</strong> ${actualActualDepartureTime} ${timezone}</p>
+                        <p><strong>Gifts Delivered:</strong> ${eggsDelivered}</p>
+                        <p><strong>Latitude:</strong> ${Latitude}</p>
+                        <p><strong>Longitude:</strong> ${Longitude}</p>
+                        <p><strong>Population:</strong> ${Population} People as of ${popyear}</p>
+                        <p><strong>Elevation:</strong> ${Elevation} feet</p>
+                        <p><strong>Delivering Time:</strong> ${DeliveringTime} Seconds</p>
+                        <p><strong>Timezone:</strong> ${Timezone}</p>
+                        <p><strong>Country Code:</strong> ${CountryCode}</p>
+                        <p>All times are shown in local timezone.</p>
+
+                        <p><a href="${result['Wikipedia attr']}" target="_blank">More Info on Wikipedia</a></p>
+                    </div>
+                   
+                `;
+
+                resultsDiv.appendChild(tab);
+                }
+            });
+        
+        }
+
+        function filterResults() {
+    const query = document.getElementById('search-query').value.toLowerCase();
+    const filteredCities = cities.filter(city => {
+        const cityCountry = `${city.City}, ${city.Region}`.toLowerCase();
+        const popyear = city["Population Year"] ? city["Population Year"].toString() : '';
+        const latitude = city["Latitude"] ? city["Latitude"].toString() : '';
+        const longitude = city["Longitude"] ? city["Longitude"].toString() : '';
+        const elevation = city["Elevation Meter"] ? city["Elevation Meter"].toString() : '';
+        const deliveringTime = city["Arrival Stoppage Time"] ? city["Arrival Stoppage Time"].toString() : '';
+        const timezone = city["Timezone"] ? city["Timezone"].toLowerCase() : '';
+        const countryCode = city["CC"] ? city["CC"].toLowerCase() : '';
+        const population = city["Population Num"] ? city["Population Num"].toString() : '';
+        const eggsDelivered = city["Eggs Delivered"] ? city["Eggs Delivered"].toString() : '';
+        const arrivalTime = unixToReadable(city["Unix Arrival"]).toLowerCase();
+        const departureTime = unixToReadable(city["Unix Arrival Departure"]).toLowerCase();
+
+        // Check if the query matches any of these fields
+        return cityCountry.includes(query) ||
+               popyear.includes(query) ||
+               latitude.includes(query) ||
+               longitude.includes(query) ||
+               elevation.includes(query) ||
+               deliveringTime.includes(query) ||
+               timezone.includes(query) ||
+               countryCode.includes(query) ||
+               population.includes(query) ||
+               eggsDelivered.includes(query) ||
+               arrivalTime.includes(query) ||
+               departureTime.includes(query);
+    });
+    displayResults(filteredCities);
+}
+
+
+        // Load all cities when the page loads
+        window.onload = loadCities;
+    </script>
+</body>
+</html>
