@@ -1488,7 +1488,7 @@ async function sendMassEmail(html) {
  // Loop through each email in the mailing list and send the email
  for (const email of existingEmails) {
  /* await transporter.sendMail({
-    from: 'tracker@master-trackers.xyz',
+    from: 'tracker@master-trackers.xyz',/home/hayde/Downloads/thetracekr/masterbunnyrevamp (copy)/.github
     to: email,
     subject: 'Hourly Update for the Master Santa Tracker',
     html: html + `<br/><a href="http://master-trackers.xyz/unsubscribe?email=${email}" target="_blank">Unsubscribe</a>`
